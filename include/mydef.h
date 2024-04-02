@@ -6,20 +6,22 @@
 #define ullint_t  unsigned long long int
 #define ldouble_t long double
 
+#define SIZEOF_ARR(a) (sizeof(a) / sizeof(*a))
+
 #ifdef INFO
-    #define PRINT_INFO(str ...) printf(str);
+#define PRINT_INFO(str...) printf(str);
 #else
-    #define PRINT_INFO(str ...) {};
+#define PRINT_INFO(str...) {};
 #endif
 
 #ifdef DEBUG
-    #define PRINT_DEBUG(str ...) fprintf(stderr, "DEBUG: " str);
+#define PRINT_DEBUG(str...) fprintf(stderr, "DEBUG: " str);
 #else
-    #define PRINT_DEBUG(str ...) {};
+#define PRINT_DEBUG(str...) {};
 #endif
 
-#define PRINT_ERROR(str ...)                                                                 \
-{                                                                                            \
-    fprintf(stderr, "ERROR: " str);                                                          \
-    fprintf(stderr, "FILE: %s; FUNC: %s; LINE: %d; \n", __FILE__, __func__, __LINE__);       \
-}
+#define PRINT_ERROR(str...)                                                                                            \
+    {                                                                                                                  \
+        fprintf(stderr, "ERROR: " str);                                                                                \
+        fprintf(stderr, "FILE: %s; FUNC: %s; LINE: %d; \n", __FILE__, __func__, __LINE__);                             \
+    }
