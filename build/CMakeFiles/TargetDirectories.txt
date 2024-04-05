@@ -1,3 +1,0 @@
-/home/hunter/Git/differentiator/build/CMakeFiles/differentiator.dir
-/home/hunter/Git/differentiator/build/CMakeFiles/edit_cache.dir
-/home/hunter/Git/differentiator/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,27 @@
+digraph {
+	"0x503000000040" [label = "{ Nodetype: Function | TypeFunction: log | 0x503000000040 | { 0x503000000070 | 0x5030000001c0 } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x503000000040" -> "0x503000000070"
+	"0x503000000070" [label = "{ Nodetype: Operation | TypeOperation: - | 0x503000000070 | { 0x5030000000a0 | 0x503000000130 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x503000000070" -> "0x5030000000a0"
+	"0x5030000000a0" [label = "{ Nodetype: Operation | TypeOperation: ^ | 0x5030000000a0 | { 0x5030000000d0 | 0x503000000100 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x5030000000a0" -> "0x5030000000d0"
+	"0x5030000000d0" [label = "{ Nodetype: Variable | Var: x | 0x5030000000d0 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x5030000000a0" -> "0x503000000100"
+	"0x503000000100" [label = "{ Nodetype: Num | Num: 3.00 | 0x503000000100 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = lightskyblue, shape = Mrecord]
+	"0x503000000070" -> "0x503000000130"
+	"0x503000000130" [label = "{ Nodetype: Operation | TypeOperation: * | 0x503000000130 | { 0x503000000160 | 0x503000000190 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x503000000130" -> "0x503000000160"
+	"0x503000000160" [label = "{ Nodetype: Num | Num: 2.00 | 0x503000000160 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = lightskyblue, shape = Mrecord]
+	"0x503000000130" -> "0x503000000190"
+	"0x503000000190" [label = "{ Nodetype: Variable | Var: x | 0x503000000190 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x503000000040" -> "0x5030000001c0"
+	"0x5030000001c0" [label = "{ Nodetype: Operation | TypeOperation: + | 0x5030000001c0 | { 0x5030000001f0 | 0x503000000280 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x5030000001c0" -> "0x5030000001f0"
+	"0x5030000001f0" [label = "{ Nodetype: Operation | TypeOperation: * | 0x5030000001f0 | { 0x503000000220 | 0x503000000250 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x5030000001f0" -> "0x503000000220"
+	"0x503000000220" [label = "{ Nodetype: Num | Num: 5.00 | 0x503000000220 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = lightskyblue, shape = Mrecord]
+	"0x5030000001f0" -> "0x503000000250"
+	"0x503000000250" [label = "{ Nodetype: Variable | Var: x | 0x503000000250 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x5030000001c0" -> "0x503000000280"
+	"0x503000000280" [label = "{ Nodetype: Num | Num: 2.00 | 0x503000000280 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = lightskyblue, shape = Mrecord]
+}

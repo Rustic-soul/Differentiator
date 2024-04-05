@@ -4,13 +4,13 @@
 #include "main.h"
 #include "mydef.h"
 
-#include <cassert>
-#include <cmath>
-#include <cstddef>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
-#include <ctime>
+#include <assert.h>
+#include <math.h>
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include <math.h>
 
 
@@ -46,6 +46,10 @@ DiffNode *Differentiator(DiffNode *node, int part)
             {
                 return _MUL(_POW(_CPY(LNODE), _CPY(RNODE)), _ADD(_DIV(_MUL(_CPY(RNODE), _DIFF(LNODE)), _CPY(LNODE)), _MUL(_DIFF(RNODE), _LN(_CPY(LNODE)))));
             }
+        
+        default:
+            PRINT_ERROR("Неизвестный тип операциии [%d]\n", OP_VR_TYPE);
+            exit(ERROR_UNKNOWN_OPERATION_TYPE);
         }
     
     case TpFn:
@@ -99,7 +103,15 @@ DiffNode *Differentiator(DiffNode *node, int part)
                 DtorTree(diffr);
                 return tmp;
             }
+
+        default:
+            PRINT_ERROR("Неизвестный тип функции [%d]\n", OP_VR_TYPE);
+            exit(ERROR_UNKNOWN_FUNCTION_TYPE);
         }
+
+    default:
+        PRINT_ERROR("Неизвестный тип узла [%d]\n", NTYPE);
+        exit(ERROR_UNKNOWN_NODE_TYPE);
     }
 
     return NULL;
@@ -119,12 +131,16 @@ DiffNode *Optimizer1(DiffNode *node)
     {
         switch (OP_VR_TYPE)
         {
-            case OpAdd: node->Data.Num = LNODE->Data.Num + RNODE->Data.Num; break;
-            case OpSub: node->Data.Num = LNODE->Data.Num - RNODE->Data.Num; break;
-            case OpMul: node->Data.Num = LNODE->Data.Num * RNODE->Data.Num; break;
-            case OpDiv: node->Data.Num = LNODE->Data.Num / RNODE->Data.Num; break;
-            
-            case OpPow: node->Data.Num = pow(LNODE->Data.Num, RNODE->Data.Num); break;
+        case OpAdd: node->Data.Num = LNODE->Data.Num + RNODE->Data.Num; break;
+        case OpSub: node->Data.Num = LNODE->Data.Num - RNODE->Data.Num; break;
+        case OpMul: node->Data.Num = LNODE->Data.Num * RNODE->Data.Num; break;
+        case OpDiv: node->Data.Num = LNODE->Data.Num / RNODE->Data.Num; break;
+        
+        case OpPow: node->Data.Num = pow(LNODE->Data.Num, RNODE->Data.Num); break;
+    
+        default:
+            PRINT_ERROR("Неизвестный тип операции [%d]\n", OP_VR_TYPE);
+            exit(ERROR_UNKNOWN_OPERATION_TYPE);
         }
 
         free(LNODE);
@@ -150,11 +166,15 @@ DiffNode *Optimizer1(DiffNode *node)
         case FnLn:   node->Data.Num = log  (LNODE->Data.Num); break;
         case FnLg:   node->Data.Num = log10(LNODE->Data.Num); break;
         
-        case FnCtg:  node->Data.Num = tan(M_PI/2 - LNODE->Data.Num);                 break;
+        case FnCtg:  node->Data.Num = tan(3.14/2 - LNODE->Data.Num);                 break;
 
-        case FnActg: node->Data.Num = M_PI/2 - atan(LNODE->Data.Num);                break;
+        case FnActg: node->Data.Num = 3.14/2 - atan(LNODE->Data.Num);                break;
         
         case FnCth:  node->Data.Num = cosh(LNODE->Data.Num) / sinh(LNODE->Data.Num); break;
+        
+        default:
+            PRINT_ERROR("Неизвестный тип функции [%d]\n", OP_VR_TYPE);
+            exit(ERROR_UNKNOWN_FUNCTION_TYPE);
         }
         
         if (OP_VR_TYPE == FnLog)
@@ -236,7 +256,7 @@ DiffNode *Optimizer2(DiffNode *node)
                 }
                 break;
 
-                case OpPow:
+            case OpPow:
                 if ((num_node == LNODE) && (equal(num_node->Data.Num, 1) || equal(num_node->Data.Num, 0)))
                 {
                     DtorTree(nan_node);
@@ -255,6 +275,10 @@ DiffNode *Optimizer2(DiffNode *node)
                     return _NUM(1);
                 }
                 break;
+
+            default:
+                PRINT_ERROR("Неизвестный тип операции [%d]\n", OP_VR_TYPE);
+                exit(ERROR_UNKNOWN_OPERATION_TYPE);
             }
         }
     }
@@ -344,7 +368,7 @@ DiffNode *CreateTreeRec(array_t *sarr, size_t *count)
         double tmp_num                      = 0;
         char   type                         = DefinitionTypeNode(sarr->arr_ptr + (*count));
         char   tmp2                         = '\0';
-        char   func_name[MAX_LEN_FUNC_NAME] = {};
+        char   func_name[MAX_LEN_FUNC_NAME] = "";
 
         switch (type)
         {
@@ -357,14 +381,14 @@ DiffNode *CreateTreeRec(array_t *sarr, size_t *count)
         case TpNm:
             sscanf(sarr->arr_ptr + (*count), "%lf%n", &tmp_num, &ncr);
             *count += (size_t)ncr;
-            node = CreateNode(type, {tmp_num}, NULL, NULL);
+            node = CreateNode(type, (NodeData){tmp_num}, NULL, NULL);
             break;
 
         case TpFn:
             sscanf(sarr->arr_ptr + (*count), "%s%n", func_name, &ncr);
             *count += (size_t)ncr;
             
-            node = CreateNode(type, {.TypeOpVr = DTFunc(func_name)}, NULL, NULL);
+            node = CreateNode(type, (NodeData){.TypeOpVr = DTFunc(func_name)}, NULL, NULL);
             break;
         
         case TpOp: case TpVr:
@@ -376,7 +400,10 @@ DiffNode *CreateTreeRec(array_t *sarr, size_t *count)
 
             node = CreateNode(type, tmp3, NULL, NULL);
             break;
-        
+
+        default:
+            PRINT_ERROR("Неизвестный тип узла [%d]\n", NTYPE);
+            exit(ERROR_UNKNOWN_NODE_TYPE);
         }
 
         if (sarr->arr_ptr[*count + 1] == ')')
@@ -426,7 +453,7 @@ int DefinitionTypeVariableAndOperation(char ch)
 char DefinitionTypeNode(char *arr)
 {
     double tmp_num                      = 0;
-    char   func_name[MAX_LEN_FUNC_NAME] = {};
+    char   func_name[MAX_LEN_FUNC_NAME] = "";
 
     if (sscanf(arr, "%lf", &tmp_num) == 1)
     {
