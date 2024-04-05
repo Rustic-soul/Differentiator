@@ -1,10 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
 #define CALCULATE_CPP
 
 #include "differentiator.h"
 #include "mydef.h"
 #include "config.h"
 
-#include <cmath>
+#include <math.h>
 
 double CalculateTree(DiffNode *node)
 {
@@ -28,6 +30,10 @@ double CalculateTree(DiffNode *node)
         case OpDiv: PRINT_DEBUG("node <--> Div\n"); return CalculateTree(LNODE) / CalculateTree(RNODE);
         
         case OpPow: PRINT_DEBUG("node <--> Pow\n"); return pow(CalculateTree(LNODE), CalculateTree(RNODE));
+        
+        default:
+            PRINT_ERROR("Неизвестный тип операции [%d]\n", OP_VR_TYPE);
+            exit(ERROR_UNKNOWN_OPERATION_TYPE);
         }
 
     case TpFn:
@@ -47,13 +53,22 @@ double CalculateTree(DiffNode *node)
         
         case FnCth:  PRINT_DEBUG("node <--> Cth\n"); return cosh (CalculateTree(LNODE)) / sinh(CalculateTree(LNODE)); 
         
-        case FnCtg:  PRINT_DEBUG("node <--> Ctg\n"); return tan(M_PI/2 - CalculateTree(LNODE)); 
+        case FnCtg:  PRINT_DEBUG("node <--> Ctg\n"); return tan(3.14/2 - CalculateTree(LNODE)); 
         
-        case FnActg: PRINT_DEBUG("node <--> Atg\n"); return M_PI/2 - atan(CalculateTree(LNODE)); 
+        case FnActg: PRINT_DEBUG("node <--> Atg\n"); return 3.14/2 - atan(CalculateTree(LNODE)); 
         
         case FnLog:  PRINT_DEBUG("node <--> Log\n"); printf("Да вроде норм\n"); return log(CalculateTree(RNODE)) / log(CalculateTree(LNODE)); 
+        
+        default:
+            PRINT_ERROR("Неизвестный тип функции [%d]\n", OP_VR_TYPE);
+            exit(ERROR_UNKNOWN_FUNCTION_TYPE);
         }
+
+    default:
+        PRINT_ERROR("Неизвестный тип узла [%d]\n", NTYPE);
+        exit(ERROR_UNKNOWN_NODE_TYPE);
     }
+
     PRINT_DEBUG("node <--> Nan Неправильное поведение\n"); 
     return NAN;
 }

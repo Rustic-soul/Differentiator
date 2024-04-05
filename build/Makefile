@@ -129,101 +129,101 @@ differentiator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/build
 .PHONY : differentiator/fast
 
-src/calculate.o: src/calculate.cpp.o
+src/calculate.o: src/calculate.c.o
 .PHONY : src/calculate.o
 
 # target to build an object file
-src/calculate.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/calculate.cpp.o
-.PHONY : src/calculate.cpp.o
+src/calculate.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/calculate.c.o
+.PHONY : src/calculate.c.o
 
-src/calculate.i: src/calculate.cpp.i
+src/calculate.i: src/calculate.c.i
 .PHONY : src/calculate.i
 
 # target to preprocess a source file
-src/calculate.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/calculate.cpp.i
-.PHONY : src/calculate.cpp.i
+src/calculate.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/calculate.c.i
+.PHONY : src/calculate.c.i
 
-src/calculate.s: src/calculate.cpp.s
+src/calculate.s: src/calculate.c.s
 .PHONY : src/calculate.s
 
 # target to generate assembly for a file
-src/calculate.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/calculate.cpp.s
-.PHONY : src/calculate.cpp.s
+src/calculate.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/calculate.c.s
+.PHONY : src/calculate.c.s
 
-src/differentiator.o: src/differentiator.cpp.o
+src/differentiator.o: src/differentiator.c.o
 .PHONY : src/differentiator.o
 
 # target to build an object file
-src/differentiator.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/differentiator.cpp.o
-.PHONY : src/differentiator.cpp.o
+src/differentiator.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/differentiator.c.o
+.PHONY : src/differentiator.c.o
 
-src/differentiator.i: src/differentiator.cpp.i
+src/differentiator.i: src/differentiator.c.i
 .PHONY : src/differentiator.i
 
 # target to preprocess a source file
-src/differentiator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/differentiator.cpp.i
-.PHONY : src/differentiator.cpp.i
+src/differentiator.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/differentiator.c.i
+.PHONY : src/differentiator.c.i
 
-src/differentiator.s: src/differentiator.cpp.s
+src/differentiator.s: src/differentiator.c.s
 .PHONY : src/differentiator.s
 
 # target to generate assembly for a file
-src/differentiator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/differentiator.cpp.s
-.PHONY : src/differentiator.cpp.s
+src/differentiator.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/differentiator.c.s
+.PHONY : src/differentiator.c.s
 
-src/main.o: src/main.cpp.o
+src/main.o: src/main.c.o
 .PHONY : src/main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-src/main.i: src/main.cpp.i
+src/main.i: src/main.c.i
 .PHONY : src/main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-src/main.s: src/main.cpp.s
+src/main.s: src/main.c.s
 .PHONY : src/main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/main.c.s
+.PHONY : src/main.c.s
 
-src/print.o: src/print.cpp.o
+src/print.o: src/print.c.o
 .PHONY : src/print.o
 
 # target to build an object file
-src/print.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/print.cpp.o
-.PHONY : src/print.cpp.o
+src/print.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/print.c.o
+.PHONY : src/print.c.o
 
-src/print.i: src/print.cpp.i
+src/print.i: src/print.c.i
 .PHONY : src/print.i
 
 # target to preprocess a source file
-src/print.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/print.cpp.i
-.PHONY : src/print.cpp.i
+src/print.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/print.c.i
+.PHONY : src/print.c.i
 
-src/print.s: src/print.cpp.s
+src/print.s: src/print.c.s
 .PHONY : src/print.s
 
 # target to generate assembly for a file
-src/print.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/print.cpp.s
-.PHONY : src/print.cpp.s
+src/print.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/print.c.s
+.PHONY : src/print.c.s
 
 # Help Target
 help:

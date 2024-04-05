@@ -9,19 +9,20 @@
 #define SIZEOF_ARR(a) (sizeof(a) / sizeof(*a))
 
 #ifdef INFO
-#define PRINT_INFO(str...) printf(str);
+    #define PRINT_INFO(...) printf("[INFO] " __VA_ARGS__)
 #else
-#define PRINT_INFO(str...) {};
+    #define PRINT_INFO(...)
 #endif
+
 
 #ifdef DEBUG
-#define PRINT_DEBUG(str...) fprintf(stderr, "DEBUG: " str);
+    #define PRINT_DEBUG(...) fprintf(stderr, "[DEBUG] " __VA_ARGS__)
 #else
-#define PRINT_DEBUG(str...) {};
+    #define PRINT_DEBUG(...)
 #endif
 
-#define PRINT_ERROR(str...)                                                                                            \
-    {                                                                                                                  \
-        fprintf(stderr, "ERROR: " str);                                                                                \
-        fprintf(stderr, "FILE: %s; FUNC: %s; LINE: %d; \n", __FILE__, __func__, __LINE__);                             \
-    }
+#define PRINT_ERROR(...)                                                                     \
+{                                                                                            \
+    fprintf(stderr, "[ERROR] " __VA_ARGS__);                                                 \
+    fprintf(stderr, "FILE: %s; FUNC: %s; LINE: %d; \n", __FILE__, __func__, __LINE__);       \
+}

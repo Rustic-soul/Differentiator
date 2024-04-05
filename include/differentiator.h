@@ -3,7 +3,7 @@
 
 #include "main.h"
 
-#include <cmath>
+#include <math.h>
 
 typedef struct Array_t
 {
@@ -61,8 +61,8 @@ static const char *ArrayCn[] = {
 };
 
 static const double ConstArray[] = {
-    M_E,
-    M_PI,
+    2.7,
+    3.14,
 };
 
 static const char* ArrayFn[] = {
@@ -107,6 +107,12 @@ static const char ArrayVr[] = {
     'z',
 };
 
+enum ErrorCode {
+    ERROR_UNKNOWN_NODE_TYPE      = 1,
+    ERROR_UNKNOWN_OPERATION_TYPE = 2,
+    ERROR_UNKNOWN_FUNCTION_TYPE  = 3,
+};
+
 #define MAX_LEN_FUNC_NAME 100
 
 #define NTYPE      node->Type
@@ -119,30 +125,30 @@ static const char ArrayVr[] = {
 #define _DIFF(node) Differentiator(node, part)
 #define _CPY(node)  Copy_Node     (node)
 
-#define _NUM(val)          CreateNode(TpNm, {.Num      = val  }, NULL , NULL )
-#define _ADD(lnode, rnode) CreateNode(TpOp, {.TypeOpVr = OpAdd}, lnode, rnode)
-#define _SUB(lnode, rnode) CreateNode(TpOp, {.TypeOpVr = OpSub}, lnode, rnode)
-#define _MUL(lnode, rnode) CreateNode(TpOp, {.TypeOpVr = OpMul}, lnode, rnode)
-#define _DIV(lnode, rnode) CreateNode(TpOp, {.TypeOpVr = OpDiv}, lnode, rnode)
-#define _POW(lnode, rnode) CreateNode(TpOp, {.TypeOpVr = OpPow}, lnode, rnode)
+#define _NUM(val)          CreateNode(TpNm, (NodeData){.Num      = val  }, NULL , NULL )
+#define _ADD(lnode, rnode) CreateNode(TpOp, (NodeData){.TypeOpVr = OpAdd}, lnode, rnode)
+#define _SUB(lnode, rnode) CreateNode(TpOp, (NodeData){.TypeOpVr = OpSub}, lnode, rnode)
+#define _MUL(lnode, rnode) CreateNode(TpOp, (NodeData){.TypeOpVr = OpMul}, lnode, rnode)
+#define _DIV(lnode, rnode) CreateNode(TpOp, (NodeData){.TypeOpVr = OpDiv}, lnode, rnode)
+#define _POW(lnode, rnode) CreateNode(TpOp, (NodeData){.TypeOpVr = OpPow}, lnode, rnode)
 
-#define _LN(node)          CreateNode(TpFn, {.TypeOpVr = FnLn  }, node, NULL)
-#define _LG(node)          CreateNode(TpFn, {.TypeOpVr = FnLg  }, node, NULL)
-#define _LOG(node)         CreateNode(TpFn, {.TypeOpVr = FnLog }, node, NULL)
-#define _SIN(node)         CreateNode(TpFn, {.TypeOpVr = FnSin }, node, NULL)
-#define _COS(node)         CreateNode(TpFn, {.TypeOpVr = FnCos }, node, NULL)
-#define _TG(node)          CreateNode(TpFn, {.TypeOpVr = FnTg  }, node, NULL)
-#define _CTG(node)         CreateNode(TpFn, {.TypeOpVr = FnCtg }, node, NULL)
-#define _ASIN(node)        CreateNode(TpFn, {.TypeOpVr = FnAsin}, node, NULL)
-#define _ACOS(node)        CreateNode(TpFn, {.TypeOpVr = FnAcos}, node, NULL)
-#define _ATG(node)         CreateNode(TpFn, {.TypeOpVr = FnTg  }, node, NULL)
-#define _ACTG(node)        CreateNode(TpFn, {.TypeOpVr = FnCtg }, node, NULL)
-#define _SH(node)          CreateNode(TpFn, {.TypeOpVr = FnSh  }, node, NULL)
-#define _CH(node)          CreateNode(TpFn, {.TypeOpVr = FnCh  }, node, NULL)
-#define _TH(node)          CreateNode(TpFn, {.TypeOpVr = FnTh  }, node, NULL)
-#define _CTH(node)         CreateNode(TpFn, {.TypeOpVr = FnCth }, node, NULL)
-#define _SQRT(node)        CreateNode(TpFn, {.TypeOpVr = FnSqrt}, node, NULL)
-#define _EXP(node)         CreateNode(TpFn, {.TypeOpVr = FnExp }, node, NULL)
+#define _LN(node)          CreateNode(TpFn, (NodeData){.TypeOpVr = FnLn  }, node, NULL)
+#define _LG(node)          CreateNode(TpFn, (NodeData){.TypeOpVr = FnLg  }, node, NULL)
+#define _LOG(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnLog }, node, NULL)
+#define _SIN(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnSin }, node, NULL)
+#define _COS(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnCos }, node, NULL)
+#define _TG(node)          CreateNode(TpFn, (NodeData){.TypeOpVr = FnTg  }, node, NULL)
+#define _CTG(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnCtg }, node, NULL)
+#define _ASIN(node)        CreateNode(TpFn, (NodeData){.TypeOpVr = FnAsin}, node, NULL)
+#define _ACOS(node)        CreateNode(TpFn, (NodeData){.TypeOpVr = FnAcos}, node, NULL)
+#define _ATG(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnTg  }, node, NULL)
+#define _ACTG(node)        CreateNode(TpFn, (NodeData){.TypeOpVr = FnCtg }, node, NULL)
+#define _SH(node)          CreateNode(TpFn, (NodeData){.TypeOpVr = FnSh  }, node, NULL)
+#define _CH(node)          CreateNode(TpFn, (NodeData){.TypeOpVr = FnCh  }, node, NULL)
+#define _TH(node)          CreateNode(TpFn, (NodeData){.TypeOpVr = FnTh  }, node, NULL)
+#define _CTH(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnCth }, node, NULL)
+#define _SQRT(node)        CreateNode(TpFn, (NodeData){.TypeOpVr = FnSqrt}, node, NULL)
+#define _EXP(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnExp }, node, NULL)
 
 int DTFunc(const char* fname);
 

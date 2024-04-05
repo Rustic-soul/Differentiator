@@ -4,13 +4,14 @@
 #include "mydef.h"
 #include "config.h"
 
-#include <cassert>
-#include <cstddef>
+#include <assert.h>
+#include <stddef.h>
 #include <stdio.h>
 
 // Функция для записи узла в формат .dot
 int PrintNodesDot(FILE *fp, DiffNode *node)
 {
+
     fprintf(fp, "\t\"%p\" [", node);
     if (NTYPE == TpOp)
     {

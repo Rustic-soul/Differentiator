@@ -1,7 +1,6 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-// #include <cmath>
 
 #ifdef PRINT_CPP
 
@@ -18,7 +17,7 @@ static const char *FN_SHAPE = "Mrecord";
 
 #ifdef CALCULATE_CPP
 
-double VarArray[] {
+double VarArray[] = {
     2,
     77,
     345,
