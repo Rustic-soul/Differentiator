@@ -3,16 +3,12 @@
 
 #include "main.h"
 
-#include <math.h>
-
-typedef struct Array_t
-{
+typedef struct Array_t {
     char  *arr_ptr;
     size_t size_arr;
 } array_t;
 
-enum ClassNodeType
-{
+enum ClassNodeType {
     TpNm = 0,
     TpVr = 1,
     TpOp = 2,
@@ -20,8 +16,7 @@ enum ClassNodeType
     TpCn = 4,
 };
 
-enum ClassOperation
-{
+enum ClassOperation {
     OpAdd = 0,
     OpSub = 1,
     OpMul = 2,
@@ -55,15 +50,9 @@ enum ClassConstant {
     CnPi = 1,
 };
 
-static const char *ArrayCn[] = {
-    "e",
-    "pi",
-};
+static const char *ArrayCn[] = { "e", "pi" };
 
-static const double ConstArray[] = {
-    2.7,
-    3.14,
-};
+static const double ConstArray[] = { 2.7, 3.14 };
 
 static const char* ArrayFn[] = {
     "sin",
@@ -82,7 +71,7 @@ static const char* ArrayFn[] = {
     "arcctg",
     "th",
     "cth",
-    "exp",
+    "exp"
 };
 
 static const char* ArrayTp[] = {
@@ -90,22 +79,12 @@ static const char* ArrayTp[] = {
     "Variable",
     "Operation",
     "Function",
-    "Constant",
+    "Constant"
 };
 
-static const char ArrayOp[] = {
-    '+',
-    '-',
-    '*',
-    '/',
-    '^',
-};
+static const char ArrayOp[] = { '+', '-', '*', '/', '^' };
 
-static const char ArrayVr[] = {
-    'x',
-    'y',
-    'z',
-};
+static const char ArrayVr[] = { 'x', 'y', 'z' };
 
 enum ErrorCode {
     ERROR_UNKNOWN_NODE_TYPE      = 1,

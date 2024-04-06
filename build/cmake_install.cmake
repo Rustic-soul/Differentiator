@@ -1,4 +1,4 @@
-# Install script for directory: /home/hunter/Git/differentiator
+# Install script for directory: /home/hunter/Git/Differentiator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/hunter/Git/differentiator/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/hunter/Git/Differentiator/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

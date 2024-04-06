@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hunter/Git/differentiator
+CMAKE_SOURCE_DIR = /home/hunter/Git/Differentiator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hunter/Git/differentiator/build
+CMAKE_BINARY_DIR = /home/hunter/Git/Differentiator/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/differentiator.dir/depend.make
@@ -70,67 +70,82 @@ include CMakeFiles/differentiator.dir/progress.make
 include CMakeFiles/differentiator.dir/flags.make
 
 CMakeFiles/differentiator.dir/src/main.c.o: CMakeFiles/differentiator.dir/flags.make
-CMakeFiles/differentiator.dir/src/main.c.o: /home/hunter/Git/differentiator/src/main.c
+CMakeFiles/differentiator.dir/src/main.c.o: /home/hunter/Git/Differentiator/src/main.c
 CMakeFiles/differentiator.dir/src/main.c.o: CMakeFiles/differentiator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hunter/Git/differentiator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/differentiator.dir/src/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/differentiator.dir/src/main.c.o -MF CMakeFiles/differentiator.dir/src/main.c.o.d -o CMakeFiles/differentiator.dir/src/main.c.o -c /home/hunter/Git/differentiator/src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hunter/Git/Differentiator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/differentiator.dir/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/differentiator.dir/src/main.c.o -MF CMakeFiles/differentiator.dir/src/main.c.o.d -o CMakeFiles/differentiator.dir/src/main.c.o -c /home/hunter/Git/Differentiator/src/main.c
 
 CMakeFiles/differentiator.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/differentiator.dir/src/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hunter/Git/differentiator/src/main.c > CMakeFiles/differentiator.dir/src/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hunter/Git/Differentiator/src/main.c > CMakeFiles/differentiator.dir/src/main.c.i
 
 CMakeFiles/differentiator.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/differentiator.dir/src/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hunter/Git/differentiator/src/main.c -o CMakeFiles/differentiator.dir/src/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hunter/Git/Differentiator/src/main.c -o CMakeFiles/differentiator.dir/src/main.c.s
 
 CMakeFiles/differentiator.dir/src/calculate.c.o: CMakeFiles/differentiator.dir/flags.make
-CMakeFiles/differentiator.dir/src/calculate.c.o: /home/hunter/Git/differentiator/src/calculate.c
+CMakeFiles/differentiator.dir/src/calculate.c.o: /home/hunter/Git/Differentiator/src/calculate.c
 CMakeFiles/differentiator.dir/src/calculate.c.o: CMakeFiles/differentiator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hunter/Git/differentiator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/differentiator.dir/src/calculate.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/differentiator.dir/src/calculate.c.o -MF CMakeFiles/differentiator.dir/src/calculate.c.o.d -o CMakeFiles/differentiator.dir/src/calculate.c.o -c /home/hunter/Git/differentiator/src/calculate.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hunter/Git/Differentiator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/differentiator.dir/src/calculate.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/differentiator.dir/src/calculate.c.o -MF CMakeFiles/differentiator.dir/src/calculate.c.o.d -o CMakeFiles/differentiator.dir/src/calculate.c.o -c /home/hunter/Git/Differentiator/src/calculate.c
 
 CMakeFiles/differentiator.dir/src/calculate.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/differentiator.dir/src/calculate.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hunter/Git/differentiator/src/calculate.c > CMakeFiles/differentiator.dir/src/calculate.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hunter/Git/Differentiator/src/calculate.c > CMakeFiles/differentiator.dir/src/calculate.c.i
 
 CMakeFiles/differentiator.dir/src/calculate.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/differentiator.dir/src/calculate.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hunter/Git/differentiator/src/calculate.c -o CMakeFiles/differentiator.dir/src/calculate.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hunter/Git/Differentiator/src/calculate.c -o CMakeFiles/differentiator.dir/src/calculate.c.s
 
 CMakeFiles/differentiator.dir/src/differentiator.c.o: CMakeFiles/differentiator.dir/flags.make
-CMakeFiles/differentiator.dir/src/differentiator.c.o: /home/hunter/Git/differentiator/src/differentiator.c
+CMakeFiles/differentiator.dir/src/differentiator.c.o: /home/hunter/Git/Differentiator/src/differentiator.c
 CMakeFiles/differentiator.dir/src/differentiator.c.o: CMakeFiles/differentiator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hunter/Git/differentiator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/differentiator.dir/src/differentiator.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/differentiator.dir/src/differentiator.c.o -MF CMakeFiles/differentiator.dir/src/differentiator.c.o.d -o CMakeFiles/differentiator.dir/src/differentiator.c.o -c /home/hunter/Git/differentiator/src/differentiator.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hunter/Git/Differentiator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/differentiator.dir/src/differentiator.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/differentiator.dir/src/differentiator.c.o -MF CMakeFiles/differentiator.dir/src/differentiator.c.o.d -o CMakeFiles/differentiator.dir/src/differentiator.c.o -c /home/hunter/Git/Differentiator/src/differentiator.c
 
 CMakeFiles/differentiator.dir/src/differentiator.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/differentiator.dir/src/differentiator.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hunter/Git/differentiator/src/differentiator.c > CMakeFiles/differentiator.dir/src/differentiator.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hunter/Git/Differentiator/src/differentiator.c > CMakeFiles/differentiator.dir/src/differentiator.c.i
 
 CMakeFiles/differentiator.dir/src/differentiator.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/differentiator.dir/src/differentiator.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hunter/Git/differentiator/src/differentiator.c -o CMakeFiles/differentiator.dir/src/differentiator.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hunter/Git/Differentiator/src/differentiator.c -o CMakeFiles/differentiator.dir/src/differentiator.c.s
 
 CMakeFiles/differentiator.dir/src/print.c.o: CMakeFiles/differentiator.dir/flags.make
-CMakeFiles/differentiator.dir/src/print.c.o: /home/hunter/Git/differentiator/src/print.c
+CMakeFiles/differentiator.dir/src/print.c.o: /home/hunter/Git/Differentiator/src/print.c
 CMakeFiles/differentiator.dir/src/print.c.o: CMakeFiles/differentiator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hunter/Git/differentiator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/differentiator.dir/src/print.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/differentiator.dir/src/print.c.o -MF CMakeFiles/differentiator.dir/src/print.c.o.d -o CMakeFiles/differentiator.dir/src/print.c.o -c /home/hunter/Git/differentiator/src/print.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hunter/Git/Differentiator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/differentiator.dir/src/print.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/differentiator.dir/src/print.c.o -MF CMakeFiles/differentiator.dir/src/print.c.o.d -o CMakeFiles/differentiator.dir/src/print.c.o -c /home/hunter/Git/Differentiator/src/print.c
 
 CMakeFiles/differentiator.dir/src/print.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/differentiator.dir/src/print.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hunter/Git/differentiator/src/print.c > CMakeFiles/differentiator.dir/src/print.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hunter/Git/Differentiator/src/print.c > CMakeFiles/differentiator.dir/src/print.c.i
 
 CMakeFiles/differentiator.dir/src/print.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/differentiator.dir/src/print.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hunter/Git/differentiator/src/print.c -o CMakeFiles/differentiator.dir/src/print.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hunter/Git/Differentiator/src/print.c -o CMakeFiles/differentiator.dir/src/print.c.s
+
+CMakeFiles/differentiator.dir/src/read.c.o: CMakeFiles/differentiator.dir/flags.make
+CMakeFiles/differentiator.dir/src/read.c.o: /home/hunter/Git/Differentiator/src/read.c
+CMakeFiles/differentiator.dir/src/read.c.o: CMakeFiles/differentiator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hunter/Git/Differentiator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/differentiator.dir/src/read.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/differentiator.dir/src/read.c.o -MF CMakeFiles/differentiator.dir/src/read.c.o.d -o CMakeFiles/differentiator.dir/src/read.c.o -c /home/hunter/Git/Differentiator/src/read.c
+
+CMakeFiles/differentiator.dir/src/read.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/differentiator.dir/src/read.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hunter/Git/Differentiator/src/read.c > CMakeFiles/differentiator.dir/src/read.c.i
+
+CMakeFiles/differentiator.dir/src/read.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/differentiator.dir/src/read.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hunter/Git/Differentiator/src/read.c -o CMakeFiles/differentiator.dir/src/read.c.s
 
 # Object files for target differentiator
 differentiator_OBJECTS = \
 "CMakeFiles/differentiator.dir/src/main.c.o" \
 "CMakeFiles/differentiator.dir/src/calculate.c.o" \
 "CMakeFiles/differentiator.dir/src/differentiator.c.o" \
-"CMakeFiles/differentiator.dir/src/print.c.o"
+"CMakeFiles/differentiator.dir/src/print.c.o" \
+"CMakeFiles/differentiator.dir/src/read.c.o"
 
 # External object files for target differentiator
 differentiator_EXTERNAL_OBJECTS =
@@ -139,9 +154,10 @@ differentiator: CMakeFiles/differentiator.dir/src/main.c.o
 differentiator: CMakeFiles/differentiator.dir/src/calculate.c.o
 differentiator: CMakeFiles/differentiator.dir/src/differentiator.c.o
 differentiator: CMakeFiles/differentiator.dir/src/print.c.o
+differentiator: CMakeFiles/differentiator.dir/src/read.c.o
 differentiator: CMakeFiles/differentiator.dir/build.make
 differentiator: CMakeFiles/differentiator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hunter/Git/differentiator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable differentiator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hunter/Git/Differentiator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable differentiator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/differentiator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +169,6 @@ CMakeFiles/differentiator.dir/clean:
 .PHONY : CMakeFiles/differentiator.dir/clean
 
 CMakeFiles/differentiator.dir/depend:
-	cd /home/hunter/Git/differentiator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hunter/Git/differentiator /home/hunter/Git/differentiator /home/hunter/Git/differentiator/build /home/hunter/Git/differentiator/build /home/hunter/Git/differentiator/build/CMakeFiles/differentiator.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/hunter/Git/Differentiator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hunter/Git/Differentiator /home/hunter/Git/Differentiator /home/hunter/Git/Differentiator/build /home/hunter/Git/Differentiator/build /home/hunter/Git/Differentiator/build/CMakeFiles/differentiator.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/differentiator.dir/depend
 

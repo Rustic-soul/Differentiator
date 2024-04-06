@@ -1,7 +1,7 @@
 CMakeFiles/differentiator.dir/src/print.c.o: \
- /home/hunter/Git/differentiator/src/print.c /usr/include/stdc-predef.h \
- /home/hunter/Git/differentiator/include/differentiator.h \
- /home/hunter/Git/differentiator/include/main.h /usr/include/stdio.h \
+ /home/hunter/Git/Differentiator/src/print.c /usr/include/stdc-predef.h \
+ /home/hunter/Git/Differentiator/include/differentiator.h \
+ /home/hunter/Git/Differentiator/include/main.h /usr/include/stdio.h \
  /usr/include/bits/libc-header-start.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
  /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
@@ -15,11 +15,6 @@ CMakeFiles/differentiator.dir/src/print.c.o: \
  /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/floatn.h \
- /usr/include/bits/floatn-common.h /usr/include/math.h \
- /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
- /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
- /usr/include/bits/fp-fast.h \
- /usr/include/bits/mathcalls-helper-functions.h \
- /usr/include/bits/mathcalls.h \
- /home/hunter/Git/differentiator/include/mydef.h \
- /home/hunter/Git/differentiator/include/config.h /usr/include/assert.h
+ /usr/include/bits/floatn-common.h \
+ /home/hunter/Git/Differentiator/include/mydef.h \
+ /home/hunter/Git/Differentiator/include/config.h /usr/include/assert.h

@@ -1,6 +1,6 @@
 CMakeFiles/differentiator.dir/src/main.c.o: \
- /home/hunter/Git/differentiator/src/main.c /usr/include/stdc-predef.h \
- /home/hunter/Git/differentiator/include/main.h /usr/include/stdio.h \
+ /home/hunter/Git/Differentiator/src/main.c /usr/include/stdc-predef.h \
+ /home/hunter/Git/Differentiator/include/main.h /usr/include/stdio.h \
  /usr/include/bits/libc-header-start.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
  /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
@@ -15,5 +15,5 @@ CMakeFiles/differentiator.dir/src/main.c.o: \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/floatn.h \
  /usr/include/bits/floatn-common.h \
- /home/hunter/Git/differentiator/include/mydef.h /usr/include/malloc.h \
+ /home/hunter/Git/Differentiator/include/mydef.h /usr/include/malloc.h \
  /usr/include/stdlib.h /usr/include/bits/stdlib-float.h

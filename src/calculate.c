@@ -1,6 +1,7 @@
+#define CALCULATE_CPP
+
 #include <stdio.h>
 #include <stdlib.h>
-#define CALCULATE_CPP
 
 #include "differentiator.h"
 #include "mydef.h"

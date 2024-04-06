@@ -8,8 +8,7 @@ typedef union NodeData {
     int    TypeOpVr;
 } NodeData;
 
-typedef struct DiffNode
-{
+typedef struct DiffNode {
     char Type;
 
     NodeData Data;
@@ -18,8 +17,7 @@ typedef struct DiffNode
     struct DiffNode *RightNode;
 } DiffNode;
 
-enum ClassVariable
-{
+enum ClassVariable {
     VrX = 0,
     VrY = 1,
     VrZ = 2,

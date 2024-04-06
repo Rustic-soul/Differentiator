@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hunter/Git/differentiator
+CMAKE_SOURCE_DIR = /home/hunter/Git/Differentiator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hunter/Git/differentiator/build
+CMAKE_BINARY_DIR = /home/hunter/Git/Differentiator/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hunter/Git/differentiator/build/CMakeFiles /home/hunter/Git/differentiator/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hunter/Git/Differentiator/build/CMakeFiles /home/hunter/Git/Differentiator/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hunter/Git/differentiator/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hunter/Git/Differentiator/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -225,6 +225,30 @@ src/print.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/print.c.s
 .PHONY : src/print.c.s
 
+src/read.o: src/read.c.o
+.PHONY : src/read.o
+
+# target to build an object file
+src/read.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/read.c.o
+.PHONY : src/read.c.o
+
+src/read.i: src/read.c.i
+.PHONY : src/read.i
+
+# target to preprocess a source file
+src/read.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/read.c.i
+.PHONY : src/read.c.i
+
+src/read.s: src/read.c.s
+.PHONY : src/read.s
+
+# target to generate assembly for a file
+src/read.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/differentiator.dir/build.make CMakeFiles/differentiator.dir/src/read.c.s
+.PHONY : src/read.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,6 +270,9 @@ help:
 	@echo "... src/print.o"
 	@echo "... src/print.i"
 	@echo "... src/print.s"
+	@echo "... src/read.o"
+	@echo "... src/read.i"
+	@echo "... src/read.s"
 .PHONY : help
 
 

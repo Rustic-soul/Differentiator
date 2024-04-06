@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.20)
 project(Differentiator)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-set(SRC_FILES src/main.c src/calculate.c src/differentiator.c src/print.c)
+set(SRC_FILES src/main.c src/calculate.c src/differentiator.c src/print.c src/read.c)
 set(INCLUDE_DIR include/)
 
 set(FLAGS -std=c99 -lm)

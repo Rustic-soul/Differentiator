@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/differentiator.dir/src/main.c.o.d"
   "CMakeFiles/differentiator.dir/src/print.c.o"
   "CMakeFiles/differentiator.dir/src/print.c.o.d"
+  "CMakeFiles/differentiator.dir/src/read.c.o"
+  "CMakeFiles/differentiator.dir/src/read.c.o.d"
   "differentiator"
   "differentiator.pdb"
 )

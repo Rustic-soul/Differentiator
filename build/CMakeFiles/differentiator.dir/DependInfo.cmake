@@ -8,10 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/hunter/Git/differentiator/src/calculate.c" "CMakeFiles/differentiator.dir/src/calculate.c.o" "gcc" "CMakeFiles/differentiator.dir/src/calculate.c.o.d"
-  "/home/hunter/Git/differentiator/src/differentiator.c" "CMakeFiles/differentiator.dir/src/differentiator.c.o" "gcc" "CMakeFiles/differentiator.dir/src/differentiator.c.o.d"
-  "/home/hunter/Git/differentiator/src/main.c" "CMakeFiles/differentiator.dir/src/main.c.o" "gcc" "CMakeFiles/differentiator.dir/src/main.c.o.d"
-  "/home/hunter/Git/differentiator/src/print.c" "CMakeFiles/differentiator.dir/src/print.c.o" "gcc" "CMakeFiles/differentiator.dir/src/print.c.o.d"
+  "/home/hunter/Git/Differentiator/src/calculate.c" "CMakeFiles/differentiator.dir/src/calculate.c.o" "gcc" "CMakeFiles/differentiator.dir/src/calculate.c.o.d"
+  "/home/hunter/Git/Differentiator/src/differentiator.c" "CMakeFiles/differentiator.dir/src/differentiator.c.o" "gcc" "CMakeFiles/differentiator.dir/src/differentiator.c.o.d"
+  "/home/hunter/Git/Differentiator/src/main.c" "CMakeFiles/differentiator.dir/src/main.c.o" "gcc" "CMakeFiles/differentiator.dir/src/main.c.o.d"
+  "/home/hunter/Git/Differentiator/src/print.c" "CMakeFiles/differentiator.dir/src/print.c.o" "gcc" "CMakeFiles/differentiator.dir/src/print.c.o.d"
+  "/home/hunter/Git/Differentiator/src/read.c" "CMakeFiles/differentiator.dir/src/read.c.o" "gcc" "CMakeFiles/differentiator.dir/src/read.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

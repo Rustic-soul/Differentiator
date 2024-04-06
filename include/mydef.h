@@ -8,6 +8,7 @@
 
 #define SIZEOF_ARR(a) (sizeof(a) / sizeof(*a))
 
+
 #ifdef INFO
     #define PRINT_INFO(...) printf("[INFO] " __VA_ARGS__)
 #else
@@ -20,6 +21,7 @@
 #else
     #define PRINT_DEBUG(...)
 #endif
+
 
 #define PRINT_ERROR(...)                                                                     \
 {                                                                                            \
