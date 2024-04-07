@@ -1,11 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <bits/types/FILE.h>
 #include <stdio.h>
 
 typedef union NodeData {
     double Num;
-    int    TypeOpVr;
+    int    AdditionalType;
 } NodeData;
 
 typedef struct DiffNode {
@@ -23,16 +24,13 @@ enum ClassVariable {
     VrZ = 2,
 };
 
-DiffNode *CreateTree    (FILE     *fp);
-int       DtorTree      (DiffNode *node);
-int       PrintTreeDot  (FILE     *fp, DiffNode *node);
-
+DiffNode *ReadTreeFile  (FILE     *fp);
+DiffNode *Differentiator(DiffNode *node, int part);
 double    CalculateTree (DiffNode *node);
 
-DiffNode *Differentiator(DiffNode *node, int part);
+int       DtorTree      (DiffNode *node);
 
-DiffNode *Optimizer1    (DiffNode *node);
-DiffNode *Optimizer2    (DiffNode *node);
-DiffNode *FullOptimizer (DiffNode *node);
+int       PrintTreeDot  (FILE *fp, DiffNode *node);
+int       CreateResTex  (FILE *fp, DiffNode *TreeExp, DiffNode *TreeDiff);
 
 #endif // !MAIN_H

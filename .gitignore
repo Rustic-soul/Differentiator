@@ -1,3 +1,8 @@
-.cache/*
-# images/*
-!images/.gitkeep
+.cache/
+build/
+.vscode/
+images/tex/*
+!images/tex/preamble.tex
+!images/tex/title.tex
+!images/tex/res.tex
+!images/tex/res.pdf

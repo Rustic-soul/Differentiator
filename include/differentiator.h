@@ -4,8 +4,8 @@
 #include "main.h"
 
 typedef struct Array_t {
-    char  *arr_ptr;
-    size_t size_arr;
+    char   *arr_ptr;
+    size_t  size_arr;
 } array_t;
 
 enum ClassNodeType {
@@ -23,7 +23,6 @@ enum ClassOperation {
     OpDiv = 3,
     OpPow  = 4 
 };
-
 
 enum ClassFunction {
     FnSin  = 0,
@@ -87,59 +86,80 @@ static const char ArrayOp[] = { '+', '-', '*', '/', '^' };
 static const char ArrayVr[] = { 'x', 'y', 'z' };
 
 enum ErrorCode {
-    ERROR_UNKNOWN_NODE_TYPE      = 1,
-    ERROR_UNKNOWN_OPERATION_TYPE = 2,
-    ERROR_UNKNOWN_FUNCTION_TYPE  = 3,
+    ERROR_UNKNOWN_NODE_TYPE      = -1,
+    ERROR_UNKNOWN_OPERATION_TYPE = -2,
+    ERROR_UNKNOWN_FUNCTION_TYPE  = -3,
+    ERROR_SYNTAX                 = -4,
+    ERROR_RANGE_ACCEPTABLE_LOGARITHM_VALUES = -5,
+    ERROR_NULL_PTR = -6,
+    ERROR_FTELL_FAILED = -7
 };
 
 #define MAX_LEN_FUNC_NAME 100
 
 #define NTYPE      node->Type
+#define NDATA      node->Data
+#define NDTYPE     node->Data.AdditionalType
+#define NDNUM      node->Data.Num
+
 #define LNODE      node->LeftNode
 #define RNODE      node->RightNode
 #define LNTYPE     node->LeftNode->Type
 #define RNTYPE     node->RightNode->Type
-#define OP_VR_TYPE node->Data.TypeOpVr
+#define LNDATA     node->LeftNode->Data
+#define RNDATA     node->RightNode->Data
+#define LNDTYPE    node->LeftNode->Data.AdditionalType
+#define RNDTYPE    node->RightNode->Data.AdditionalType
+#define LNDNUM     node->LeftNode->Data.Num
+#define RNDNUM     node->RightNode->Data.Num
 
-#define _DIFF(node) Differentiator(node, part)
-#define _CPY(node)  Copy_Node     (node)
+#define _DIFF(node) DifferentiatorRec(node, part)
+#define _CPY(node)  CopyNode         (node)
 
-#define _NUM(val)          CreateNode(TpNm, (NodeData){.Num      = val  }, NULL , NULL )
-#define _ADD(lnode, rnode) CreateNode(TpOp, (NodeData){.TypeOpVr = OpAdd}, lnode, rnode)
-#define _SUB(lnode, rnode) CreateNode(TpOp, (NodeData){.TypeOpVr = OpSub}, lnode, rnode)
-#define _MUL(lnode, rnode) CreateNode(TpOp, (NodeData){.TypeOpVr = OpMul}, lnode, rnode)
-#define _DIV(lnode, rnode) CreateNode(TpOp, (NodeData){.TypeOpVr = OpDiv}, lnode, rnode)
-#define _POW(lnode, rnode) CreateNode(TpOp, (NodeData){.TypeOpVr = OpPow}, lnode, rnode)
+#define _VAR(tp)           CreateNode(TpVr, (NodeData){.AdditionalType = tp   }, NULL , NULL )
+#define _NUM(val)          CreateNode(TpNm, (NodeData){.Num            = val  }, NULL , NULL )
+#define _ADD(lnode, rnode) CreateNode(TpOp, (NodeData){.AdditionalType = OpAdd}, lnode, rnode)
+#define _SUB(lnode, rnode) CreateNode(TpOp, (NodeData){.AdditionalType = OpSub}, lnode, rnode)
+#define _MUL(lnode, rnode) CreateNode(TpOp, (NodeData){.AdditionalType = OpMul}, lnode, rnode)
+#define _DIV(lnode, rnode) CreateNode(TpOp, (NodeData){.AdditionalType = OpDiv}, lnode, rnode)
+#define _POW(lnode, rnode) CreateNode(TpOp, (NodeData){.AdditionalType = OpPow}, lnode, rnode)
 
-#define _LN(node)          CreateNode(TpFn, (NodeData){.TypeOpVr = FnLn  }, node, NULL)
-#define _LG(node)          CreateNode(TpFn, (NodeData){.TypeOpVr = FnLg  }, node, NULL)
-#define _LOG(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnLog }, node, NULL)
-#define _SIN(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnSin }, node, NULL)
-#define _COS(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnCos }, node, NULL)
-#define _TG(node)          CreateNode(TpFn, (NodeData){.TypeOpVr = FnTg  }, node, NULL)
-#define _CTG(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnCtg }, node, NULL)
-#define _ASIN(node)        CreateNode(TpFn, (NodeData){.TypeOpVr = FnAsin}, node, NULL)
-#define _ACOS(node)        CreateNode(TpFn, (NodeData){.TypeOpVr = FnAcos}, node, NULL)
-#define _ATG(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnTg  }, node, NULL)
-#define _ACTG(node)        CreateNode(TpFn, (NodeData){.TypeOpVr = FnCtg }, node, NULL)
-#define _SH(node)          CreateNode(TpFn, (NodeData){.TypeOpVr = FnSh  }, node, NULL)
-#define _CH(node)          CreateNode(TpFn, (NodeData){.TypeOpVr = FnCh  }, node, NULL)
-#define _TH(node)          CreateNode(TpFn, (NodeData){.TypeOpVr = FnTh  }, node, NULL)
-#define _CTH(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnCth }, node, NULL)
-#define _SQRT(node)        CreateNode(TpFn, (NodeData){.TypeOpVr = FnSqrt}, node, NULL)
-#define _EXP(node)         CreateNode(TpFn, (NodeData){.TypeOpVr = FnExp }, node, NULL)
+#define _LN(node)          CreateNode(TpFn, (NodeData){.AdditionalType = FnLn  }, node, NULL)
+#define _LG(node)          CreateNode(TpFn, (NodeData){.AdditionalType = FnLg  }, node, NULL)
+#define _LOG(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnLog }, node, NULL)
+#define _SIN(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnSin }, node, NULL)
+#define _COS(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnCos }, node, NULL)
+#define _TG(node)          CreateNode(TpFn, (NodeData){.AdditionalType = FnTg  }, node, NULL)
+#define _CTG(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnCtg }, node, NULL)
+#define _ASIN(node)        CreateNode(TpFn, (NodeData){.AdditionalType = FnAsin}, node, NULL)
+#define _ACOS(node)        CreateNode(TpFn, (NodeData){.AdditionalType = FnAcos}, node, NULL)
+#define _ATG(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnTg  }, node, NULL)
+#define _ACTG(node)        CreateNode(TpFn, (NodeData){.AdditionalType = FnCtg }, node, NULL)
+#define _SH(node)          CreateNode(TpFn, (NodeData){.AdditionalType = FnSh  }, node, NULL)
+#define _CH(node)          CreateNode(TpFn, (NodeData){.AdditionalType = FnCh  }, node, NULL)
+#define _TH(node)          CreateNode(TpFn, (NodeData){.AdditionalType = FnTh  }, node, NULL)
+#define _CTH(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnCth }, node, NULL)
+#define _SQRT(node)        CreateNode(TpFn, (NodeData){.AdditionalType = FnSqrt}, node, NULL)
+#define _EXP(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnExp }, node, NULL)
 
-int DTFunc(const char* fname);
+#define SKIP_SPACES(pstr) while ((*pstr == ' ') || (*pstr == '\n')) { pstr++; }
+
+// int DTFunc(const char* fname);
 
 DiffNode *CreateTreeRec(array_t *sarr, size_t *count);
-size_t    SearchSizeFile(FILE *fp);
-array_t  *CtorArray(FILE *fp_src);
 int       SearchVar(DiffNode *node, int var);
-int       equal(double num1, double num2);
-DiffNode *Copy_Node(DiffNode *node);
+int       DoubleEqual(double num1, double num2);
+DiffNode *CopyNode(DiffNode *node);
 DiffNode *CreateNode(char type, NodeData data, DiffNode *LeftNode, DiffNode *RightNode);
 int       PrintNodesDot(FILE *fp, DiffNode *node);
 int       DefinitionTypeVariableAndOperation(char ch);
 char      DefinitionTypeNode(char *arr);
+
+DiffNode *CreateTree           (FILE     *fp);
+DiffNode *ConvolutionConstants (DiffNode *node);
+DiffNode *RemoveNeutralElements(DiffNode *node);
+DiffNode *FullOptimizer        (DiffNode *node);
+DiffNode *DifferentiatorRec    (DiffNode *node, int part);
+DiffNode *DifferentiatorLog(DiffNode *node, int part);
 
 #endif
