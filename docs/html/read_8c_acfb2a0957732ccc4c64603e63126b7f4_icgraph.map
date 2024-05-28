@@ -1,0 +1,19 @@
+<map id="GetT" name="GetT">
+<area shape="rect" id="Node000001" title="Gets term from expression." alt="" coords="452,132,502,159"/>
+<area shape="rect" id="Node000002" href="$read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="352,81,404,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="437,128,403,110,406,105,439,123"/>
+<area shape="rect" id="Node000003" href="$read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="253,56,303,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="337,87,303,78,304,73,338,82"/>
+<area shape="rect" id="Node000004" href="$read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="129,107,180,133"/>
+<area shape="poly" id="edge9_Node000002_Node000004" title=" " alt="" coords="337,102,181,120,180,115,337,97"/>
+<area shape="rect" id="Node000006" href="$read_8c.html#a7669219ca1e65583aeb3532fe1e1127a" title=" " alt="" coords="252,5,304,32"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="346,74,296,35,299,30,349,70"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="240,88,181,112,179,107,238,83"/>
+<area shape="rect" id="Node000005" href="$read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="5,132,57,159"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="114,131,58,143,57,138,113,126"/>
+<area shape="poly" id="edge5_Node000005_Node000001" title=" " alt="" coords="73,143,451,143,451,148,73,148"/>
+<area shape="rect" id="Node000007" href="$read_8c.html#a7809f622e41beb01d7eb8c3d73191c3f" title="Reads an expression tree from a file." alt="" coords="105,5,204,32"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="236,21,204,21,204,16,236,16"/>
+<area shape="rect" id="Node000008" href="$src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="6,5,56,32"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="89,21,56,21,56,16,89,16"/>
+</map>

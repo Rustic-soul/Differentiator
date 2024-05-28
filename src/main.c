@@ -1,32 +1,29 @@
-#include <stdlib.h>
 #include <stdio.h>
 
-#include "main.h"
+#include "differentiator.h"
+#include "config.h"
 #include "mydef.h"
 
 int main()
 {
-    FILE     *fp_exp  = fopen("../images/exp/expression1.txt", "r");
-    DiffNode *TreeExp = ReadTreeFile(fp_exp);
+    FILE     *fp_exp  = fopen(PATH_TO_EXP, "r");
+    node_t *TreeExp = ReadTreeFile(fp_exp);
     fclose(fp_exp);
 
-    DiffNode *TreeDiff = Differentiator(TreeExp, 'x');
+    node_t *TreeDiff = Differentiator(TreeExp, 'x');
     
-    FILE *fp_exp_dot = fopen("../images/dot/exp.dot", "w");
+    FILE *fp_exp_dot = fopen(PATH_TO_EXP_DOT, "w");
     PrintTreeDot(fp_exp_dot, TreeExp);
     fclose(fp_exp_dot);
 
-    FILE *fp_diff_dot = fopen("../images/dot/diff.dot", "w");
+    FILE *fp_diff_dot = fopen(PATH_TO_DIFF_DOT, "w");
     PrintTreeDot(fp_diff_dot, TreeDiff);
     fclose(fp_diff_dot);
 
-#if 1
-    FILE *fp_tex = fopen("../images/tex/res.tex", "w");
+    FILE *fp_tex = fopen(PATH_TO_RES_TEX, "w");
     CreateResTex(fp_tex, TreeExp, TreeDiff);
     fclose(fp_tex);
-#endif
 
     DtorTree(TreeExp);
     DtorTree(TreeDiff);
 }
-

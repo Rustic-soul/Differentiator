@@ -1,0 +1,23 @@
+<map id="GetG" name="GetG">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,58,83"/>
+<area shape="rect" id="Node000002" href="$read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="106,56,157,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,67,90,67,90,72,58,72"/>
+<area shape="rect" id="Node000003" href="$read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="205,5,255,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="156,54,190,36,192,41,159,59"/>
+<area shape="rect" id="Node000004" href="$read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="303,5,355,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="256,16,288,16,288,21,256,21"/>
+<area shape="rect" id="Node000005" href="$read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="403,56,454,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="356,29,390,47,388,52,354,34"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="402,72,172,72,172,67,402,67"/>
+<area shape="rect" id="Node000006" href="$read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="503,107,553,133"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="455,80,491,98,488,103,453,84"/>
+<area shape="rect" id="Node000009" href="$read_8c.html#adfb6427a2db0bc58be50dae5cc9ae767" title="Gets keyword from expression." alt="" coords="503,5,554,32"/>
+<area shape="poly" id="edge10_Node000005_Node000009" title=" " alt="" coords="453,54,487,36,490,41,455,59"/>
+<area shape="rect" id="Node000010" href="$read_8c.html#a4b3a879d81abade33728b5b9b25262c0" title="Gets number from expression." alt="" coords="502,56,554,83"/>
+<area shape="poly" id="edge11_Node000005_Node000010" title=" " alt="" coords="454,67,486,67,486,72,454,72"/>
+<area shape="poly" id="edge9_Node000006_Node000002" title=" " alt="" coords="502,120,172,77,172,72,503,114"/>
+<area shape="rect" id="Node000007" href="$differentiator_8c.html#a5c2ba86d87f77f6bdab5dfb65018e7aa" title="Creates a new expression tree node." alt="" coords="602,81,694,108"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="553,112,587,105,588,110,554,117"/>
+<area shape="rect" id="Node000008" href="$read_8c.html#a922cfb1857404523cfb1fcc3a53591da" title=" " alt="" coords="616,132,680,159"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="554,123,601,133,600,138,553,128"/>
+</map>

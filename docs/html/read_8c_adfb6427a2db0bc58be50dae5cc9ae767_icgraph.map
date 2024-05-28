@@ -1,0 +1,21 @@
+<map id="GetK" name="GetK">
+<area shape="rect" id="Node000001" title="Gets keyword from expression." alt="" coords="747,56,798,83"/>
+<area shape="rect" id="Node000002" href="$read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="647,56,699,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="731,72,699,72,699,67,731,67"/>
+<area shape="rect" id="Node000003" href="$read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="548,5,599,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="632,52,598,34,601,29,635,47"/>
+<area shape="rect" id="Node000004" href="$read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="450,5,500,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="532,21,501,21,501,16,532,16"/>
+<area shape="rect" id="Node000005" href="$read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="350,56,402,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="437,41,404,59,401,54,435,36"/>
+<area shape="poly" id="edge10_Node000005_Node000002" title=" " alt="" coords="417,67,647,67,647,72,417,72"/>
+<area shape="rect" id="Node000006" href="$read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="251,107,301,133"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="338,91,303,110,300,105,336,87"/>
+<area shape="rect" id="Node000007" href="$read_8c.html#a7669219ca1e65583aeb3532fe1e1127a" title=" " alt="" coords="250,56,302,83"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="335,72,303,72,303,67,335,67"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="316,112,647,70,647,75,317,118"/>
+<area shape="rect" id="Node000008" href="$read_8c.html#a7809f622e41beb01d7eb8c3d73191c3f" title="Reads an expression tree from a file." alt="" coords="103,56,202,83"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="234,72,202,72,202,67,234,67"/>
+<area shape="rect" id="Node000009" href="$src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+</map>

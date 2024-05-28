@@ -1,0 +1,8 @@
+<map id="remove_neutral_elements_div" name="remove_neutral_elements_div">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,43,200,69"/>
+<area shape="rect" id="Node000002" href="$differentiator_8c.html#a9512cedda6a16cd9098db3d8b9a6879a" title="Checks if two double values are equal." alt="" coords="248,5,343,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,39,232,28,233,33,175,45"/>
+<area shape="rect" id="Node000003" href="$differentiator_8c.html#ad3bd7695c84588311332f137fd0cccb3" title="Destroys an expression tree." alt="" coords="259,80,332,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,67,245,81,244,86,174,73"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="262,81,257,71,261,62,274,55,295,53,318,56,331,62,328,67,317,61,295,59,275,61,264,65,262,71,267,78"/>
+</map>

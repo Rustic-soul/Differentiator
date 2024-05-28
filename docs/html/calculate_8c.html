@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My first project: Файл calculate.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My first project<span id="projectnumber">&#160;1.0.1</span>
+   </div>
+   <div id="projectbrief">program for solving quadratic equations</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('calculate_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл calculate.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="calculate_8c_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a4aa575574652b30dc3c18719425855a3" id="r_a4aa575574652b30dc3c18719425855a3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a> (<a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *node)</td></tr>
+<tr class="memdesc:a4aa575574652b30dc3c18719425855a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates an expression tree value.  <br /></td></tr>
+<tr class="separator:a4aa575574652b30dc3c18719425855a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a4aa575574652b30dc3c18719425855a3" name="a4aa575574652b30dc3c18719425855a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa575574652b30dc3c18719425855a3">&#9670;&#160;</a></span>CalculateTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double CalculateTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates an expression tree value. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Expression tree node.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Expression tree value. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="calculate_8c_source.html">calculate.c</a> строка <a class="el" href="calculate_8c_source.html#l00010">10</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{</div>
+<div class="line"><span class="lineno">   12</span>    <span class="keywordflow">switch</span> (NTYPE)</div>
+<div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a44ce2a9d595052af59609442ff49e76aa67864c023ab347d1525ac07de522b3eb">TpNm</a>: PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Num\n&quot;</span>); <span class="keywordflow">return</span> node-&gt;<a class="code hl_variable" href="structNode__t.html#a36fa01075ecacd03b83c14c5385d7a67">data</a>.<a class="code hl_variable" href="unionNode__data__t.html#af656038045ce6448240b3767491787da">num</a>;</div>
+<div class="line"><span class="lineno">   15</span> </div>
+<div class="line"><span class="lineno">   16</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a44ce2a9d595052af59609442ff49e76aa4a26bf7b69598320619997f3f8811d1f">TpVr</a>: PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Var\n&quot;</span>); <span class="keywordflow">return</span> 1; <span class="comment">//TODO Сделать запрос переменных для подсчета</span></div>
+<div class="line"><span class="lineno">   17</span> </div>
+<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a44ce2a9d595052af59609442ff49e76aa1442b04e3b39ce59e0a3331baedaf7ca">TpCn</a>: PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Const\n&quot;</span>); <span class="keywordflow">return</span> ConstArray[NDTYPE];</div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a44ce2a9d595052af59609442ff49e76aae1ba50de21a415415e73cf559f296b75">TpOp</a>:</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">switch</span> (NDTYPE)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#ab750cdc2e17fb613009d0b6979c908b0ab6840212ac8e951ae9de3b08d5e6cd50">OpAdd</a>: PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Add\n&quot;</span>); <span class="keywordflow">return</span> <a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE) + <a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(RNODE);</div>
+<div class="line"><span class="lineno">   24</span>        </div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#ab750cdc2e17fb613009d0b6979c908b0a58f96555a50de9117a39fdfbc8668543">OpSub</a>: PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Sub\n&quot;</span>); <span class="keywordflow">return</span> <a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE) - <a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(RNODE);</div>
+<div class="line"><span class="lineno">   26</span>        </div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#ab750cdc2e17fb613009d0b6979c908b0a3ae71bba8b27b9302d5ece3256e9b54a">OpMul</a>: PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Mul\n&quot;</span>); <span class="keywordflow">return</span> <a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE) * <a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(RNODE);</div>
+<div class="line"><span class="lineno">   28</span>        </div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#ab750cdc2e17fb613009d0b6979c908b0a64c05a08a4c58bef9b3792549b6a449a">OpDiv</a>: PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Div\n&quot;</span>); <span class="keywordflow">return</span> <a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE) / <a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(RNODE);</div>
+<div class="line"><span class="lineno">   30</span>        </div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#ab750cdc2e17fb613009d0b6979c908b0ab0f9e4ba9682cefdd957f8b509c51248">OpPow</a>: PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Pow\n&quot;</span>); <span class="keywordflow">return</span> pow(<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE), <a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(RNODE));</div>
+<div class="line"><span class="lineno">   32</span>        </div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">   34</span>            PRINT_ERROR(<span class="stringliteral">&quot;Неизвестный тип операции [%d]\n&quot;</span>, NDTYPE);</div>
+<div class="line"><span class="lineno">   35</span>            exit(<a class="code hl_enumvalue" href="differentiator_8h.html#a59e56af19e754a6aa26a612ebf91d05faecab962e463d38eb70bab4f1a39d52be">ERROR_UNKNOWN_OPERATION_TYPE</a>);</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a44ce2a9d595052af59609442ff49e76aa8e4634ad55e9525034e4270bc0c2b648">TpFn</a>:</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">switch</span> (NDTYPE)</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a53615d781bca378eb65218004597169b">FnSin</a>:  PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Sin\n&quot;</span>); <span class="keywordflow">return</span> sin  (<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)); </div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203ac908783ffc80b1fa7742b11797960a11">FnCos</a>:  PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Cos\n&quot;</span>); <span class="keywordflow">return</span> cos  (<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)); </div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a57754d1e2565c0ba738d3bb9ebc602bf">FnTg</a>:   PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Tg \n&quot;</span>); <span class="keywordflow">return</span> tan  (<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)); </div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a1b5311a013ec540ebfd1ed3cfa31dac6">FnAtg</a>:  PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Atg\n&quot;</span>); <span class="keywordflow">return</span> atan (<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)); </div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a493aa3ce74f61c47d177fd8c490f967c">FnSh</a>:   PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Sh \n&quot;</span>); <span class="keywordflow">return</span> sinh (<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)); </div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203ac88c20137389861306aab225ea7549e7">FnCh</a>:   PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Ch \n&quot;</span>); <span class="keywordflow">return</span> cosh (<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)); </div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a6c53071ceba113fe0dff7fe73104c69c">FnTh</a>:   PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Th \n&quot;</span>); <span class="keywordflow">return</span> tanh (<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)); </div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203abd38cf916c410646581c323e99a880ee">FnExp</a>:  PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Exp\n&quot;</span>); <span class="keywordflow">return</span> exp  (<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)); </div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203adf542eb48eb61d4218e180b81e73ab02">FnSqrt</a>: PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Sqr\n&quot;</span>); <span class="keywordflow">return</span> sqrt (<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)); </div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a213fbcd0e45db9a58bbb19f8d5491d04">FnLn</a>:   PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Ln \n&quot;</span>); <span class="keywordflow">return</span> log  (<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE));</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203ada63cacca3f32546b45b301acfea4c9b">FnLg</a>:   PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Lg\n&quot;</span>); <span class="keywordflow">return</span> log10(<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE));</div>
+<div class="line"><span class="lineno">   52</span>        </div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203af852b6644e8657d6d9444551c4aa31f2">FnCth</a>:  PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Cth\n&quot;</span>); <span class="keywordflow">return</span> cosh (<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)) / sinh(<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)); </div>
+<div class="line"><span class="lineno">   54</span>        </div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a263f561d10fc34d9b2fd19ba38297887">FnCtg</a>:  PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Ctg\n&quot;</span>); <span class="keywordflow">return</span> tan(3.14/2 - <a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)); </div>
+<div class="line"><span class="lineno">   56</span>        </div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a4ca0a2588013a580800507e5e5b38b49">FnActg</a>: PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Atg\n&quot;</span>); <span class="keywordflow">return</span> 3.14/2 - atan(<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)); </div>
+<div class="line"><span class="lineno">   58</span>        </div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203aeb983f45d643d531ad20682046a5e96d">FnLog</a>:  PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Log\n&quot;</span>); printf(<span class="stringliteral">&quot;Да вроде норм\n&quot;</span>); <span class="keywordflow">return</span> log(<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(RNODE)) / log(<a class="code hl_function" href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a>(LNODE)); </div>
+<div class="line"><span class="lineno">   60</span>        </div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">   62</span>            PRINT_ERROR(<span class="stringliteral">&quot;Неизвестный тип функции [%d]\n&quot;</span>, NDTYPE);</div>
+<div class="line"><span class="lineno">   63</span>            exit(<a class="code hl_enumvalue" href="differentiator_8h.html#a59e56af19e754a6aa26a612ebf91d05fac7b310ba00248c190d79944f000d6ec7">ERROR_UNKNOWN_FUNCTION_TYPE</a>);</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">   67</span>        PRINT_ERROR(<span class="stringliteral">&quot;Неизвестный тип узла [%d]\n&quot;</span>, NTYPE);</div>
+<div class="line"><span class="lineno">   68</span>        exit(<a class="code hl_enumvalue" href="differentiator_8h.html#a59e56af19e754a6aa26a612ebf91d05fadb7d13fff34d366ec6189416967c3b87">ERROR_UNKNOWN_NODE_TYPE</a>);</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    PRINT_DEBUG(<span class="stringliteral">&quot;node &lt;--&gt; Nan Неправильное поведение\n&quot;</span>); </div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">return</span> NAN;</div>
+<div class="line"><span class="lineno">   73</span>}</div>
+<div class="ttc" id="acalculate_8c_html_a4aa575574652b30dc3c18719425855a3"><div class="ttname"><a href="#a4aa575574652b30dc3c18719425855a3">CalculateTree</a></div><div class="ttdeci">double CalculateTree(node_t *node)</div><div class="ttdoc">Calculates an expression tree value.</div><div class="ttdef"><b>Definition</b> <a href="calculate_8c_source.html#l00010">calculate.c:10</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a44ce2a9d595052af59609442ff49e76aa1442b04e3b39ce59e0a3331baedaf7ca"><div class="ttname"><a href="differentiator_8h.html#a44ce2a9d595052af59609442ff49e76aa1442b04e3b39ce59e0a3331baedaf7ca">TpCn</a></div><div class="ttdeci">@ TpCn</div><div class="ttdoc">Constant node.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00043">differentiator.h:43</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a44ce2a9d595052af59609442ff49e76aa4a26bf7b69598320619997f3f8811d1f"><div class="ttname"><a href="differentiator_8h.html#a44ce2a9d595052af59609442ff49e76aa4a26bf7b69598320619997f3f8811d1f">TpVr</a></div><div class="ttdeci">@ TpVr</div><div class="ttdoc">Variable node.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00040">differentiator.h:40</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a44ce2a9d595052af59609442ff49e76aa67864c023ab347d1525ac07de522b3eb"><div class="ttname"><a href="differentiator_8h.html#a44ce2a9d595052af59609442ff49e76aa67864c023ab347d1525ac07de522b3eb">TpNm</a></div><div class="ttdeci">@ TpNm</div><div class="ttdoc">Numerical value node.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00039">differentiator.h:39</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a44ce2a9d595052af59609442ff49e76aa8e4634ad55e9525034e4270bc0c2b648"><div class="ttname"><a href="differentiator_8h.html#a44ce2a9d595052af59609442ff49e76aa8e4634ad55e9525034e4270bc0c2b648">TpFn</a></div><div class="ttdeci">@ TpFn</div><div class="ttdoc">Function node.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00042">differentiator.h:42</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a44ce2a9d595052af59609442ff49e76aae1ba50de21a415415e73cf559f296b75"><div class="ttname"><a href="differentiator_8h.html#a44ce2a9d595052af59609442ff49e76aae1ba50de21a415415e73cf559f296b75">TpOp</a></div><div class="ttdeci">@ TpOp</div><div class="ttdoc">Operator node.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00041">differentiator.h:41</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203a1b5311a013ec540ebfd1ed3cfa31dac6"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a1b5311a013ec540ebfd1ed3cfa31dac6">FnAtg</a></div><div class="ttdeci">@ FnAtg</div><div class="ttdoc">Arctangent.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00073">differentiator.h:73</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203a213fbcd0e45db9a58bbb19f8d5491d04"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a213fbcd0e45db9a58bbb19f8d5491d04">FnLn</a></div><div class="ttdeci">@ FnLn</div><div class="ttdoc">Natural logarithm.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00067">differentiator.h:67</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203a263f561d10fc34d9b2fd19ba38297887"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a263f561d10fc34d9b2fd19ba38297887">FnCtg</a></div><div class="ttdeci">@ FnCtg</div><div class="ttdoc">Cotangent function.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00064">differentiator.h:64</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203a493aa3ce74f61c47d177fd8c490f967c"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a493aa3ce74f61c47d177fd8c490f967c">FnSh</a></div><div class="ttdeci">@ FnSh</div><div class="ttdoc">Hyperbolic sine function.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00065">differentiator.h:65</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203a4ca0a2588013a580800507e5e5b38b49"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a4ca0a2588013a580800507e5e5b38b49">FnActg</a></div><div class="ttdeci">@ FnActg</div><div class="ttdoc">Arcctangent.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00074">differentiator.h:74</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203a53615d781bca378eb65218004597169b"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a53615d781bca378eb65218004597169b">FnSin</a></div><div class="ttdeci">@ FnSin</div><div class="ttdoc">Sine function.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00061">differentiator.h:61</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203a57754d1e2565c0ba738d3bb9ebc602bf"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a57754d1e2565c0ba738d3bb9ebc602bf">FnTg</a></div><div class="ttdeci">@ FnTg</div><div class="ttdoc">Tangent function.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00063">differentiator.h:63</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203a6c53071ceba113fe0dff7fe73104c69c"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203a6c53071ceba113fe0dff7fe73104c69c">FnTh</a></div><div class="ttdeci">@ FnTh</div><div class="ttdoc">Hyperbolic tangent.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00075">differentiator.h:75</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203abd38cf916c410646581c323e99a880ee"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203abd38cf916c410646581c323e99a880ee">FnExp</a></div><div class="ttdeci">@ FnExp</div><div class="ttdoc">Exponential function.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00077">differentiator.h:77</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203ac88c20137389861306aab225ea7549e7"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203ac88c20137389861306aab225ea7549e7">FnCh</a></div><div class="ttdeci">@ FnCh</div><div class="ttdoc">Hyperbolic cosine function.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00066">differentiator.h:66</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203ac908783ffc80b1fa7742b11797960a11"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203ac908783ffc80b1fa7742b11797960a11">FnCos</a></div><div class="ttdeci">@ FnCos</div><div class="ttdoc">Cosine function.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00062">differentiator.h:62</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203ada63cacca3f32546b45b301acfea4c9b"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203ada63cacca3f32546b45b301acfea4c9b">FnLg</a></div><div class="ttdeci">@ FnLg</div><div class="ttdoc">Base-10 logarithm.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00068">differentiator.h:68</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203adf542eb48eb61d4218e180b81e73ab02"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203adf542eb48eb61d4218e180b81e73ab02">FnSqrt</a></div><div class="ttdeci">@ FnSqrt</div><div class="ttdoc">Square root.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00070">differentiator.h:70</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203aeb983f45d643d531ad20682046a5e96d"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203aeb983f45d643d531ad20682046a5e96d">FnLog</a></div><div class="ttdeci">@ FnLog</div><div class="ttdoc">Base-e logarithm.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00069">differentiator.h:69</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203af852b6644e8657d6d9444551c4aa31f2"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203af852b6644e8657d6d9444551c4aa31f2">FnCth</a></div><div class="ttdeci">@ FnCth</div><div class="ttdoc">Hyperbolic cotangent.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00076">differentiator.h:76</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a59e56af19e754a6aa26a612ebf91d05fac7b310ba00248c190d79944f000d6ec7"><div class="ttname"><a href="differentiator_8h.html#a59e56af19e754a6aa26a612ebf91d05fac7b310ba00248c190d79944f000d6ec7">ERROR_UNKNOWN_FUNCTION_TYPE</a></div><div class="ttdeci">@ ERROR_UNKNOWN_FUNCTION_TYPE</div><div class="ttdoc">Unknown function type.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00143">differentiator.h:143</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a59e56af19e754a6aa26a612ebf91d05fadb7d13fff34d366ec6189416967c3b87"><div class="ttname"><a href="differentiator_8h.html#a59e56af19e754a6aa26a612ebf91d05fadb7d13fff34d366ec6189416967c3b87">ERROR_UNKNOWN_NODE_TYPE</a></div><div class="ttdeci">@ ERROR_UNKNOWN_NODE_TYPE</div><div class="ttdoc">Unknown node type.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00141">differentiator.h:141</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a59e56af19e754a6aa26a612ebf91d05faecab962e463d38eb70bab4f1a39d52be"><div class="ttname"><a href="differentiator_8h.html#a59e56af19e754a6aa26a612ebf91d05faecab962e463d38eb70bab4f1a39d52be">ERROR_UNKNOWN_OPERATION_TYPE</a></div><div class="ttdeci">@ ERROR_UNKNOWN_OPERATION_TYPE</div><div class="ttdoc">Unknown operation type.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00142">differentiator.h:142</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_ab750cdc2e17fb613009d0b6979c908b0a3ae71bba8b27b9302d5ece3256e9b54a"><div class="ttname"><a href="differentiator_8h.html#ab750cdc2e17fb613009d0b6979c908b0a3ae71bba8b27b9302d5ece3256e9b54a">OpMul</a></div><div class="ttdeci">@ OpMul</div><div class="ttdoc">Multiplication operation.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00052">differentiator.h:52</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_ab750cdc2e17fb613009d0b6979c908b0a58f96555a50de9117a39fdfbc8668543"><div class="ttname"><a href="differentiator_8h.html#ab750cdc2e17fb613009d0b6979c908b0a58f96555a50de9117a39fdfbc8668543">OpSub</a></div><div class="ttdeci">@ OpSub</div><div class="ttdoc">Subtraction operation.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00051">differentiator.h:51</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_ab750cdc2e17fb613009d0b6979c908b0a64c05a08a4c58bef9b3792549b6a449a"><div class="ttname"><a href="differentiator_8h.html#ab750cdc2e17fb613009d0b6979c908b0a64c05a08a4c58bef9b3792549b6a449a">OpDiv</a></div><div class="ttdeci">@ OpDiv</div><div class="ttdoc">Division operation.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00053">differentiator.h:53</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_ab750cdc2e17fb613009d0b6979c908b0ab0f9e4ba9682cefdd957f8b509c51248"><div class="ttname"><a href="differentiator_8h.html#ab750cdc2e17fb613009d0b6979c908b0ab0f9e4ba9682cefdd957f8b509c51248">OpPow</a></div><div class="ttdeci">@ OpPow</div><div class="ttdoc">Exponentiation operation.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00054">differentiator.h:54</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_ab750cdc2e17fb613009d0b6979c908b0ab6840212ac8e951ae9de3b08d5e6cd50"><div class="ttname"><a href="differentiator_8h.html#ab750cdc2e17fb613009d0b6979c908b0ab6840212ac8e951ae9de3b08d5e6cd50">OpAdd</a></div><div class="ttdeci">@ OpAdd</div><div class="ttdoc">Addition operation.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00050">differentiator.h:50</a></div></div>
+<div class="ttc" id="astructNode__t_html_a36fa01075ecacd03b83c14c5385d7a67"><div class="ttname"><a href="structNode__t.html#a36fa01075ecacd03b83c14c5385d7a67">Node_t::data</a></div><div class="ttdeci">node_data_t data</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00028">differentiator.h:28</a></div></div>
+<div class="ttc" id="aunionNode__data__t_html_af656038045ce6448240b3767491787da"><div class="ttname"><a href="unionNode__data__t.html#af656038045ce6448240b3767491787da">Node_data_t::num</a></div><div class="ttdeci">double num</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00012">differentiator.h:12</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="calculate_8c_source.html#l00010">CalculateTree()</a>, <a class="el" href="differentiator_8h_source.html#l00028">Node_t::data</a>, <a class="el" href="differentiator_8h_source.html#l00143">ERROR_UNKNOWN_FUNCTION_TYPE</a>, <a class="el" href="differentiator_8h_source.html#l00141">ERROR_UNKNOWN_NODE_TYPE</a>, <a class="el" href="differentiator_8h_source.html#l00142">ERROR_UNKNOWN_OPERATION_TYPE</a>, <a class="el" href="differentiator_8h_source.html#l00074">FnActg</a>, <a class="el" href="differentiator_8h_source.html#l00073">FnAtg</a>, <a class="el" href="differentiator_8h_source.html#l00066">FnCh</a>, <a class="el" href="differentiator_8h_source.html#l00062">FnCos</a>, <a class="el" href="differentiator_8h_source.html#l00064">FnCtg</a>, <a class="el" href="differentiator_8h_source.html#l00076">FnCth</a>, <a class="el" href="differentiator_8h_source.html#l00077">FnExp</a>, <a class="el" href="differentiator_8h_source.html#l00068">FnLg</a>, <a class="el" href="differentiator_8h_source.html#l00067">FnLn</a>, <a class="el" href="differentiator_8h_source.html#l00069">FnLog</a>, <a class="el" href="differentiator_8h_source.html#l00065">FnSh</a>, <a class="el" href="differentiator_8h_source.html#l00061">FnSin</a>, <a class="el" href="differentiator_8h_source.html#l00070">FnSqrt</a>, <a class="el" href="differentiator_8h_source.html#l00063">FnTg</a>, <a class="el" href="differentiator_8h_source.html#l00075">FnTh</a>, <a class="el" href="differentiator_8h_source.html#l00012">Node_data_t::num</a>, <a class="el" href="differentiator_8h_source.html#l00050">OpAdd</a>, <a class="el" href="differentiator_8h_source.html#l00053">OpDiv</a>, <a class="el" href="differentiator_8h_source.html#l00052">OpMul</a>, <a class="el" href="differentiator_8h_source.html#l00054">OpPow</a>, <a class="el" href="differentiator_8h_source.html#l00051">OpSub</a>, <a class="el" href="differentiator_8h_source.html#l00043">TpCn</a>, <a class="el" href="differentiator_8h_source.html#l00042">TpFn</a>, <a class="el" href="differentiator_8h_source.html#l00039">TpNm</a>, <a class="el" href="differentiator_8h_source.html#l00041">TpOp</a> и <a class="el" href="differentiator_8h_source.html#l00040">TpVr</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="calculate_8c_source.html#l00010">CalculateTree()</a> и <a class="el" href="differentiator_8c_source.html#l00270">convolution_constants()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="calculate_8c_a4aa575574652b30dc3c18719425855a3_cgraph.png" border="0" usemap="#acalculate_8c_a4aa575574652b30dc3c18719425855a3_cgraph" alt=""/></div>
+<map name="acalculate_8c_a4aa575574652b30dc3c18719425855a3_cgraph" id="acalculate_8c_a4aa575574652b30dc3c18719425855a3_cgraph">
+<area shape="rect" title="Calculates an expression tree value." alt="" coords="5,29,108,56"/>
+<area shape="poly" title=" " alt="" coords="38,30,35,20,37,11,44,5,57,3,69,5,76,12,73,16,67,10,56,8,47,10,41,14,40,20,43,28"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="calculate_8c_a4aa575574652b30dc3c18719425855a3_icgraph.png" border="0" usemap="#acalculate_8c_a4aa575574652b30dc3c18719425855a3_icgraph" alt=""/></div>
+<map name="acalculate_8c_a4aa575574652b30dc3c18719425855a3_icgraph" id="acalculate_8c_a4aa575574652b30dc3c18719425855a3_icgraph">
+<area shape="rect" title="Calculates an expression tree value." alt="" coords="592,29,694,56"/>
+<area shape="poly" title=" " alt="" coords="672,16,662,10,643,8,625,10,615,15,613,20,617,28,613,30,607,21,611,11,623,5,643,3,664,5,675,12"/>
+<area shape="rect" href="differentiator_8c.html#a276807feb099f02b9c043a8907a3f0e1" title="Convolution with constants in expression tree." alt="" coords="392,29,544,56"/>
+<area shape="poly" title=" " alt="" coords="576,45,544,45,544,40,576,40"/>
+<area shape="poly" title=" " alt="" coords="497,16,487,10,468,8,450,10,441,15,438,20,443,28,438,30,433,21,437,11,449,5,468,3,489,5,500,12"/>
+<area shape="rect" href="differentiator_8c.html#a39a8e68c15f71b41ddb2847e326b0996" title="Full optimizer of expression tree." alt="" coords="246,29,344,56"/>
+<area shape="poly" title=" " alt="" coords="377,45,345,45,345,40,377,40"/>
+<area shape="rect" href="differentiator_8c.html#abea5f36d78c7c1736bddb0cd0f06e189" title="Differentiates an expression tree." alt="" coords="103,29,198,56"/>
+<area shape="poly" title=" " alt="" coords="231,45,198,45,198,40,231,40"/>
+<area shape="rect" href="src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="calculate_8c.html">calculate.c</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

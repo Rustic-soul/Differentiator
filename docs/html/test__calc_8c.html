@@ -1,0 +1,773 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My first project: Файл test_calc.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My first project<span id="projectnumber">&#160;1.0.1</span>
+   </div>
+   <div id="projectbrief">program for solving quadratic equations</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('test__calc_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл test_calc.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="test__calc_8c_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a7535ed8ede901d094ccc35c130848c01" id="r_a7535ed8ede901d094ccc35c130848c01"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7535ed8ede901d094ccc35c130848c01">calc_add</a> (int a, int b)</td></tr>
+<tr class="separator:a7535ed8ede901d094ccc35c130848c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf365ef77da637f4922c57e7e0318a9" id="r_abcf365ef77da637f4922c57e7e0318a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcf365ef77da637f4922c57e7e0318a9">node_cmp</a> (<a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *node1, <a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *node2)</td></tr>
+<tr class="separator:abcf365ef77da637f4922c57e7e0318a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a81400c24a6e0d9ff1520eac82b98a619" id="r_a81400c24a6e0d9ff1520eac82b98a619"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81400c24a6e0d9ff1520eac82b98a619">exp_sin</a> = &quot;sin(x)&quot;</td></tr>
+<tr class="separator:a81400c24a6e0d9ff1520eac82b98a619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62a2bc8de90f70172b7addc8729b2525" id="r_a62a2bc8de90f70172b7addc8729b2525"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62a2bc8de90f70172b7addc8729b2525">exp_cos</a> = &quot;cos(x)&quot;</td></tr>
+<tr class="separator:a62a2bc8de90f70172b7addc8729b2525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a340af5ab99ab876a804f8f970516d733" id="r_a340af5ab99ab876a804f8f970516d733"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a340af5ab99ab876a804f8f970516d733">exp_tg</a> = &quot;tg(x)&quot;</td></tr>
+<tr class="separator:a340af5ab99ab876a804f8f970516d733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18869378b6af7d92788a3c0dfb0b5776" id="r_a18869378b6af7d92788a3c0dfb0b5776"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18869378b6af7d92788a3c0dfb0b5776">exp_ctg</a> = &quot;ctg(x)&quot;</td></tr>
+<tr class="separator:a18869378b6af7d92788a3c0dfb0b5776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e27ecd67f7f28d959416e509b83cc98" id="r_a4e27ecd67f7f28d959416e509b83cc98"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e27ecd67f7f28d959416e509b83cc98">exp_asin</a> = &quot;asin(x)&quot;</td></tr>
+<tr class="separator:a4e27ecd67f7f28d959416e509b83cc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a42afb4f5b518a16ed8b7f52b1f627" id="r_ae7a42afb4f5b518a16ed8b7f52b1f627"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7a42afb4f5b518a16ed8b7f52b1f627">exp_acos</a> = &quot;acos(x)&quot;</td></tr>
+<tr class="separator:ae7a42afb4f5b518a16ed8b7f52b1f627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c510e8af9d9ca6db6c4964695a421df" id="r_a2c510e8af9d9ca6db6c4964695a421df"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c510e8af9d9ca6db6c4964695a421df">exp_atg</a> = &quot;atg(x)&quot;</td></tr>
+<tr class="separator:a2c510e8af9d9ca6db6c4964695a421df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714c88cb134d8d4cffb408dc542b3349" id="r_a714c88cb134d8d4cffb408dc542b3349"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a714c88cb134d8d4cffb408dc542b3349">exp_actg</a> = &quot;actg(x)&quot;</td></tr>
+<tr class="separator:a714c88cb134d8d4cffb408dc542b3349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281b17612a18bfc95976c9b4bbc6be63" id="r_a281b17612a18bfc95976c9b4bbc6be63"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a281b17612a18bfc95976c9b4bbc6be63">exp_sh</a> = &quot;sh(x)&quot;</td></tr>
+<tr class="separator:a281b17612a18bfc95976c9b4bbc6be63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abece7b601a89ecd8ef8559ec9226af0e" id="r_abece7b601a89ecd8ef8559ec9226af0e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abece7b601a89ecd8ef8559ec9226af0e">exp_ch</a> = &quot;ch(x)&quot;</td></tr>
+<tr class="separator:abece7b601a89ecd8ef8559ec9226af0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a03226108867dbb2319de03ac2cf293" id="r_a7a03226108867dbb2319de03ac2cf293"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a03226108867dbb2319de03ac2cf293">exp_th</a> = &quot;th(x)&quot;</td></tr>
+<tr class="separator:a7a03226108867dbb2319de03ac2cf293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b4f1f65314b9ede054eefb7cf7b79eb" id="r_a1b4f1f65314b9ede054eefb7cf7b79eb"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b4f1f65314b9ede054eefb7cf7b79eb">exp_cth</a> = &quot;cth(x)&quot;</td></tr>
+<tr class="separator:a1b4f1f65314b9ede054eefb7cf7b79eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd9d40a03faf7f2d943172495c9d60c2" id="r_afd9d40a03faf7f2d943172495c9d60c2"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd9d40a03faf7f2d943172495c9d60c2">exp_exp</a> = &quot;exp(x)&quot;</td></tr>
+<tr class="separator:afd9d40a03faf7f2d943172495c9d60c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec6bd0e9ba4eceac14983b66bf3cecc0" id="r_aec6bd0e9ba4eceac14983b66bf3cecc0"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec6bd0e9ba4eceac14983b66bf3cecc0">exp_sqrt</a> = &quot;sqrt(x)&quot;</td></tr>
+<tr class="separator:aec6bd0e9ba4eceac14983b66bf3cecc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c317c0b4b9d73415b63fc96cb03b99a" id="r_a9c317c0b4b9d73415b63fc96cb03b99a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c317c0b4b9d73415b63fc96cb03b99a">exp_ln</a> = &quot;ln(x)&quot;</td></tr>
+<tr class="separator:a9c317c0b4b9d73415b63fc96cb03b99a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a175f0f876b15c921da26ba4c742067c5" id="r_a175f0f876b15c921da26ba4c742067c5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a175f0f876b15c921da26ba4c742067c5">diff_sin</a> = &quot;cos(x)&quot;</td></tr>
+<tr class="separator:a175f0f876b15c921da26ba4c742067c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba29d478340902573d5eb52cb79d9e6" id="r_adba29d478340902573d5eb52cb79d9e6"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adba29d478340902573d5eb52cb79d9e6">diff_cos</a> = &quot;(-1)*sin(x)&quot;</td></tr>
+<tr class="separator:adba29d478340902573d5eb52cb79d9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54eac34ae683d2448dfb8b77d3561e04" id="r_a54eac34ae683d2448dfb8b77d3561e04"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54eac34ae683d2448dfb8b77d3561e04">diff_tg</a> = &quot;1/(tg(x)^2)&quot;</td></tr>
+<tr class="separator:a54eac34ae683d2448dfb8b77d3561e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc6d749e262befa96f8f63dbc6d9bd6b" id="r_adc6d749e262befa96f8f63dbc6d9bd6b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc6d749e262befa96f8f63dbc6d9bd6b">diff_ctg</a> = &quot;(-1) * (1/(ctg(x)^2))&quot;</td></tr>
+<tr class="separator:adc6d749e262befa96f8f63dbc6d9bd6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ce830e4d1889ab6108cf4711c798b4" id="r_ab6ce830e4d1889ab6108cf4711c798b4"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6ce830e4d1889ab6108cf4711c798b4">diff_asin</a> = &quot;1/asin(x)^2&quot;</td></tr>
+<tr class="separator:ab6ce830e4d1889ab6108cf4711c798b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf5faa0b7305aff5b684fcd8f7650d4" id="r_a5bf5faa0b7305aff5b684fcd8f7650d4"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bf5faa0b7305aff5b684fcd8f7650d4">diff_acos</a> = &quot;-1/acos(x)^2&quot;</td></tr>
+<tr class="separator:a5bf5faa0b7305aff5b684fcd8f7650d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd7b2c5c6a0f47e03005ecb46ec51307" id="r_afd7b2c5c6a0f47e03005ecb46ec51307"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd7b2c5c6a0f47e03005ecb46ec51307">diff_atg</a> = &quot;1/(atg(x))^2&quot;</td></tr>
+<tr class="separator:afd7b2c5c6a0f47e03005ecb46ec51307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeef2967e7a76257dc2465154f4940b4" id="r_afeef2967e7a76257dc2465154f4940b4"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeef2967e7a76257dc2465154f4940b4">diff_actg</a> = &quot;-1/(actg(x))^2&quot;</td></tr>
+<tr class="separator:afeef2967e7a76257dc2465154f4940b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96e55fb45dece82f16dd62cf76b6e335" id="r_a96e55fb45dece82f16dd62cf76b6e335"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96e55fb45dece82f16dd62cf76b6e335">diff_sh</a> = &quot;1/sh(x)^2&quot;</td></tr>
+<tr class="separator:a96e55fb45dece82f16dd62cf76b6e335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10d67f71161d085eb1a00215be41948e" id="r_a10d67f71161d085eb1a00215be41948e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10d67f71161d085eb1a00215be41948e">diff_ch</a> = &quot;1/ch(x)^2&quot;</td></tr>
+<tr class="separator:a10d67f71161d085eb1a00215be41948e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9dc15572dcc0607badb4820e84f09c1" id="r_af9dc15572dcc0607badb4820e84f09c1"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9dc15572dcc0607badb4820e84f09c1">diff_th</a> = &quot;1/th(x)^2&quot;</td></tr>
+<tr class="separator:af9dc15572dcc0607badb4820e84f09c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8925012ea0c7e7b8af9ac48bff78134" id="r_af8925012ea0c7e7b8af9ac48bff78134"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8925012ea0c7e7b8af9ac48bff78134">diff_cth</a> = &quot;-1/cth(x)^2&quot;</td></tr>
+<tr class="separator:af8925012ea0c7e7b8af9ac48bff78134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b64eef3e83178bfa9702eb4b4240f46" id="r_a6b64eef3e83178bfa9702eb4b4240f46"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b64eef3e83178bfa9702eb4b4240f46">diff_exp</a> = &quot;exp(x)&quot;</td></tr>
+<tr class="separator:a6b64eef3e83178bfa9702eb4b4240f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af287a5c5b6396a4aa44f13da8e4b5d6c" id="r_af287a5c5b6396a4aa44f13da8e4b5d6c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af287a5c5b6396a4aa44f13da8e4b5d6c">diff_sqrt</a> = &quot;1/(2*sqrt(x))&quot;</td></tr>
+<tr class="separator:af287a5c5b6396a4aa44f13da8e4b5d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6403f51c0c755643db36afa4d5aa29b" id="r_ac6403f51c0c755643db36afa4d5aa29b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6403f51c0c755643db36afa4d5aa29b">diff_ln</a> = &quot;1/x&quot;</td></tr>
+<tr class="separator:ac6403f51c0c755643db36afa4d5aa29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a7535ed8ede901d094ccc35c130848c01" name="a7535ed8ede901d094ccc35c130848c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7535ed8ede901d094ccc35c130848c01">&#9670;&#160;</a></span>calc_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int calc_add </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00011">11</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{ <span class="keywordflow">return</span> a + b; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abcf365ef77da637f4922c57e7e0318a9" name="abcf365ef77da637f4922c57e7e0318a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcf365ef77da637f4922c57e7e0318a9">&#9670;&#160;</a></span>node_cmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool node_cmp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *</td>          <td class="paramname"><span class="paramname"><em>node1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *</td>          <td class="paramname"><span class="paramname"><em>node2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00045">45</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>{</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">if</span> ((node1 == NULL) &amp;&amp; (node2 == NULL))</div>
+<div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">if</span> ((node1 == NULL) || (node2 == NULL))</div>
+<div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">if</span> (node1-&gt;<a class="code hl_variable" href="structNode__t.html#aff17911edc8208aa8ddb1c7c52c78389">type</a> != node2-&gt;<a class="code hl_variable" href="structNode__t.html#aff17911edc8208aa8ddb1c7c52c78389">type</a>)</div>
+<div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="#abcf365ef77da637f4922c57e7e0318a9">node_cmp</a>(node1-&gt;<a class="code hl_variable" href="structNode__t.html#afbf8c7ed1f9ead7f960d183c5961ab72">LeftNode</a>, node2-&gt;<a class="code hl_variable" href="structNode__t.html#afbf8c7ed1f9ead7f960d183c5961ab72">LeftNode</a>))</div>
+<div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="#abcf365ef77da637f4922c57e7e0318a9">node_cmp</a>(node1-&gt;<a class="code hl_variable" href="structNode__t.html#a1cd35fd209f0524cdd31aa98ff1f8f4f">RightNode</a>, node2-&gt;<a class="code hl_variable" href="structNode__t.html#a1cd35fd209f0524cdd31aa98ff1f8f4f">RightNode</a>))</div>
+<div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   68</span>}   </div>
+<div class="ttc" id="astructNode__t_html_a1cd35fd209f0524cdd31aa98ff1f8f4f"><div class="ttname"><a href="structNode__t.html#a1cd35fd209f0524cdd31aa98ff1f8f4f">Node_t::RightNode</a></div><div class="ttdeci">struct Node_t * RightNode</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00031">differentiator.h:31</a></div></div>
+<div class="ttc" id="astructNode__t_html_afbf8c7ed1f9ead7f960d183c5961ab72"><div class="ttname"><a href="structNode__t.html#afbf8c7ed1f9ead7f960d183c5961ab72">Node_t::LeftNode</a></div><div class="ttdeci">struct Node_t * LeftNode</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00030">differentiator.h:30</a></div></div>
+<div class="ttc" id="astructNode__t_html_aff17911edc8208aa8ddb1c7c52c78389"><div class="ttname"><a href="structNode__t.html#aff17911edc8208aa8ddb1c7c52c78389">Node_t::type</a></div><div class="ttdeci">char type</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00026">differentiator.h:26</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_abcf365ef77da637f4922c57e7e0318a9"><div class="ttname"><a href="#abcf365ef77da637f4922c57e7e0318a9">node_cmp</a></div><div class="ttdeci">bool node_cmp(node_t *node1, node_t *node2)</div><div class="ttdef"><b>Definition</b> <a href="test__calc_8c_source.html#l00045">test_calc.c:45</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="differentiator_8h_source.html#l00030">Node_t::LeftNode</a>, <a class="el" href="test__calc_8c_source.html#l00045">node_cmp()</a>, <a class="el" href="differentiator_8h_source.html#l00031">Node_t::RightNode</a> и <a class="el" href="differentiator_8h_source.html#l00026">Node_t::type</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__calc_8c_source.html#l00045">node_cmp()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__calc_8c_abcf365ef77da637f4922c57e7e0318a9_cgraph.png" border="0" usemap="#atest__calc_8c_abcf365ef77da637f4922c57e7e0318a9_cgraph" alt=""/></div>
+<map name="atest__calc_8c_abcf365ef77da637f4922c57e7e0318a9_cgraph" id="atest__calc_8c_abcf365ef77da637f4922c57e7e0318a9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,87,56"/>
+<area shape="poly" title=" " alt="" coords="30,29,30,12,36,5,46,3,57,5,62,12,58,15,54,10,46,8,39,10,35,14,36,29"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__calc_8c_abcf365ef77da637f4922c57e7e0318a9_icgraph.png" border="0" usemap="#atest__calc_8c_abcf365ef77da637f4922c57e7e0318a9_icgraph" alt=""/></div>
+<map name="atest__calc_8c_abcf365ef77da637f4922c57e7e0318a9_icgraph" id="atest__calc_8c_abcf365ef77da637f4922c57e7e0318a9_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,87,56"/>
+<area shape="poly" title=" " alt="" coords="58,15,54,10,46,8,39,10,35,14,36,29,30,29,30,12,36,5,46,3,57,5,62,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a5bf5faa0b7305aff5b684fcd8f7650d4" name="a5bf5faa0b7305aff5b684fcd8f7650d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf5faa0b7305aff5b684fcd8f7650d4">&#9670;&#160;</a></span>diff_acos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* diff_acos = &quot;-1/acos(x)^2&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00034">34</a></p>
+
+</div>
+</div>
+<a id="afeef2967e7a76257dc2465154f4940b4" name="afeef2967e7a76257dc2465154f4940b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeef2967e7a76257dc2465154f4940b4">&#9670;&#160;</a></span>diff_actg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* diff_actg = &quot;-1/(actg(x))^2&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00036">36</a></p>
+
+</div>
+</div>
+<a id="ab6ce830e4d1889ab6108cf4711c798b4" name="ab6ce830e4d1889ab6108cf4711c798b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ce830e4d1889ab6108cf4711c798b4">&#9670;&#160;</a></span>diff_asin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* diff_asin = &quot;1/asin(x)^2&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00033">33</a></p>
+
+</div>
+</div>
+<a id="afd7b2c5c6a0f47e03005ecb46ec51307" name="afd7b2c5c6a0f47e03005ecb46ec51307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd7b2c5c6a0f47e03005ecb46ec51307">&#9670;&#160;</a></span>diff_atg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* diff_atg = &quot;1/(atg(x))^2&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00035">35</a></p>
+
+</div>
+</div>
+<a id="a10d67f71161d085eb1a00215be41948e" name="a10d67f71161d085eb1a00215be41948e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10d67f71161d085eb1a00215be41948e">&#9670;&#160;</a></span>diff_ch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* diff_ch = &quot;1/ch(x)^2&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00038">38</a></p>
+
+</div>
+</div>
+<a id="adba29d478340902573d5eb52cb79d9e6" name="adba29d478340902573d5eb52cb79d9e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba29d478340902573d5eb52cb79d9e6">&#9670;&#160;</a></span>diff_cos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* diff_cos = &quot;(-1)*sin(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00030">30</a></p>
+
+</div>
+</div>
+<a id="adc6d749e262befa96f8f63dbc6d9bd6b" name="adc6d749e262befa96f8f63dbc6d9bd6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc6d749e262befa96f8f63dbc6d9bd6b">&#9670;&#160;</a></span>diff_ctg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* diff_ctg = &quot;(-1) * (1/(ctg(x)^2))&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00032">32</a></p>
+
+</div>
+</div>
+<a id="af8925012ea0c7e7b8af9ac48bff78134" name="af8925012ea0c7e7b8af9ac48bff78134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8925012ea0c7e7b8af9ac48bff78134">&#9670;&#160;</a></span>diff_cth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* diff_cth = &quot;-1/cth(x)^2&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00040">40</a></p>
+
+</div>
+</div>
+<a id="a6b64eef3e83178bfa9702eb4b4240f46" name="a6b64eef3e83178bfa9702eb4b4240f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b64eef3e83178bfa9702eb4b4240f46">&#9670;&#160;</a></span>diff_exp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* diff_exp = &quot;exp(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00041">41</a></p>
+
+</div>
+</div>
+<a id="ac6403f51c0c755643db36afa4d5aa29b" name="ac6403f51c0c755643db36afa4d5aa29b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6403f51c0c755643db36afa4d5aa29b">&#9670;&#160;</a></span>diff_ln</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* diff_ln = &quot;1/x&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00043">43</a></p>
+
+</div>
+</div>
+<a id="a96e55fb45dece82f16dd62cf76b6e335" name="a96e55fb45dece82f16dd62cf76b6e335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e55fb45dece82f16dd62cf76b6e335">&#9670;&#160;</a></span>diff_sh</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* diff_sh = &quot;1/sh(x)^2&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00037">37</a></p>
+
+</div>
+</div>
+<a id="a175f0f876b15c921da26ba4c742067c5" name="a175f0f876b15c921da26ba4c742067c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a175f0f876b15c921da26ba4c742067c5">&#9670;&#160;</a></span>diff_sin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* diff_sin = &quot;cos(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00029">29</a></p>
+
+</div>
+</div>
+<a id="af287a5c5b6396a4aa44f13da8e4b5d6c" name="af287a5c5b6396a4aa44f13da8e4b5d6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af287a5c5b6396a4aa44f13da8e4b5d6c">&#9670;&#160;</a></span>diff_sqrt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* diff_sqrt = &quot;1/(2*sqrt(x))&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00042">42</a></p>
+
+</div>
+</div>
+<a id="a54eac34ae683d2448dfb8b77d3561e04" name="a54eac34ae683d2448dfb8b77d3561e04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54eac34ae683d2448dfb8b77d3561e04">&#9670;&#160;</a></span>diff_tg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* diff_tg = &quot;1/(tg(x)^2)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00031">31</a></p>
+
+</div>
+</div>
+<a id="af9dc15572dcc0607badb4820e84f09c1" name="af9dc15572dcc0607badb4820e84f09c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9dc15572dcc0607badb4820e84f09c1">&#9670;&#160;</a></span>diff_th</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* diff_th = &quot;1/th(x)^2&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00039">39</a></p>
+
+</div>
+</div>
+<a id="ae7a42afb4f5b518a16ed8b7f52b1f627" name="ae7a42afb4f5b518a16ed8b7f52b1f627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7a42afb4f5b518a16ed8b7f52b1f627">&#9670;&#160;</a></span>exp_acos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* exp_acos = &quot;acos(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00018">18</a></p>
+
+</div>
+</div>
+<a id="a714c88cb134d8d4cffb408dc542b3349" name="a714c88cb134d8d4cffb408dc542b3349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a714c88cb134d8d4cffb408dc542b3349">&#9670;&#160;</a></span>exp_actg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* exp_actg = &quot;actg(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00020">20</a></p>
+
+</div>
+</div>
+<a id="a4e27ecd67f7f28d959416e509b83cc98" name="a4e27ecd67f7f28d959416e509b83cc98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e27ecd67f7f28d959416e509b83cc98">&#9670;&#160;</a></span>exp_asin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* exp_asin = &quot;asin(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00017">17</a></p>
+
+</div>
+</div>
+<a id="a2c510e8af9d9ca6db6c4964695a421df" name="a2c510e8af9d9ca6db6c4964695a421df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c510e8af9d9ca6db6c4964695a421df">&#9670;&#160;</a></span>exp_atg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* exp_atg = &quot;atg(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00019">19</a></p>
+
+</div>
+</div>
+<a id="abece7b601a89ecd8ef8559ec9226af0e" name="abece7b601a89ecd8ef8559ec9226af0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abece7b601a89ecd8ef8559ec9226af0e">&#9670;&#160;</a></span>exp_ch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* exp_ch = &quot;ch(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00022">22</a></p>
+
+</div>
+</div>
+<a id="a62a2bc8de90f70172b7addc8729b2525" name="a62a2bc8de90f70172b7addc8729b2525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62a2bc8de90f70172b7addc8729b2525">&#9670;&#160;</a></span>exp_cos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* exp_cos = &quot;cos(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00014">14</a></p>
+
+</div>
+</div>
+<a id="a18869378b6af7d92788a3c0dfb0b5776" name="a18869378b6af7d92788a3c0dfb0b5776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18869378b6af7d92788a3c0dfb0b5776">&#9670;&#160;</a></span>exp_ctg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* exp_ctg = &quot;ctg(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00016">16</a></p>
+
+</div>
+</div>
+<a id="a1b4f1f65314b9ede054eefb7cf7b79eb" name="a1b4f1f65314b9ede054eefb7cf7b79eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b4f1f65314b9ede054eefb7cf7b79eb">&#9670;&#160;</a></span>exp_cth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* exp_cth = &quot;cth(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00024">24</a></p>
+
+</div>
+</div>
+<a id="afd9d40a03faf7f2d943172495c9d60c2" name="afd9d40a03faf7f2d943172495c9d60c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd9d40a03faf7f2d943172495c9d60c2">&#9670;&#160;</a></span>exp_exp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* exp_exp = &quot;exp(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00025">25</a></p>
+
+</div>
+</div>
+<a id="a9c317c0b4b9d73415b63fc96cb03b99a" name="a9c317c0b4b9d73415b63fc96cb03b99a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c317c0b4b9d73415b63fc96cb03b99a">&#9670;&#160;</a></span>exp_ln</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* exp_ln = &quot;ln(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00027">27</a></p>
+
+</div>
+</div>
+<a id="a281b17612a18bfc95976c9b4bbc6be63" name="a281b17612a18bfc95976c9b4bbc6be63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a281b17612a18bfc95976c9b4bbc6be63">&#9670;&#160;</a></span>exp_sh</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* exp_sh = &quot;sh(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00021">21</a></p>
+
+</div>
+</div>
+<a id="a81400c24a6e0d9ff1520eac82b98a619" name="a81400c24a6e0d9ff1520eac82b98a619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81400c24a6e0d9ff1520eac82b98a619">&#9670;&#160;</a></span>exp_sin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* exp_sin = &quot;sin(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00013">13</a></p>
+
+</div>
+</div>
+<a id="aec6bd0e9ba4eceac14983b66bf3cecc0" name="aec6bd0e9ba4eceac14983b66bf3cecc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec6bd0e9ba4eceac14983b66bf3cecc0">&#9670;&#160;</a></span>exp_sqrt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* exp_sqrt = &quot;sqrt(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00026">26</a></p>
+
+</div>
+</div>
+<a id="a340af5ab99ab876a804f8f970516d733" name="a340af5ab99ab876a804f8f970516d733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a340af5ab99ab876a804f8f970516d733">&#9670;&#160;</a></span>exp_tg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* exp_tg = &quot;tg(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00015">15</a></p>
+
+</div>
+</div>
+<a id="a7a03226108867dbb2319de03ac2cf293" name="a7a03226108867dbb2319de03ac2cf293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a03226108867dbb2319de03ac2cf293">&#9670;&#160;</a></span>exp_th</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* exp_th = &quot;th(x)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__calc_8c_source.html">test_calc.c</a> строка <a class="el" href="test__calc_8c_source.html#l00023">23</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li><li class="navelem"><a class="el" href="dir_657bc3dbb3ab2a0b56840d616fb9daa0.html">tests</a></li><li class="navelem"><a class="el" href="test__calc_8c.html">test_calc.c</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My first project: Исходный файл test_calc.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My first project<span id="projectnumber">&#160;1.0.1</span>
+   </div>
+   <div id="projectbrief">program for solving quadratic equations</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('test__calc_8c_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">test_calc.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="test__calc_8c.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="unit_8h.html">unit.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="differentiator_8h.html">differentiator.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="read_8h.html">read.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="read_8c.html">read.c</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="mydef_8h.html">mydef.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a7535ed8ede901d094ccc35c130848c01">   11</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="test__calc_8c.html#a7535ed8ede901d094ccc35c130848c01">calc_add</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) { <span class="keywordflow">return</span> a + b; }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a81400c24a6e0d9ff1520eac82b98a619">   13</a></span><span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a81400c24a6e0d9ff1520eac82b98a619">exp_sin</a> = <span class="stringliteral">&quot;sin(x)&quot;</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a62a2bc8de90f70172b7addc8729b2525">   14</a></span><span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a62a2bc8de90f70172b7addc8729b2525">exp_cos</a> = <span class="stringliteral">&quot;cos(x)&quot;</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a340af5ab99ab876a804f8f970516d733">   15</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a340af5ab99ab876a804f8f970516d733">exp_tg</a> = <span class="stringliteral">&quot;tg(x)&quot;</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a18869378b6af7d92788a3c0dfb0b5776">   16</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a18869378b6af7d92788a3c0dfb0b5776">exp_ctg</a> = <span class="stringliteral">&quot;ctg(x)&quot;</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a4e27ecd67f7f28d959416e509b83cc98">   17</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a4e27ecd67f7f28d959416e509b83cc98">exp_asin</a> = <span class="stringliteral">&quot;asin(x)&quot;</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="test__calc_8c.html#ae7a42afb4f5b518a16ed8b7f52b1f627">   18</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#ae7a42afb4f5b518a16ed8b7f52b1f627">exp_acos</a> = <span class="stringliteral">&quot;acos(x)&quot;</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a2c510e8af9d9ca6db6c4964695a421df">   19</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a2c510e8af9d9ca6db6c4964695a421df">exp_atg</a> = <span class="stringliteral">&quot;atg(x)&quot;</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a714c88cb134d8d4cffb408dc542b3349">   20</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a714c88cb134d8d4cffb408dc542b3349">exp_actg</a> = <span class="stringliteral">&quot;actg(x)&quot;</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a281b17612a18bfc95976c9b4bbc6be63">   21</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a281b17612a18bfc95976c9b4bbc6be63">exp_sh</a> = <span class="stringliteral">&quot;sh(x)&quot;</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="test__calc_8c.html#abece7b601a89ecd8ef8559ec9226af0e">   22</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#abece7b601a89ecd8ef8559ec9226af0e">exp_ch</a> = <span class="stringliteral">&quot;ch(x)&quot;</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a7a03226108867dbb2319de03ac2cf293">   23</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a7a03226108867dbb2319de03ac2cf293">exp_th</a> = <span class="stringliteral">&quot;th(x)&quot;</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a1b4f1f65314b9ede054eefb7cf7b79eb">   24</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a1b4f1f65314b9ede054eefb7cf7b79eb">exp_cth</a> = <span class="stringliteral">&quot;cth(x)&quot;</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="test__calc_8c.html#afd9d40a03faf7f2d943172495c9d60c2">   25</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#afd9d40a03faf7f2d943172495c9d60c2">exp_exp</a> = <span class="stringliteral">&quot;exp(x)&quot;</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="test__calc_8c.html#aec6bd0e9ba4eceac14983b66bf3cecc0">   26</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#aec6bd0e9ba4eceac14983b66bf3cecc0">exp_sqrt</a> = <span class="stringliteral">&quot;sqrt(x)&quot;</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a9c317c0b4b9d73415b63fc96cb03b99a">   27</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a9c317c0b4b9d73415b63fc96cb03b99a">exp_ln</a> = <span class="stringliteral">&quot;ln(x)&quot;</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a175f0f876b15c921da26ba4c742067c5">   29</a></span><span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a175f0f876b15c921da26ba4c742067c5">diff_sin</a> = <span class="stringliteral">&quot;cos(x)&quot;</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="test__calc_8c.html#adba29d478340902573d5eb52cb79d9e6">   30</a></span><span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#adba29d478340902573d5eb52cb79d9e6">diff_cos</a> = <span class="stringliteral">&quot;(-1)*sin(x)&quot;</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a54eac34ae683d2448dfb8b77d3561e04">   31</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a54eac34ae683d2448dfb8b77d3561e04">diff_tg</a> = <span class="stringliteral">&quot;1/(tg(x)^2)&quot;</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="test__calc_8c.html#adc6d749e262befa96f8f63dbc6d9bd6b">   32</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#adc6d749e262befa96f8f63dbc6d9bd6b">diff_ctg</a> = <span class="stringliteral">&quot;(-1) * (1/(ctg(x)^2))&quot;</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="test__calc_8c.html#ab6ce830e4d1889ab6108cf4711c798b4">   33</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#ab6ce830e4d1889ab6108cf4711c798b4">diff_asin</a> = <span class="stringliteral">&quot;1/asin(x)^2&quot;</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a5bf5faa0b7305aff5b684fcd8f7650d4">   34</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a5bf5faa0b7305aff5b684fcd8f7650d4">diff_acos</a> = <span class="stringliteral">&quot;-1/acos(x)^2&quot;</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="test__calc_8c.html#afd7b2c5c6a0f47e03005ecb46ec51307">   35</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#afd7b2c5c6a0f47e03005ecb46ec51307">diff_atg</a> = <span class="stringliteral">&quot;1/(atg(x))^2&quot;</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="test__calc_8c.html#afeef2967e7a76257dc2465154f4940b4">   36</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#afeef2967e7a76257dc2465154f4940b4">diff_actg</a> = <span class="stringliteral">&quot;-1/(actg(x))^2&quot;</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a96e55fb45dece82f16dd62cf76b6e335">   37</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a96e55fb45dece82f16dd62cf76b6e335">diff_sh</a> = <span class="stringliteral">&quot;1/sh(x)^2&quot;</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a10d67f71161d085eb1a00215be41948e">   38</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a10d67f71161d085eb1a00215be41948e">diff_ch</a> = <span class="stringliteral">&quot;1/ch(x)^2&quot;</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="test__calc_8c.html#af9dc15572dcc0607badb4820e84f09c1">   39</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#af9dc15572dcc0607badb4820e84f09c1">diff_th</a> = <span class="stringliteral">&quot;1/th(x)^2&quot;</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="test__calc_8c.html#af8925012ea0c7e7b8af9ac48bff78134">   40</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#af8925012ea0c7e7b8af9ac48bff78134">diff_cth</a> = <span class="stringliteral">&quot;-1/cth(x)^2&quot;</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="test__calc_8c.html#a6b64eef3e83178bfa9702eb4b4240f46">   41</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#a6b64eef3e83178bfa9702eb4b4240f46">diff_exp</a> = <span class="stringliteral">&quot;exp(x)&quot;</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="test__calc_8c.html#af287a5c5b6396a4aa44f13da8e4b5d6c">   42</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#af287a5c5b6396a4aa44f13da8e4b5d6c">diff_sqrt</a> = <span class="stringliteral">&quot;1/(2*sqrt(x))&quot;</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="test__calc_8c.html#ac6403f51c0c755643db36afa4d5aa29b">   43</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="test__calc_8c.html#ac6403f51c0c755643db36afa4d5aa29b">diff_ln</a> = <span class="stringliteral">&quot;1/x&quot;</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="test__calc_8c.html#abcf365ef77da637f4922c57e7e0318a9">   45</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="test__calc_8c.html#abcf365ef77da637f4922c57e7e0318a9">node_cmp</a>(<a class="code hl_struct" href="structNode__t.html">node_t</a>* node1, <a class="code hl_struct" href="structNode__t.html">node_t</a>* node2)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> ((node1 == NULL) &amp;&amp; (node2 == NULL))</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span> ((node1 == NULL) || (node2 == NULL))</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">if</span> (node1-&gt;<a class="code hl_variable" href="structNode__t.html#aff17911edc8208aa8ddb1c7c52c78389">type</a> != node2-&gt;<a class="code hl_variable" href="structNode__t.html#aff17911edc8208aa8ddb1c7c52c78389">type</a>)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="test__calc_8c.html#abcf365ef77da637f4922c57e7e0318a9">node_cmp</a>(node1-&gt;<a class="code hl_variable" href="structNode__t.html#afbf8c7ed1f9ead7f960d183c5961ab72">LeftNode</a>, node2-&gt;<a class="code hl_variable" href="structNode__t.html#afbf8c7ed1f9ead7f960d183c5961ab72">LeftNode</a>))</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="test__calc_8c.html#abcf365ef77da637f4922c57e7e0318a9">node_cmp</a>(node1-&gt;<a class="code hl_variable" href="structNode__t.html#a1cd35fd209f0524cdd31aa98ff1f8f4f">RightNode</a>, node2-&gt;<a class="code hl_variable" href="structNode__t.html#a1cd35fd209f0524cdd31aa98ff1f8f4f">RightNode</a>))</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}   </div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>BEGIN_TEST(<a class="code hl_function" href="test__calc_8c.html#a7535ed8ede901d094ccc35c130848c01">calc_add</a>)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a>* node_exp_sin = <a class="code hl_function" href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a">GetG</a>(&amp;<a class="code hl_variable" href="test__calc_8c.html#a81400c24a6e0d9ff1520eac82b98a619">exp_sin</a>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a>* node_exp_cos = <a class="code hl_function" href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a">GetG</a>(&amp;<a class="code hl_variable" href="test__calc_8c.html#a62a2bc8de90f70172b7addc8729b2525">exp_cos</a>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a>* node_diff_sin = <a class="code hl_function" href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a">GetG</a>(&amp;<a class="code hl_variable" href="test__calc_8c.html#a175f0f876b15c921da26ba4c742067c5">diff_sin</a>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a>* node_diff_cos = <a class="code hl_function" href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a">GetG</a>(&amp;<a class="code hl_variable" href="test__calc_8c.html#adba29d478340902573d5eb52cb79d9e6">diff_cos</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    FILE* fp = fopen(<span class="stringliteral">&quot;test.txt&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_function" href="differentiator_8h.html#a557a5db69836b606d43c8f1258f02f6a">PrintExpression</a>(fp, node_exp_sin);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_function" href="differentiator_8h.html#a557a5db69836b606d43c8f1258f02f6a">PrintExpression</a>(fp, node_exp_cos);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_function" href="differentiator_8h.html#a557a5db69836b606d43c8f1258f02f6a">PrintExpression</a>(fp, node_diff_sin);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_function" href="differentiator_8h.html#a557a5db69836b606d43c8f1258f02f6a">PrintExpression</a>(fp, node_diff_cos);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    fclose(fp);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a>* test_node_diff_sin = <a class="code hl_function" href="differentiator_8h.html#abea5f36d78c7c1736bddb0cd0f06e189">Differentiator</a>(node_exp_sin, <span class="charliteral">&#39;x&#39;</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a>* test_node_diff_cos = <a class="code hl_function" href="differentiator_8h.html#abea5f36d78c7c1736bddb0cd0f06e189">Differentiator</a>(node_exp_cos, <span class="charliteral">&#39;x&#39;</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    TA(<a class="code hl_function" href="test__calc_8c.html#abcf365ef77da637f4922c57e7e0318a9">node_cmp</a>(test_node_diff_sin, node_diff_sin));</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    TA(<a class="code hl_function" href="test__calc_8c.html#abcf365ef77da637f4922c57e7e0318a9">node_cmp</a>(test_node_diff_cos, node_diff_cos));</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_function" href="differentiator_8h.html#ad3bd7695c84588311332f137fd0cccb3">DtorTree</a>(node_exp_sin); </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_function" href="differentiator_8h.html#ad3bd7695c84588311332f137fd0cccb3">DtorTree</a>(node_exp_cos);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_function" href="differentiator_8h.html#ad3bd7695c84588311332f137fd0cccb3">DtorTree</a>(node_diff_sin);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_function" href="differentiator_8h.html#ad3bd7695c84588311332f137fd0cccb3">DtorTree</a>(node_diff_cos);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_function" href="differentiator_8h.html#ad3bd7695c84588311332f137fd0cccb3">DtorTree</a>(test_node_diff_sin);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_function" href="differentiator_8h.html#ad3bd7695c84588311332f137fd0cccb3">DtorTree</a>(test_node_diff_cos);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>END_TEST()</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>BEGIN_TEST(equal_str)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    TAE_STRING(&quot;adidas&quot;, &quot;NIKE&quot;, 4);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    TAE_STRING(&quot;broke&quot;, &quot;broke&quot;, 5);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>END_TEST()</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>BEGIN_TEST(equal_double)</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    TAE_DOUBLE(1.0, 1.0, 0.2);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    TAE_DOUBLE(1.0, 2.0, 0.2);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    TAE_DOUBLE(5.12345, 5.12346, 10e-6);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>END_TEST()</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>BEGIN_TEST(equal_int)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    TAE_INT(1, 1);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    TAE_INT(2, 2);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    TAE_INT(5, 5);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    TAE_INT(1234, 1234);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>END_TEST()</div>
+<div class="ttc" id="adifferentiator_8h_html"><div class="ttname"><a href="differentiator_8h.html">differentiator.h</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a557a5db69836b606d43c8f1258f02f6a"><div class="ttname"><a href="differentiator_8h.html#a557a5db69836b606d43c8f1258f02f6a">PrintExpression</a></div><div class="ttdeci">int PrintExpression(FILE *fp, node_t *node)</div><div class="ttdoc">Prints an expression in a human-readable format.</div><div class="ttdef"><b>Definition</b> <a href="print_8c_source.html#l00089">print.c:89</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_abea5f36d78c7c1736bddb0cd0f06e189"><div class="ttname"><a href="differentiator_8h.html#abea5f36d78c7c1736bddb0cd0f06e189">Differentiator</a></div><div class="ttdeci">node_t * Differentiator(node_t *node, int part)</div><div class="ttdoc">Differentiates an expression tree.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8c_source.html#l00057">differentiator.c:57</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_ad3bd7695c84588311332f137fd0cccb3"><div class="ttname"><a href="differentiator_8h.html#ad3bd7695c84588311332f137fd0cccb3">DtorTree</a></div><div class="ttdeci">int DtorTree(node_t *node)</div><div class="ttdoc">Destroys an expression tree.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8c_source.html#l00486">differentiator.c:486</a></div></div>
+<div class="ttc" id="amydef_8h_html"><div class="ttname"><a href="mydef_8h.html">mydef.h</a></div></div>
+<div class="ttc" id="aread_8c_html"><div class="ttname"><a href="read_8c.html">read.c</a></div></div>
+<div class="ttc" id="aread_8c_html_a7669219ca1e65583aeb3532fe1e1127a"><div class="ttname"><a href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a">GetG</a></div><div class="ttdeci">node_t * GetG(char **exp)</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00029">read.c:29</a></div></div>
+<div class="ttc" id="aread_8h_html"><div class="ttname"><a href="read_8h.html">read.h</a></div><div class="ttdoc">File with functions for reading expression from file.</div></div>
+<div class="ttc" id="astructNode__t_html"><div class="ttname"><a href="structNode__t.html">Node_t</a></div><div class="ttdoc">Structure that represents a node in an expression tree.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00025">differentiator.h:25</a></div></div>
+<div class="ttc" id="astructNode__t_html_a1cd35fd209f0524cdd31aa98ff1f8f4f"><div class="ttname"><a href="structNode__t.html#a1cd35fd209f0524cdd31aa98ff1f8f4f">Node_t::RightNode</a></div><div class="ttdeci">struct Node_t * RightNode</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00031">differentiator.h:31</a></div></div>
+<div class="ttc" id="astructNode__t_html_afbf8c7ed1f9ead7f960d183c5961ab72"><div class="ttname"><a href="structNode__t.html#afbf8c7ed1f9ead7f960d183c5961ab72">Node_t::LeftNode</a></div><div class="ttdeci">struct Node_t * LeftNode</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00030">differentiator.h:30</a></div></div>
+<div class="ttc" id="astructNode__t_html_aff17911edc8208aa8ddb1c7c52c78389"><div class="ttname"><a href="structNode__t.html#aff17911edc8208aa8ddb1c7c52c78389">Node_t::type</a></div><div class="ttdeci">char type</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00026">differentiator.h:26</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a10d67f71161d085eb1a00215be41948e"><div class="ttname"><a href="test__calc_8c.html#a10d67f71161d085eb1a00215be41948e">diff_ch</a></div><div class="ttdeci">const char * diff_ch</div><div class="ttdef"><b>Definition</b> <a href="#l00038">test_calc.c:38</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a175f0f876b15c921da26ba4c742067c5"><div class="ttname"><a href="test__calc_8c.html#a175f0f876b15c921da26ba4c742067c5">diff_sin</a></div><div class="ttdeci">char * diff_sin</div><div class="ttdef"><b>Definition</b> <a href="#l00029">test_calc.c:29</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a18869378b6af7d92788a3c0dfb0b5776"><div class="ttname"><a href="test__calc_8c.html#a18869378b6af7d92788a3c0dfb0b5776">exp_ctg</a></div><div class="ttdeci">const char * exp_ctg</div><div class="ttdef"><b>Definition</b> <a href="#l00016">test_calc.c:16</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a1b4f1f65314b9ede054eefb7cf7b79eb"><div class="ttname"><a href="test__calc_8c.html#a1b4f1f65314b9ede054eefb7cf7b79eb">exp_cth</a></div><div class="ttdeci">const char * exp_cth</div><div class="ttdef"><b>Definition</b> <a href="#l00024">test_calc.c:24</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a281b17612a18bfc95976c9b4bbc6be63"><div class="ttname"><a href="test__calc_8c.html#a281b17612a18bfc95976c9b4bbc6be63">exp_sh</a></div><div class="ttdeci">const char * exp_sh</div><div class="ttdef"><b>Definition</b> <a href="#l00021">test_calc.c:21</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a2c510e8af9d9ca6db6c4964695a421df"><div class="ttname"><a href="test__calc_8c.html#a2c510e8af9d9ca6db6c4964695a421df">exp_atg</a></div><div class="ttdeci">const char * exp_atg</div><div class="ttdef"><b>Definition</b> <a href="#l00019">test_calc.c:19</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a340af5ab99ab876a804f8f970516d733"><div class="ttname"><a href="test__calc_8c.html#a340af5ab99ab876a804f8f970516d733">exp_tg</a></div><div class="ttdeci">const char * exp_tg</div><div class="ttdef"><b>Definition</b> <a href="#l00015">test_calc.c:15</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a4e27ecd67f7f28d959416e509b83cc98"><div class="ttname"><a href="test__calc_8c.html#a4e27ecd67f7f28d959416e509b83cc98">exp_asin</a></div><div class="ttdeci">const char * exp_asin</div><div class="ttdef"><b>Definition</b> <a href="#l00017">test_calc.c:17</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a54eac34ae683d2448dfb8b77d3561e04"><div class="ttname"><a href="test__calc_8c.html#a54eac34ae683d2448dfb8b77d3561e04">diff_tg</a></div><div class="ttdeci">const char * diff_tg</div><div class="ttdef"><b>Definition</b> <a href="#l00031">test_calc.c:31</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a5bf5faa0b7305aff5b684fcd8f7650d4"><div class="ttname"><a href="test__calc_8c.html#a5bf5faa0b7305aff5b684fcd8f7650d4">diff_acos</a></div><div class="ttdeci">const char * diff_acos</div><div class="ttdef"><b>Definition</b> <a href="#l00034">test_calc.c:34</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a62a2bc8de90f70172b7addc8729b2525"><div class="ttname"><a href="test__calc_8c.html#a62a2bc8de90f70172b7addc8729b2525">exp_cos</a></div><div class="ttdeci">char * exp_cos</div><div class="ttdef"><b>Definition</b> <a href="#l00014">test_calc.c:14</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a6b64eef3e83178bfa9702eb4b4240f46"><div class="ttname"><a href="test__calc_8c.html#a6b64eef3e83178bfa9702eb4b4240f46">diff_exp</a></div><div class="ttdeci">const char * diff_exp</div><div class="ttdef"><b>Definition</b> <a href="#l00041">test_calc.c:41</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a714c88cb134d8d4cffb408dc542b3349"><div class="ttname"><a href="test__calc_8c.html#a714c88cb134d8d4cffb408dc542b3349">exp_actg</a></div><div class="ttdeci">const char * exp_actg</div><div class="ttdef"><b>Definition</b> <a href="#l00020">test_calc.c:20</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a7535ed8ede901d094ccc35c130848c01"><div class="ttname"><a href="test__calc_8c.html#a7535ed8ede901d094ccc35c130848c01">calc_add</a></div><div class="ttdeci">int calc_add(int a, int b)</div><div class="ttdef"><b>Definition</b> <a href="#l00011">test_calc.c:11</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a7a03226108867dbb2319de03ac2cf293"><div class="ttname"><a href="test__calc_8c.html#a7a03226108867dbb2319de03ac2cf293">exp_th</a></div><div class="ttdeci">const char * exp_th</div><div class="ttdef"><b>Definition</b> <a href="#l00023">test_calc.c:23</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a81400c24a6e0d9ff1520eac82b98a619"><div class="ttname"><a href="test__calc_8c.html#a81400c24a6e0d9ff1520eac82b98a619">exp_sin</a></div><div class="ttdeci">char * exp_sin</div><div class="ttdef"><b>Definition</b> <a href="#l00013">test_calc.c:13</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a96e55fb45dece82f16dd62cf76b6e335"><div class="ttname"><a href="test__calc_8c.html#a96e55fb45dece82f16dd62cf76b6e335">diff_sh</a></div><div class="ttdeci">const char * diff_sh</div><div class="ttdef"><b>Definition</b> <a href="#l00037">test_calc.c:37</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_a9c317c0b4b9d73415b63fc96cb03b99a"><div class="ttname"><a href="test__calc_8c.html#a9c317c0b4b9d73415b63fc96cb03b99a">exp_ln</a></div><div class="ttdeci">const char * exp_ln</div><div class="ttdef"><b>Definition</b> <a href="#l00027">test_calc.c:27</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_ab6ce830e4d1889ab6108cf4711c798b4"><div class="ttname"><a href="test__calc_8c.html#ab6ce830e4d1889ab6108cf4711c798b4">diff_asin</a></div><div class="ttdeci">const char * diff_asin</div><div class="ttdef"><b>Definition</b> <a href="#l00033">test_calc.c:33</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_abcf365ef77da637f4922c57e7e0318a9"><div class="ttname"><a href="test__calc_8c.html#abcf365ef77da637f4922c57e7e0318a9">node_cmp</a></div><div class="ttdeci">bool node_cmp(node_t *node1, node_t *node2)</div><div class="ttdef"><b>Definition</b> <a href="#l00045">test_calc.c:45</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_abece7b601a89ecd8ef8559ec9226af0e"><div class="ttname"><a href="test__calc_8c.html#abece7b601a89ecd8ef8559ec9226af0e">exp_ch</a></div><div class="ttdeci">const char * exp_ch</div><div class="ttdef"><b>Definition</b> <a href="#l00022">test_calc.c:22</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_ac6403f51c0c755643db36afa4d5aa29b"><div class="ttname"><a href="test__calc_8c.html#ac6403f51c0c755643db36afa4d5aa29b">diff_ln</a></div><div class="ttdeci">const char * diff_ln</div><div class="ttdef"><b>Definition</b> <a href="#l00043">test_calc.c:43</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_adba29d478340902573d5eb52cb79d9e6"><div class="ttname"><a href="test__calc_8c.html#adba29d478340902573d5eb52cb79d9e6">diff_cos</a></div><div class="ttdeci">char * diff_cos</div><div class="ttdef"><b>Definition</b> <a href="#l00030">test_calc.c:30</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_adc6d749e262befa96f8f63dbc6d9bd6b"><div class="ttname"><a href="test__calc_8c.html#adc6d749e262befa96f8f63dbc6d9bd6b">diff_ctg</a></div><div class="ttdeci">const char * diff_ctg</div><div class="ttdef"><b>Definition</b> <a href="#l00032">test_calc.c:32</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_ae7a42afb4f5b518a16ed8b7f52b1f627"><div class="ttname"><a href="test__calc_8c.html#ae7a42afb4f5b518a16ed8b7f52b1f627">exp_acos</a></div><div class="ttdeci">const char * exp_acos</div><div class="ttdef"><b>Definition</b> <a href="#l00018">test_calc.c:18</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_aec6bd0e9ba4eceac14983b66bf3cecc0"><div class="ttname"><a href="test__calc_8c.html#aec6bd0e9ba4eceac14983b66bf3cecc0">exp_sqrt</a></div><div class="ttdeci">const char * exp_sqrt</div><div class="ttdef"><b>Definition</b> <a href="#l00026">test_calc.c:26</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_af287a5c5b6396a4aa44f13da8e4b5d6c"><div class="ttname"><a href="test__calc_8c.html#af287a5c5b6396a4aa44f13da8e4b5d6c">diff_sqrt</a></div><div class="ttdeci">const char * diff_sqrt</div><div class="ttdef"><b>Definition</b> <a href="#l00042">test_calc.c:42</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_af8925012ea0c7e7b8af9ac48bff78134"><div class="ttname"><a href="test__calc_8c.html#af8925012ea0c7e7b8af9ac48bff78134">diff_cth</a></div><div class="ttdeci">const char * diff_cth</div><div class="ttdef"><b>Definition</b> <a href="#l00040">test_calc.c:40</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_af9dc15572dcc0607badb4820e84f09c1"><div class="ttname"><a href="test__calc_8c.html#af9dc15572dcc0607badb4820e84f09c1">diff_th</a></div><div class="ttdeci">const char * diff_th</div><div class="ttdef"><b>Definition</b> <a href="#l00039">test_calc.c:39</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_afd7b2c5c6a0f47e03005ecb46ec51307"><div class="ttname"><a href="test__calc_8c.html#afd7b2c5c6a0f47e03005ecb46ec51307">diff_atg</a></div><div class="ttdeci">const char * diff_atg</div><div class="ttdef"><b>Definition</b> <a href="#l00035">test_calc.c:35</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_afd9d40a03faf7f2d943172495c9d60c2"><div class="ttname"><a href="test__calc_8c.html#afd9d40a03faf7f2d943172495c9d60c2">exp_exp</a></div><div class="ttdeci">const char * exp_exp</div><div class="ttdef"><b>Definition</b> <a href="#l00025">test_calc.c:25</a></div></div>
+<div class="ttc" id="atest__calc_8c_html_afeef2967e7a76257dc2465154f4940b4"><div class="ttname"><a href="test__calc_8c.html#afeef2967e7a76257dc2465154f4940b4">diff_actg</a></div><div class="ttdeci">const char * diff_actg</div><div class="ttdef"><b>Definition</b> <a href="#l00036">test_calc.c:36</a></div></div>
+<div class="ttc" id="aunit_8h_html"><div class="ttname"><a href="unit_8h.html">unit.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li><li class="navelem"><a class="el" href="dir_657bc3dbb3ab2a0b56840d616fb9daa0.html">tests</a></li><li class="navelem"><a class="el" href="test__calc_8c.html">test_calc.c</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

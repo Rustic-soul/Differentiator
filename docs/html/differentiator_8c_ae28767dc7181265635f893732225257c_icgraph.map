@@ -1,0 +1,16 @@
+<map id="is_binary_operator" name="is_binary_operator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="611,67,738,93"/>
+<area shape="rect" id="Node000002" href="$differentiator_8c.html#a276807feb099f02b9c043a8907a3f0e1" title="Convolution with constants in expression tree." alt="" coords="402,29,553,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="595,68,551,59,552,54,596,62"/>
+<area shape="rect" id="Node000006" href="$differentiator_8c.html#af568b87d046fc494a549b2ee6f81a34d" title="Removes neutral elements in expression tree." alt="" coords="392,104,563,131"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="596,98,552,106,551,101,595,92"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="508,16,498,10,477,8,459,10,448,15,446,20,451,28,446,30,441,21,445,11,457,5,478,3,499,5,511,12"/>
+<area shape="rect" id="Node000003" href="$differentiator_8c.html#a39a8e68c15f71b41ddb2847e326b0996" title="Full optimizer of expression tree." alt="" coords="246,67,344,93"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="395,62,345,73,344,67,394,57"/>
+<area shape="rect" id="Node000004" href="$differentiator_8c.html#abea5f36d78c7c1736bddb0cd0f06e189" title="Differentiates an expression tree." alt="" coords="103,67,198,93"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="231,83,198,83,198,77,231,77"/>
+<area shape="rect" id="Node000005" href="$src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,67,55,93"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="87,83,55,83,55,77,87,77"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="394,103,344,93,345,87,395,98"/>
+<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="508,91,498,85,477,83,459,85,448,89,446,95,451,102,446,105,441,95,445,86,457,79,478,77,499,80,511,86"/>
+</map>

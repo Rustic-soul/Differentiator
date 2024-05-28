@@ -67,10 +67,12 @@ set(SOURCES
     ./src/differentiator.c 
     ./src/print.c
     ./src/read.c
+    ./lib/array.c
 )
 
 set(INCLUDE_DIRS 
     ./include/
+    ./lib/
 )
 
 add_executable(differentiator ${SOURCES})

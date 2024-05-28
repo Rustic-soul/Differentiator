@@ -1,0 +1,1069 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My first project: Файл read.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My first project<span id="projectnumber">&#160;1.0.1</span>
+   </div>
+   <div id="projectbrief">program for solving quadratic equations</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('read_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл read.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="read_8c_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a7809f622e41beb01d7eb8c3d73191c3f" id="r_a7809f622e41beb01d7eb8c3d73191c3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7809f622e41beb01d7eb8c3d73191c3f">ReadTreeFile</a> (FILE *fp)</td></tr>
+<tr class="memdesc:a7809f622e41beb01d7eb8c3d73191c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads an expression tree from a file.  <br /></td></tr>
+<tr class="separator:a7809f622e41beb01d7eb8c3d73191c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7669219ca1e65583aeb3532fe1e1127a" id="r_a7669219ca1e65583aeb3532fe1e1127a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7669219ca1e65583aeb3532fe1e1127a">GetG</a> (char **exp)</td></tr>
+<tr class="separator:a7669219ca1e65583aeb3532fe1e1127a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a121c0a0635ee664e1e75dc6f4b744554" id="r_a121c0a0635ee664e1e75dc6f4b744554"><td class="memItemLeft" align="right" valign="top"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a121c0a0635ee664e1e75dc6f4b744554">GetE</a> (char **exp)</td></tr>
+<tr class="separator:a121c0a0635ee664e1e75dc6f4b744554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb2a0957732ccc4c64603e63126b7f4" id="r_acfb2a0957732ccc4c64603e63126b7f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfb2a0957732ccc4c64603e63126b7f4">GetT</a> (char **exp)</td></tr>
+<tr class="memdesc:acfb2a0957732ccc4c64603e63126b7f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets term from expression.  <br /></td></tr>
+<tr class="separator:acfb2a0957732ccc4c64603e63126b7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a575569dafbf902a16ff04e180ad14bab" id="r_a575569dafbf902a16ff04e180ad14bab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a575569dafbf902a16ff04e180ad14bab">GetV</a> (char **exp)</td></tr>
+<tr class="memdesc:a575569dafbf902a16ff04e180ad14bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets variable from expression.  <br /></td></tr>
+<tr class="separator:a575569dafbf902a16ff04e180ad14bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc51e260013f474ddcb0381654d173c1" id="r_abc51e260013f474ddcb0381654d173c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc51e260013f474ddcb0381654d173c1">GetP</a> (char **exp)</td></tr>
+<tr class="memdesc:abc51e260013f474ddcb0381654d173c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets product from expression.  <br /></td></tr>
+<tr class="separator:abc51e260013f474ddcb0381654d173c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb6427a2db0bc58be50dae5cc9ae767" id="r_adfb6427a2db0bc58be50dae5cc9ae767"><td class="memItemLeft" align="right" valign="top"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfb6427a2db0bc58be50dae5cc9ae767">GetK</a> (char **exp)</td></tr>
+<tr class="memdesc:adfb6427a2db0bc58be50dae5cc9ae767"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets keyword from expression.  <br /></td></tr>
+<tr class="separator:adfb6427a2db0bc58be50dae5cc9ae767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1462589fbf1d7c4381368d38fb36c39b" id="r_a1462589fbf1d7c4381368d38fb36c39b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1462589fbf1d7c4381368d38fb36c39b">GetF</a> (char **exp)</td></tr>
+<tr class="memdesc:a1462589fbf1d7c4381368d38fb36c39b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets factor from expression.  <br /></td></tr>
+<tr class="separator:a1462589fbf1d7c4381368d38fb36c39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b3a879d81abade33728b5b9b25262c0" id="r_a4b3a879d81abade33728b5b9b25262c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b3a879d81abade33728b5b9b25262c0">GetN</a> (char **exp)</td></tr>
+<tr class="memdesc:a4b3a879d81abade33728b5b9b25262c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets number from expression.  <br /></td></tr>
+<tr class="separator:a4b3a879d81abade33728b5b9b25262c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a922cfb1857404523cfb1fcc3a53591da" id="r_a922cfb1857404523cfb1fcc3a53591da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a922cfb1857404523cfb1fcc3a53591da">dt_func</a> (char **exp)</td></tr>
+<tr class="separator:a922cfb1857404523cfb1fcc3a53591da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a922cfb1857404523cfb1fcc3a53591da" name="a922cfb1857404523cfb1fcc3a53591da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a922cfb1857404523cfb1fcc3a53591da">&#9670;&#160;</a></span>dt_func()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dt_func </td>
+          <td>(</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>exp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="read_8c_source.html">read.c</a> строка <a class="el" href="read_8c_source.html#l00201">201</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  202</span>{</div>
+<div class="line"><span class="lineno">  203</span>    <span class="keywordtype">char</span> fname[MAX_LEN_FUNC_NAME] = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  204</span> </div>
+<div class="line"><span class="lineno">  205</span>    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><span class="lineno">  206</span>    <span class="keywordflow">while</span>(isalpha(**exp)) { fname[i] = **exp; (*exp)++; i++; } fname[i] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  207</span>    SKIP_SPACES((*exp));</div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span>    PRINT_DEBUG(<span class="stringliteral">&quot;fname = {%s}\n&quot;</span>, fname);</div>
+<div class="line"><span class="lineno">  210</span>    </div>
+<div class="line"><span class="lineno">  211</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; (size_t)j &lt; <span class="keyword">sizeof</span>(ArrayFn) / <span class="keyword">sizeof</span>(*ArrayFn) ; j++)</div>
+<div class="line"><span class="lineno">  212</span>    {</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">if</span> (strcmp(fname, ArrayFn[j]) == 0) { <span class="keywordflow">return</span> j; }</div>
+<div class="line"><span class="lineno">  214</span>    }</div>
+<div class="line"><span class="lineno">  215</span>    </div>
+<div class="line"><span class="lineno">  216</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="differentiator_8h.html#a59e56af19e754a6aa26a612ebf91d05fac7b310ba00248c190d79944f000d6ec7">ERROR_UNKNOWN_FUNCTION_TYPE</a>;</div>
+<div class="line"><span class="lineno">  217</span>}</div>
+<div class="ttc" id="adifferentiator_8h_html_a59e56af19e754a6aa26a612ebf91d05fac7b310ba00248c190d79944f000d6ec7"><div class="ttname"><a href="differentiator_8h.html#a59e56af19e754a6aa26a612ebf91d05fac7b310ba00248c190d79944f000d6ec7">ERROR_UNKNOWN_FUNCTION_TYPE</a></div><div class="ttdeci">@ ERROR_UNKNOWN_FUNCTION_TYPE</div><div class="ttdoc">Unknown function type.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00143">differentiator.h:143</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="differentiator_8h_source.html#l00143">ERROR_UNKNOWN_FUNCTION_TYPE</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="read_8c_source.html#l00145">GetF()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_a922cfb1857404523cfb1fcc3a53591da_icgraph.png" border="0" usemap="#aread_8c_a922cfb1857404523cfb1fcc3a53591da_icgraph" alt=""/></div>
+<map name="aread_8c_a922cfb1857404523cfb1fcc3a53591da_icgraph" id="aread_8c_a922cfb1857404523cfb1fcc3a53591da_icgraph">
+<area shape="rect" title=" " alt="" coords="845,81,909,108"/>
+<area shape="rect" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="747,81,797,108"/>
+<area shape="poly" title=" " alt="" coords="829,97,797,97,797,92,829,92"/>
+<area shape="rect" href="read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="647,56,699,83"/>
+<area shape="poly" title=" " alt="" coords="731,87,699,78,700,73,732,82"/>
+<area shape="rect" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="548,5,599,32"/>
+<area shape="poly" title=" " alt="" coords="632,52,598,34,601,29,635,47"/>
+<area shape="rect" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="450,5,500,32"/>
+<area shape="poly" title=" " alt="" coords="532,21,501,21,501,16,532,16"/>
+<area shape="rect" href="read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="350,56,402,83"/>
+<area shape="poly" title=" " alt="" coords="437,41,404,59,401,54,435,36"/>
+<area shape="poly" title=" " alt="" coords="418,72,522,83,647,92,746,93,746,98,647,97,521,88,417,77"/>
+<area shape="poly" title=" " alt="" coords="417,67,647,67,647,72,417,72"/>
+<area shape="rect" href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a" title=" " alt="" coords="250,56,302,83"/>
+<area shape="poly" title=" " alt="" coords="335,72,303,72,303,67,335,67"/>
+<area shape="rect" href="read_8c.html#a7809f622e41beb01d7eb8c3d73191c3f" title="Reads an expression tree from a file." alt="" coords="103,56,202,83"/>
+<area shape="poly" title=" " alt="" coords="234,72,202,72,202,67,234,67"/>
+<area shape="rect" href="src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a121c0a0635ee664e1e75dc6f4b744554" name="a121c0a0635ee664e1e75dc6f4b744554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a121c0a0635ee664e1e75dc6f4b744554">&#9670;&#160;</a></span>GetE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> * GetE </td>
+          <td>(</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>exp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="read_8c_source.html">read.c</a> строка <a class="el" href="read_8c_source.html#l00041">41</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>{</div>
+<div class="line"><span class="lineno">   43</span>    PRINT_DEBUG(<span class="stringliteral">&quot;Locate: func GetE\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   44</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a> *node = <a class="code hl_function" href="#acfb2a0957732ccc4c64603e63126b7f4">GetT</a>(exp);</div>
+<div class="line"><span class="lineno">   45</span>    </div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">while</span> ((**exp == <span class="charliteral">&#39;+&#39;</span>) || (**exp == <span class="charliteral">&#39;-&#39;</span>))</div>
+<div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordtype">char</span> op = **exp;</div>
+<div class="line"><span class="lineno">   49</span>        (*exp)++;   </div>
+<div class="line"><span class="lineno">   50</span>        </div>
+<div class="line"><span class="lineno">   51</span>        SKIP_SPACES((*exp));</div>
+<div class="line"><span class="lineno">   52</span>    </div>
+<div class="line"><span class="lineno">   53</span>        <a class="code hl_struct" href="structNode__t.html">node_t</a> *rnode = <a class="code hl_function" href="#acfb2a0957732ccc4c64603e63126b7f4">GetT</a>(exp);</div>
+<div class="line"><span class="lineno">   54</span>        </div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;+&#39;</span>) { node =  _ADD(node, rnode); }</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">else</span>           { node =  _SUB(node, rnode); }</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">return</span> node;</div>
+<div class="line"><span class="lineno">   60</span>}</div>
+<div class="ttc" id="aread_8c_html_acfb2a0957732ccc4c64603e63126b7f4"><div class="ttname"><a href="#acfb2a0957732ccc4c64603e63126b7f4">GetT</a></div><div class="ttdeci">node_t * GetT(char **exp)</div><div class="ttdoc">Gets term from expression.</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00062">read.c:62</a></div></div>
+<div class="ttc" id="astructNode__t_html"><div class="ttname"><a href="structNode__t.html">Node_t</a></div><div class="ttdoc">Structure that represents a node in an expression tree.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00025">differentiator.h:25</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="read_8c_source.html#l00062">GetT()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="read_8c_source.html#l00145">GetF()</a>, <a class="el" href="read_8c_source.html#l00029">GetG()</a> и <a class="el" href="read_8c_source.html#l00105">GetP()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_a121c0a0635ee664e1e75dc6f4b744554_cgraph.png" border="0" usemap="#aread_8c_a121c0a0635ee664e1e75dc6f4b744554_cgraph" alt=""/></div>
+<map name="aread_8c_a121c0a0635ee664e1e75dc6f4b744554_cgraph" id="aread_8c_a121c0a0635ee664e1e75dc6f4b744554_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,57,83"/>
+<area shape="rect" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="105,5,155,32"/>
+<area shape="poly" title=" " alt="" coords="56,54,90,36,92,41,58,59"/>
+<area shape="rect" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="203,5,254,32"/>
+<area shape="poly" title=" " alt="" coords="155,16,187,16,187,21,155,21"/>
+<area shape="rect" href="read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="302,56,354,83"/>
+<area shape="poly" title=" " alt="" coords="256,29,290,47,288,52,254,34"/>
+<area shape="poly" title=" " alt="" coords="302,72,72,72,72,67,302,67"/>
+<area shape="rect" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="403,107,453,133"/>
+<area shape="poly" title=" " alt="" coords="355,80,390,98,388,103,353,84"/>
+<area shape="rect" href="read_8c.html#adfb6427a2db0bc58be50dae5cc9ae767" title="Gets keyword from expression." alt="" coords="402,5,454,32"/>
+<area shape="poly" title=" " alt="" coords="353,54,387,36,389,41,355,59"/>
+<area shape="rect" href="read_8c.html#a4b3a879d81abade33728b5b9b25262c0" title="Gets number from expression." alt="" coords="402,56,454,83"/>
+<area shape="poly" title=" " alt="" coords="354,67,386,67,386,72,354,72"/>
+<area shape="poly" title=" " alt="" coords="402,120,71,77,72,72,403,114"/>
+<area shape="rect" href="differentiator_8c.html#a5c2ba86d87f77f6bdab5dfb65018e7aa" title="Creates a new expression tree node." alt="" coords="502,81,593,108"/>
+<area shape="poly" title=" " alt="" coords="453,112,486,105,487,110,454,117"/>
+<area shape="rect" href="read_8c.html#a922cfb1857404523cfb1fcc3a53591da" title=" " alt="" coords="516,132,580,159"/>
+<area shape="poly" title=" " alt="" coords="454,123,501,133,500,138,453,128"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_a121c0a0635ee664e1e75dc6f4b744554_icgraph.png" border="0" usemap="#aread_8c_a121c0a0635ee664e1e75dc6f4b744554_icgraph" alt=""/></div>
+<map name="aread_8c_a121c0a0635ee664e1e75dc6f4b744554_icgraph" id="aread_8c_a121c0a0635ee664e1e75dc6f4b744554_icgraph">
+<area shape="rect" title=" " alt="" coords="451,81,502,108"/>
+<area shape="rect" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="351,5,402,32"/>
+<area shape="poly" title=" " alt="" coords="444,74,394,35,397,30,447,70"/>
+<area shape="rect" href="read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="227,56,278,83"/>
+<area shape="poly" title=" " alt="" coords="435,93,279,75,279,70,436,87"/>
+<area shape="rect" href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a" title=" " alt="" coords="350,107,403,133"/>
+<area shape="poly" title=" " alt="" coords="437,107,404,116,402,111,435,102"/>
+<area shape="poly" title=" " alt="" coords="338,37,280,61,278,57,336,32"/>
+<area shape="rect" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="104,56,155,83"/>
+<area shape="poly" title=" " alt="" coords="212,72,155,72,155,67,212,67"/>
+<area shape="rect" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="5,107,56,133"/>
+<area shape="poly" title=" " alt="" coords="91,92,57,110,55,105,89,87"/>
+<area shape="poly" title=" " alt="" coords="71,134,104,143,188,158,255,166,321,163,402,143,434,127,459,106,463,111,437,131,404,148,321,168,255,171,187,163,103,148,69,139"/>
+<area shape="rect" href="read_8c.html#a7809f622e41beb01d7eb8c3d73191c3f" title="Reads an expression tree from a file." alt="" coords="203,107,302,133"/>
+<area shape="poly" title=" " alt="" coords="335,123,303,123,303,117,335,117"/>
+<area shape="rect" href="src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="105,107,154,133"/>
+<area shape="poly" title=" " alt="" coords="188,123,154,123,154,117,188,117"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1462589fbf1d7c4381368d38fb36c39b" name="a1462589fbf1d7c4381368d38fb36c39b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1462589fbf1d7c4381368d38fb36c39b">&#9670;&#160;</a></span>GetF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> * GetF </td>
+          <td>(</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>exp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets factor from expression. </p>
+<p>Gets function from expression.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exp</td><td>address of pointer to expression string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>pointer to root of factor node</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exp</td><td>address of pointer to expression string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>pointer to root of function node </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="read_8c_source.html">read.c</a> строка <a class="el" href="read_8c_source.html#l00145">145</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>{</div>
+<div class="line"><span class="lineno">  147</span>    PRINT_DEBUG(<span class="stringliteral">&quot;Locate: func GetF\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>    <span class="keywordtype">int</span> ftype = <a class="code hl_function" href="#a922cfb1857404523cfb1fcc3a53591da">dt_func</a>(exp);</div>
+<div class="line"><span class="lineno">  150</span>    PRINT_DEBUG(<span class="stringliteral">&quot;dt_func = %d\n&quot;</span>, ftype);</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a> *lnode = NULL;</div>
+<div class="line"><span class="lineno">  153</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a> *rnode = NULL;</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>    <span class="keywordflow">if</span> (**exp == <span class="charliteral">&#39;(&#39;</span>)</div>
+<div class="line"><span class="lineno">  156</span>    {</div>
+<div class="line"><span class="lineno">  157</span>        (*exp)++;</div>
+<div class="line"><span class="lineno">  158</span>          </div>
+<div class="line"><span class="lineno">  159</span>        SKIP_SPACES((*exp));</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>        lnode = <a class="code hl_function" href="#a121c0a0635ee664e1e75dc6f4b744554">GetE</a>(exp);</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (ftype == <a class="code hl_enumvalue" href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203aeb983f45d643d531ad20682046a5e96d">FnLog</a>)</div>
+<div class="line"><span class="lineno">  164</span>        {</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">if</span> (**exp == <span class="charliteral">&#39;,&#39;</span>)</div>
+<div class="line"><span class="lineno">  166</span>            {</div>
+<div class="line"><span class="lineno">  167</span>                (*exp)++;</div>
+<div class="line"><span class="lineno">  168</span>                SKIP_SPACES((*exp));</div>
+<div class="line"><span class="lineno">  169</span>                </div>
+<div class="line"><span class="lineno">  170</span>                rnode = <a class="code hl_function" href="#a121c0a0635ee664e1e75dc6f4b744554">GetE</a>(exp);</div>
+<div class="line"><span class="lineno">  171</span>            }</div>
+<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">else</span> { SYNTAX_ERROR(); }</div>
+<div class="line"><span class="lineno">  173</span>        }</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">if</span> (**exp == <span class="charliteral">&#39;)&#39;</span>) { (*exp)++; } </div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">else</span>              { SYNTAX_ERROR(); }</div>
+<div class="line"><span class="lineno">  177</span>        </div>
+<div class="line"><span class="lineno">  178</span>        SKIP_SPACES((*exp));</div>
+<div class="line"><span class="lineno">  179</span>    }</div>
+<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">else</span> { SYNTAX_ERROR(); }</div>
+<div class="line"><span class="lineno">  181</span>        </div>
+<div class="line"><span class="lineno">  182</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="differentiator_8h.html#a5c2ba86d87f77f6bdab5dfb65018e7aa">CreateNode</a>(<a class="code hl_enumvalue" href="differentiator_8h.html#a44ce2a9d595052af59609442ff49e76aa8e4634ad55e9525034e4270bc0c2b648">TpFn</a>, (<a class="code hl_union" href="unionNode__data__t.html">node_data_t</a>){.additional_type = ftype}, lnode, rnode);</div>
+<div class="line"><span class="lineno">  183</span>}</div>
+<div class="ttc" id="adifferentiator_8h_html_a44ce2a9d595052af59609442ff49e76aa8e4634ad55e9525034e4270bc0c2b648"><div class="ttname"><a href="differentiator_8h.html#a44ce2a9d595052af59609442ff49e76aa8e4634ad55e9525034e4270bc0c2b648">TpFn</a></div><div class="ttdeci">@ TpFn</div><div class="ttdoc">Function node.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00042">differentiator.h:42</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a54f4f801fe5fc4c1ebd93b25401e4203aeb983f45d643d531ad20682046a5e96d"><div class="ttname"><a href="differentiator_8h.html#a54f4f801fe5fc4c1ebd93b25401e4203aeb983f45d643d531ad20682046a5e96d">FnLog</a></div><div class="ttdeci">@ FnLog</div><div class="ttdoc">Base-e logarithm.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00069">differentiator.h:69</a></div></div>
+<div class="ttc" id="adifferentiator_8h_html_a5c2ba86d87f77f6bdab5dfb65018e7aa"><div class="ttname"><a href="differentiator_8h.html#a5c2ba86d87f77f6bdab5dfb65018e7aa">CreateNode</a></div><div class="ttdeci">node_t * CreateNode(char type, node_data_t data, node_t *LeftNode, node_t *RightNode)</div><div class="ttdoc">Creates a new expression tree node.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8c_source.html#l00472">differentiator.c:472</a></div></div>
+<div class="ttc" id="aread_8c_html_a121c0a0635ee664e1e75dc6f4b744554"><div class="ttname"><a href="#a121c0a0635ee664e1e75dc6f4b744554">GetE</a></div><div class="ttdeci">node_t * GetE(char **exp)</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00041">read.c:41</a></div></div>
+<div class="ttc" id="aread_8c_html_a922cfb1857404523cfb1fcc3a53591da"><div class="ttname"><a href="#a922cfb1857404523cfb1fcc3a53591da">dt_func</a></div><div class="ttdeci">int dt_func(char **exp)</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00201">read.c:201</a></div></div>
+<div class="ttc" id="aunionNode__data__t_html"><div class="ttname"><a href="unionNode__data__t.html">Node_data_t</a></div><div class="ttdoc">Union type that stores either a double value or an int value.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00011">differentiator.h:11</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="differentiator_8c_source.html#l00472">CreateNode()</a>, <a class="el" href="read_8c_source.html#l00201">dt_func()</a>, <a class="el" href="differentiator_8h_source.html#l00069">FnLog</a>, <a class="el" href="read_8c_source.html#l00041">GetE()</a> и <a class="el" href="differentiator_8h_source.html#l00042">TpFn</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="read_8c_source.html#l00105">GetP()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_a1462589fbf1d7c4381368d38fb36c39b_cgraph.png" border="0" usemap="#aread_8c_a1462589fbf1d7c4381368d38fb36c39b_cgraph" alt=""/></div>
+<map name="aread_8c_a1462589fbf1d7c4381368d38fb36c39b_cgraph" id="aread_8c_a1462589fbf1d7c4381368d38fb36c39b_cgraph">
+<area shape="rect" title="Gets factor from expression." alt="" coords="5,81,56,108"/>
+<area shape="rect" href="differentiator_8c.html#a5c2ba86d87f77f6bdab5dfb65018e7aa" title="Creates a new expression tree node." alt="" coords="104,5,195,32"/>
+<area shape="poly" title=" " alt="" coords="49,79,102,42,109,38,112,42,105,46,52,83"/>
+<area shape="rect" href="read_8c.html#a922cfb1857404523cfb1fcc3a53591da" title=" " alt="" coords="117,56,182,83"/>
+<area shape="poly" title=" " alt="" coords="55,87,102,77,103,82,56,92"/>
+<area shape="rect" href="read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="124,107,175,133"/>
+<area shape="poly" title=" " alt="" coords="56,97,109,109,108,114,55,103"/>
+<area shape="rect" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="243,56,293,83"/>
+<area shape="poly" title=" " alt="" coords="174,107,228,84,230,88,176,112"/>
+<area shape="rect" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="341,56,393,83"/>
+<area shape="poly" title=" " alt="" coords="294,67,326,67,326,72,294,72"/>
+<area shape="rect" href="read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="441,107,492,133"/>
+<area shape="poly" title=" " alt="" coords="394,80,428,98,426,103,392,85"/>
+<area shape="poly" title=" " alt="" coords="441,130,380,146,295,160,248,164,199,164,150,159,103,148,78,136,56,121,59,116,80,131,105,143,151,154,199,159,248,159,295,155,379,141,439,125"/>
+<area shape="poly" title=" " alt="" coords="440,123,191,123,191,117,440,117"/>
+<area shape="rect" href="read_8c.html#adfb6427a2db0bc58be50dae5cc9ae767" title="Gets keyword from expression." alt="" coords="541,81,592,108"/>
+<area shape="poly" title=" " alt="" coords="492,111,525,102,526,108,493,116"/>
+<area shape="rect" href="read_8c.html#a4b3a879d81abade33728b5b9b25262c0" title="Gets number from expression." alt="" coords="540,132,592,159"/>
+<area shape="poly" title=" " alt="" coords="493,124,526,132,524,138,492,129"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_a1462589fbf1d7c4381368d38fb36c39b_icgraph.png" border="0" usemap="#aread_8c_a1462589fbf1d7c4381368d38fb36c39b_icgraph" alt=""/></div>
+<map name="aread_8c_a1462589fbf1d7c4381368d38fb36c39b_icgraph" id="aread_8c_a1462589fbf1d7c4381368d38fb36c39b_icgraph">
+<area shape="rect" title="Gets factor from expression." alt="" coords="747,81,797,108"/>
+<area shape="rect" href="read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="647,56,699,83"/>
+<area shape="poly" title=" " alt="" coords="731,87,699,78,700,73,732,82"/>
+<area shape="rect" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="548,5,599,32"/>
+<area shape="poly" title=" " alt="" coords="632,52,598,34,601,29,635,47"/>
+<area shape="rect" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="450,5,500,32"/>
+<area shape="poly" title=" " alt="" coords="532,21,501,21,501,16,532,16"/>
+<area shape="rect" href="read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="350,56,402,83"/>
+<area shape="poly" title=" " alt="" coords="437,41,404,59,401,54,435,36"/>
+<area shape="poly" title=" " alt="" coords="418,72,522,83,647,92,746,93,746,98,647,97,521,88,417,77"/>
+<area shape="poly" title=" " alt="" coords="417,67,647,67,647,72,417,72"/>
+<area shape="rect" href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a" title=" " alt="" coords="250,56,302,83"/>
+<area shape="poly" title=" " alt="" coords="335,72,303,72,303,67,335,67"/>
+<area shape="rect" href="read_8c.html#a7809f622e41beb01d7eb8c3d73191c3f" title="Reads an expression tree from a file." alt="" coords="103,56,202,83"/>
+<area shape="poly" title=" " alt="" coords="234,72,202,72,202,67,234,67"/>
+<area shape="rect" href="src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7669219ca1e65583aeb3532fe1e1127a" name="a7669219ca1e65583aeb3532fe1e1127a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7669219ca1e65583aeb3532fe1e1127a">&#9670;&#160;</a></span>GetG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> * GetG </td>
+          <td>(</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>exp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="read_8c_source.html">read.c</a> строка <a class="el" href="read_8c_source.html#l00029">29</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{</div>
+<div class="line"><span class="lineno">   31</span>    PRINT_DEBUG(<span class="stringliteral">&quot;Locate: func GetG\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   32</span>    SKIP_SPACES((*exp));</div>
+<div class="line"><span class="lineno">   33</span>    </div>
+<div class="line"><span class="lineno">   34</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a> *node = <a class="code hl_function" href="#a121c0a0635ee664e1e75dc6f4b744554">GetE</a>(exp);</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">if</span> (**exp != <span class="charliteral">&#39;\0&#39;</span>) { SYNTAX_ERROR(); }</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span> node;</div>
+<div class="line"><span class="lineno">   39</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="read_8c_source.html#l00041">GetE()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="read_8c_source.html#l00015">ReadTreeFile()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_a7669219ca1e65583aeb3532fe1e1127a_cgraph.png" border="0" usemap="#aread_8c_a7669219ca1e65583aeb3532fe1e1127a_cgraph" alt=""/></div>
+<map name="aread_8c_a7669219ca1e65583aeb3532fe1e1127a_cgraph" id="aread_8c_a7669219ca1e65583aeb3532fe1e1127a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,58,83"/>
+<area shape="rect" href="read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="106,56,157,83"/>
+<area shape="poly" title=" " alt="" coords="58,67,90,67,90,72,58,72"/>
+<area shape="rect" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="205,5,255,32"/>
+<area shape="poly" title=" " alt="" coords="156,54,190,36,192,41,159,59"/>
+<area shape="rect" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="303,5,355,32"/>
+<area shape="poly" title=" " alt="" coords="256,16,288,16,288,21,256,21"/>
+<area shape="rect" href="read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="403,56,454,83"/>
+<area shape="poly" title=" " alt="" coords="356,29,390,47,388,52,354,34"/>
+<area shape="poly" title=" " alt="" coords="402,72,172,72,172,67,402,67"/>
+<area shape="rect" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="503,107,553,133"/>
+<area shape="poly" title=" " alt="" coords="455,80,491,98,488,103,453,84"/>
+<area shape="rect" href="read_8c.html#adfb6427a2db0bc58be50dae5cc9ae767" title="Gets keyword from expression." alt="" coords="503,5,554,32"/>
+<area shape="poly" title=" " alt="" coords="453,54,487,36,490,41,455,59"/>
+<area shape="rect" href="read_8c.html#a4b3a879d81abade33728b5b9b25262c0" title="Gets number from expression." alt="" coords="502,56,554,83"/>
+<area shape="poly" title=" " alt="" coords="454,67,486,67,486,72,454,72"/>
+<area shape="poly" title=" " alt="" coords="502,120,172,77,172,72,503,114"/>
+<area shape="rect" href="differentiator_8c.html#a5c2ba86d87f77f6bdab5dfb65018e7aa" title="Creates a new expression tree node." alt="" coords="602,81,694,108"/>
+<area shape="poly" title=" " alt="" coords="553,112,587,105,588,110,554,117"/>
+<area shape="rect" href="read_8c.html#a922cfb1857404523cfb1fcc3a53591da" title=" " alt="" coords="616,132,680,159"/>
+<area shape="poly" title=" " alt="" coords="554,123,601,133,600,138,553,128"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_a7669219ca1e65583aeb3532fe1e1127a_icgraph.png" border="0" usemap="#aread_8c_a7669219ca1e65583aeb3532fe1e1127a_icgraph" alt=""/></div>
+<map name="aread_8c_a7669219ca1e65583aeb3532fe1e1127a_icgraph" id="aread_8c_a7669219ca1e65583aeb3532fe1e1127a_icgraph">
+<area shape="rect" title=" " alt="" coords="250,5,302,32"/>
+<area shape="rect" href="read_8c.html#a7809f622e41beb01d7eb8c3d73191c3f" title="Reads an expression tree from a file." alt="" coords="103,5,202,32"/>
+<area shape="poly" title=" " alt="" coords="234,21,202,21,202,16,234,16"/>
+<area shape="rect" href="src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adfb6427a2db0bc58be50dae5cc9ae767" name="adfb6427a2db0bc58be50dae5cc9ae767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfb6427a2db0bc58be50dae5cc9ae767">&#9670;&#160;</a></span>GetK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> * GetK </td>
+          <td>(</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>exp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets keyword from expression. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exp</td><td>address of pointer to expression string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>pointer to root of keyword node </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="read_8c_source.html">read.c</a> строка <a class="el" href="read_8c_source.html#l00133">133</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>{</div>
+<div class="line"><span class="lineno">  135</span>    PRINT_DEBUG(<span class="stringliteral">&quot;Locate: func GetK\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>    <span class="keywordtype">int</span> vtype = **exp;</div>
+<div class="line"><span class="lineno">  138</span>    (*exp)++;</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>    SKIP_SPACES((*exp));</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">return</span> _VAR(vtype);</div>
+<div class="line"><span class="lineno">  143</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="read_8c_source.html#l00105">GetP()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_adfb6427a2db0bc58be50dae5cc9ae767_icgraph.png" border="0" usemap="#aread_8c_adfb6427a2db0bc58be50dae5cc9ae767_icgraph" alt=""/></div>
+<map name="aread_8c_adfb6427a2db0bc58be50dae5cc9ae767_icgraph" id="aread_8c_adfb6427a2db0bc58be50dae5cc9ae767_icgraph">
+<area shape="rect" title="Gets keyword from expression." alt="" coords="747,56,798,83"/>
+<area shape="rect" href="read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="647,56,699,83"/>
+<area shape="poly" title=" " alt="" coords="731,72,699,72,699,67,731,67"/>
+<area shape="rect" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="548,5,599,32"/>
+<area shape="poly" title=" " alt="" coords="632,52,598,34,601,29,635,47"/>
+<area shape="rect" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="450,5,500,32"/>
+<area shape="poly" title=" " alt="" coords="532,21,501,21,501,16,532,16"/>
+<area shape="rect" href="read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="350,56,402,83"/>
+<area shape="poly" title=" " alt="" coords="437,41,404,59,401,54,435,36"/>
+<area shape="poly" title=" " alt="" coords="417,67,647,67,647,72,417,72"/>
+<area shape="rect" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="251,107,301,133"/>
+<area shape="poly" title=" " alt="" coords="338,91,303,110,300,105,336,87"/>
+<area shape="rect" href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a" title=" " alt="" coords="250,56,302,83"/>
+<area shape="poly" title=" " alt="" coords="335,72,303,72,303,67,335,67"/>
+<area shape="poly" title=" " alt="" coords="316,112,647,70,647,75,317,118"/>
+<area shape="rect" href="read_8c.html#a7809f622e41beb01d7eb8c3d73191c3f" title="Reads an expression tree from a file." alt="" coords="103,56,202,83"/>
+<area shape="poly" title=" " alt="" coords="234,72,202,72,202,67,234,67"/>
+<area shape="rect" href="src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4b3a879d81abade33728b5b9b25262c0" name="a4b3a879d81abade33728b5b9b25262c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b3a879d81abade33728b5b9b25262c0">&#9670;&#160;</a></span>GetN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> * GetN </td>
+          <td>(</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>exp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets number from expression. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exp</td><td>address of pointer to expression string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>pointer to root of number node </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="read_8c_source.html">read.c</a> строка <a class="el" href="read_8c_source.html#l00185">185</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>{</div>
+<div class="line"><span class="lineno">  187</span>    PRINT_DEBUG(<span class="stringliteral">&quot;Locate: func GetN\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  188</span> </div>
+<div class="line"><span class="lineno">  189</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *OldS = *exp;</div>
+<div class="line"><span class="lineno">  190</span> </div>
+<div class="line"><span class="lineno">  191</span>    <span class="keywordtype">double</span> val0 = strtod(*exp, exp);</div>
+<div class="line"><span class="lineno">  192</span> </div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">if</span> (OldS == *exp) { SYNTAX_ERROR(); }</div>
+<div class="line"><span class="lineno">  194</span> </div>
+<div class="line"><span class="lineno">  195</span>    SKIP_SPACES((*exp));</div>
+<div class="line"><span class="lineno">  196</span> </div>
+<div class="line"><span class="lineno">  197</span>    printf(<span class="stringliteral">&quot;Функция GetN() вернула: [%.2lf]\n&quot;</span>, val0);</div>
+<div class="line"><span class="lineno">  198</span>    <span class="keywordflow">return</span> _NUM(val0);</div>
+<div class="line"><span class="lineno">  199</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="read_8c_source.html#l00105">GetP()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_a4b3a879d81abade33728b5b9b25262c0_icgraph.png" border="0" usemap="#aread_8c_a4b3a879d81abade33728b5b9b25262c0_icgraph" alt=""/></div>
+<map name="aread_8c_a4b3a879d81abade33728b5b9b25262c0_icgraph" id="aread_8c_a4b3a879d81abade33728b5b9b25262c0_icgraph">
+<area shape="rect" title="Gets number from expression." alt="" coords="747,56,799,83"/>
+<area shape="rect" href="read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="647,56,699,83"/>
+<area shape="poly" title=" " alt="" coords="731,72,699,72,699,67,731,67"/>
+<area shape="rect" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="548,5,599,32"/>
+<area shape="poly" title=" " alt="" coords="632,52,598,34,601,29,635,47"/>
+<area shape="rect" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="450,5,500,32"/>
+<area shape="poly" title=" " alt="" coords="532,21,501,21,501,16,532,16"/>
+<area shape="rect" href="read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="350,56,402,83"/>
+<area shape="poly" title=" " alt="" coords="437,41,404,59,401,54,435,36"/>
+<area shape="poly" title=" " alt="" coords="417,67,647,67,647,72,417,72"/>
+<area shape="rect" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="251,107,301,133"/>
+<area shape="poly" title=" " alt="" coords="338,91,303,110,300,105,336,87"/>
+<area shape="rect" href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a" title=" " alt="" coords="250,56,302,83"/>
+<area shape="poly" title=" " alt="" coords="335,72,303,72,303,67,335,67"/>
+<area shape="poly" title=" " alt="" coords="316,112,647,70,647,75,317,118"/>
+<area shape="rect" href="read_8c.html#a7809f622e41beb01d7eb8c3d73191c3f" title="Reads an expression tree from a file." alt="" coords="103,56,202,83"/>
+<area shape="poly" title=" " alt="" coords="234,72,202,72,202,67,234,67"/>
+<area shape="rect" href="src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abc51e260013f474ddcb0381654d173c1" name="abc51e260013f474ddcb0381654d173c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc51e260013f474ddcb0381654d173c1">&#9670;&#160;</a></span>GetP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> * GetP </td>
+          <td>(</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>exp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets product from expression. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exp</td><td>address of pointer to expression string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>pointer to root of product node </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="read_8c_source.html">read.c</a> строка <a class="el" href="read_8c_source.html#l00105">105</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>{</div>
+<div class="line"><span class="lineno">  107</span>    PRINT_DEBUG(<span class="stringliteral">&quot;Locate: func GetP\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a> *node = NULL;</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">if</span> (**exp == <span class="charliteral">&#39;(&#39;</span>)</div>
+<div class="line"><span class="lineno">  112</span>    {</div>
+<div class="line"><span class="lineno">  113</span>        (*exp)++;</div>
+<div class="line"><span class="lineno">  114</span>        </div>
+<div class="line"><span class="lineno">  115</span>        SKIP_SPACES((*exp));</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>        node = <a class="code hl_function" href="#a121c0a0635ee664e1e75dc6f4b744554">GetE</a>(exp);</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (**exp != <span class="charliteral">&#39;)&#39;</span>) { SYNTAX_ERROR(); }</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">else</span>              { (*exp)++; }</div>
+<div class="line"><span class="lineno">  120</span>        </div>
+<div class="line"><span class="lineno">  121</span>        SKIP_SPACES((*exp));</div>
+<div class="line"><span class="lineno">  122</span>    }</div>
+<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isalpha(**exp))</div>
+<div class="line"><span class="lineno">  124</span>    {</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> (isalpha(*(*exp + 1))) { node = <a class="code hl_function" href="#a1462589fbf1d7c4381368d38fb36c39b">GetF</a>(exp); }</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">else</span>                      { node = <a class="code hl_function" href="#adfb6427a2db0bc58be50dae5cc9ae767">GetK</a>(exp); }</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">else</span> { node = <a class="code hl_function" href="#a4b3a879d81abade33728b5b9b25262c0">GetN</a>(exp); }</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">return</span> node;</div>
+<div class="line"><span class="lineno">  131</span>}</div>
+<div class="ttc" id="aread_8c_html_a1462589fbf1d7c4381368d38fb36c39b"><div class="ttname"><a href="#a1462589fbf1d7c4381368d38fb36c39b">GetF</a></div><div class="ttdeci">node_t * GetF(char **exp)</div><div class="ttdoc">Gets factor from expression.</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00145">read.c:145</a></div></div>
+<div class="ttc" id="aread_8c_html_a4b3a879d81abade33728b5b9b25262c0"><div class="ttname"><a href="#a4b3a879d81abade33728b5b9b25262c0">GetN</a></div><div class="ttdeci">node_t * GetN(char **exp)</div><div class="ttdoc">Gets number from expression.</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00185">read.c:185</a></div></div>
+<div class="ttc" id="aread_8c_html_adfb6427a2db0bc58be50dae5cc9ae767"><div class="ttname"><a href="#adfb6427a2db0bc58be50dae5cc9ae767">GetK</a></div><div class="ttdeci">node_t * GetK(char **exp)</div><div class="ttdoc">Gets keyword from expression.</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00133">read.c:133</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="read_8c_source.html#l00041">GetE()</a>, <a class="el" href="read_8c_source.html#l00145">GetF()</a>, <a class="el" href="read_8c_source.html#l00133">GetK()</a> и <a class="el" href="read_8c_source.html#l00185">GetN()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="read_8c_source.html#l00084">GetV()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_abc51e260013f474ddcb0381654d173c1_cgraph.png" border="0" usemap="#aread_8c_abc51e260013f474ddcb0381654d173c1_cgraph" alt=""/></div>
+<map name="aread_8c_abc51e260013f474ddcb0381654d173c1_cgraph" id="aread_8c_abc51e260013f474ddcb0381654d173c1_cgraph">
+<area shape="rect" title="Gets product from expression." alt="" coords="5,107,57,133"/>
+<area shape="rect" href="read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="225,5,276,32"/>
+<area shape="poly" title=" " alt="" coords="39,105,65,72,83,55,103,42,130,30,157,23,209,16,210,22,159,28,131,35,106,46,86,60,69,76,43,108"/>
+<area shape="rect" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="106,56,156,83"/>
+<area shape="poly" title=" " alt="" coords="56,105,91,86,93,91,58,110"/>
+<area shape="rect" href="read_8c.html#adfb6427a2db0bc58be50dae5cc9ae767" title="Gets keyword from expression." alt="" coords="105,107,157,133"/>
+<area shape="poly" title=" " alt="" coords="57,117,90,117,90,123,57,123"/>
+<area shape="rect" href="read_8c.html#a4b3a879d81abade33728b5b9b25262c0" title="Gets number from expression." alt="" coords="105,157,157,184"/>
+<area shape="poly" title=" " alt="" coords="58,130,92,148,90,153,56,135"/>
+<area shape="rect" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="344,81,395,108"/>
+<area shape="poly" title=" " alt="" coords="278,30,298,42,339,70,336,74,295,46,275,34"/>
+<area shape="rect" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="443,183,494,209"/>
+<area shape="poly" title=" " alt="" coords="386,106,446,170,442,174,382,110"/>
+<area shape="poly" title=" " alt="" coords="443,205,381,217,295,226,247,227,198,223,150,214,103,198,71,176,47,148,51,145,75,172,106,194,151,209,199,218,247,221,295,221,380,212,442,200"/>
+<area shape="poly" title=" " alt="" coords="155,56,210,33,212,38,158,61"/>
+<area shape="rect" href="differentiator_8c.html#a5c2ba86d87f77f6bdab5dfb65018e7aa" title="Creates a new expression tree node." alt="" coords="205,56,296,83"/>
+<area shape="poly" title=" " alt="" coords="156,67,189,67,189,72,156,72"/>
+<area shape="rect" href="read_8c.html#a922cfb1857404523cfb1fcc3a53591da" title=" " alt="" coords="219,107,283,133"/>
+<area shape="poly" title=" " alt="" coords="158,77,205,98,203,103,155,82"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_abc51e260013f474ddcb0381654d173c1_icgraph.png" border="0" usemap="#aread_8c_abc51e260013f474ddcb0381654d173c1_icgraph" alt=""/></div>
+<map name="aread_8c_abc51e260013f474ddcb0381654d173c1_icgraph" id="aread_8c_abc51e260013f474ddcb0381654d173c1_icgraph">
+<area shape="rect" title="Gets product from expression." alt="" coords="647,56,699,83"/>
+<area shape="rect" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="548,5,599,32"/>
+<area shape="poly" title=" " alt="" coords="632,52,598,34,601,29,635,47"/>
+<area shape="rect" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="450,5,500,32"/>
+<area shape="poly" title=" " alt="" coords="532,21,501,21,501,16,532,16"/>
+<area shape="rect" href="read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="350,56,402,83"/>
+<area shape="poly" title=" " alt="" coords="437,41,404,59,401,54,435,36"/>
+<area shape="poly" title=" " alt="" coords="417,67,647,67,647,72,417,72"/>
+<area shape="rect" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="251,107,301,133"/>
+<area shape="poly" title=" " alt="" coords="338,91,303,110,300,105,336,87"/>
+<area shape="rect" href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a" title=" " alt="" coords="250,56,302,83"/>
+<area shape="poly" title=" " alt="" coords="335,72,303,72,303,67,335,67"/>
+<area shape="poly" title=" " alt="" coords="316,112,647,70,647,75,317,118"/>
+<area shape="rect" href="read_8c.html#a7809f622e41beb01d7eb8c3d73191c3f" title="Reads an expression tree from a file." alt="" coords="103,56,202,83"/>
+<area shape="poly" title=" " alt="" coords="234,72,202,72,202,67,234,67"/>
+<area shape="rect" href="src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acfb2a0957732ccc4c64603e63126b7f4" name="acfb2a0957732ccc4c64603e63126b7f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb2a0957732ccc4c64603e63126b7f4">&#9670;&#160;</a></span>GetT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> * GetT </td>
+          <td>(</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>exp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets term from expression. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exp</td><td>address of pointer to expression string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>pointer to root of term node </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="read_8c_source.html">read.c</a> строка <a class="el" href="read_8c_source.html#l00062">62</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>{</div>
+<div class="line"><span class="lineno">   64</span>    PRINT_DEBUG(<span class="stringliteral">&quot;Locate: func GetT\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a> *node = <a class="code hl_function" href="#a575569dafbf902a16ff04e180ad14bab">GetV</a>(exp);</div>
+<div class="line"><span class="lineno">   67</span>    </div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">while</span> ((**exp == <span class="charliteral">&#39;*&#39;</span>) || (**exp == <span class="charliteral">&#39;/&#39;</span>))</div>
+<div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordtype">char</span> op = **exp;</div>
+<div class="line"><span class="lineno">   71</span>        (*exp)++;</div>
+<div class="line"><span class="lineno">   72</span>        </div>
+<div class="line"><span class="lineno">   73</span>        SKIP_SPACES((*exp));</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_struct" href="structNode__t.html">node_t</a> *rnode = <a class="code hl_function" href="#a575569dafbf902a16ff04e180ad14bab">GetV</a>(exp);</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;*&#39;</span>) { node = _MUL(node, rnode); }</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">else</span>           { node = _DIV(node, rnode); }</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
+<div class="line"><span class="lineno">   80</span>    </div>
+<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">return</span> node;</div>
+<div class="line"><span class="lineno">   82</span>}</div>
+<div class="ttc" id="aread_8c_html_a575569dafbf902a16ff04e180ad14bab"><div class="ttname"><a href="#a575569dafbf902a16ff04e180ad14bab">GetV</a></div><div class="ttdeci">node_t * GetV(char **exp)</div><div class="ttdoc">Gets variable from expression.</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00084">read.c:84</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="read_8c_source.html#l00084">GetV()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="read_8c_source.html#l00041">GetE()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_acfb2a0957732ccc4c64603e63126b7f4_cgraph.png" border="0" usemap="#aread_8c_acfb2a0957732ccc4c64603e63126b7f4_cgraph" alt=""/></div>
+<map name="aread_8c_acfb2a0957732ccc4c64603e63126b7f4_cgraph" id="aread_8c_acfb2a0957732ccc4c64603e63126b7f4_cgraph">
+<area shape="rect" title="Gets term from expression." alt="" coords="5,35,56,61"/>
+<area shape="rect" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="104,60,155,87"/>
+<area shape="poly" title=" " alt="" coords="57,52,89,60,88,66,55,57"/>
+<area shape="rect" href="read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="203,85,254,112"/>
+<area shape="poly" title=" " alt="" coords="156,77,189,86,187,91,155,83"/>
+<area shape="rect" href="read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="423,85,474,112"/>
+<area shape="poly" title=" " alt="" coords="255,96,407,96,407,101,255,101"/>
+<area shape="rect" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="303,187,354,213"/>
+<area shape="poly" title=" " alt="" coords="245,110,304,173,305,174,301,177,300,177,241,114"/>
+<area shape="rect" href="read_8c.html#adfb6427a2db0bc58be50dae5cc9ae767" title="Gets keyword from expression." alt="" coords="303,136,354,163"/>
+<area shape="poly" title=" " alt="" coords="256,109,290,127,288,132,253,114"/>
+<area shape="rect" href="read_8c.html#a4b3a879d81abade33728b5b9b25262c0" title="Gets number from expression." alt="" coords="302,35,355,61"/>
+<area shape="poly" title=" " alt="" coords="253,84,287,66,290,71,256,88"/>
+<area shape="poly" title=" " alt="" coords="434,87,401,54,378,38,354,25,316,15,278,10,200,11,128,23,71,38,70,32,127,18,199,6,278,5,318,10,356,20,381,33,404,50,438,83"/>
+<area shape="poly" title=" " alt="" coords="344,184,418,120,422,124,347,188"/>
+<area shape="rect" href="differentiator_8c.html#a5c2ba86d87f77f6bdab5dfb65018e7aa" title="Creates a new expression tree node." alt="" coords="403,161,494,188"/>
+<area shape="poly" title=" " alt="" coords="354,192,387,185,388,190,355,197"/>
+<area shape="rect" href="read_8c.html#a922cfb1857404523cfb1fcc3a53591da" title=" " alt="" coords="416,212,481,239"/>
+<area shape="poly" title=" " alt="" coords="355,203,401,213,400,218,354,208"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_acfb2a0957732ccc4c64603e63126b7f4_icgraph.png" border="0" usemap="#aread_8c_acfb2a0957732ccc4c64603e63126b7f4_icgraph" alt=""/></div>
+<map name="aread_8c_acfb2a0957732ccc4c64603e63126b7f4_icgraph" id="aread_8c_acfb2a0957732ccc4c64603e63126b7f4_icgraph">
+<area shape="rect" title="Gets term from expression." alt="" coords="452,132,502,159"/>
+<area shape="rect" href="read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="352,81,404,108"/>
+<area shape="poly" title=" " alt="" coords="437,128,403,110,406,105,439,123"/>
+<area shape="rect" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="253,56,303,83"/>
+<area shape="poly" title=" " alt="" coords="337,87,303,78,304,73,338,82"/>
+<area shape="rect" href="read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="129,107,180,133"/>
+<area shape="poly" title=" " alt="" coords="337,102,181,120,180,115,337,97"/>
+<area shape="rect" href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a" title=" " alt="" coords="252,5,304,32"/>
+<area shape="poly" title=" " alt="" coords="346,74,296,35,299,30,349,70"/>
+<area shape="poly" title=" " alt="" coords="240,88,181,112,179,107,238,83"/>
+<area shape="rect" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="5,132,57,159"/>
+<area shape="poly" title=" " alt="" coords="114,131,58,143,57,138,113,126"/>
+<area shape="poly" title=" " alt="" coords="73,143,451,143,451,148,73,148"/>
+<area shape="rect" href="read_8c.html#a7809f622e41beb01d7eb8c3d73191c3f" title="Reads an expression tree from a file." alt="" coords="105,5,204,32"/>
+<area shape="poly" title=" " alt="" coords="236,21,204,21,204,16,236,16"/>
+<area shape="rect" href="src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="6,5,56,32"/>
+<area shape="poly" title=" " alt="" coords="89,21,56,21,56,16,89,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a575569dafbf902a16ff04e180ad14bab" name="a575569dafbf902a16ff04e180ad14bab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a575569dafbf902a16ff04e180ad14bab">&#9670;&#160;</a></span>GetV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> * GetV </td>
+          <td>(</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>exp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets variable from expression. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exp</td><td>address of pointer to expression string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>pointer to root of variable node </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="read_8c_source.html">read.c</a> строка <a class="el" href="read_8c_source.html#l00084">84</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>{</div>
+<div class="line"><span class="lineno">   86</span>    PRINT_DEBUG(<span class="stringliteral">&quot;Locate: func GetV\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a> *node = <a class="code hl_function" href="#abc51e260013f474ddcb0381654d173c1">GetP</a>(exp);</div>
+<div class="line"><span class="lineno">   89</span>    </div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">while</span> (**exp == <span class="charliteral">&#39;^&#39;</span>)</div>
+<div class="line"><span class="lineno">   91</span>    {</div>
+<div class="line"><span class="lineno">   92</span>        (*exp)++;</div>
+<div class="line"><span class="lineno">   93</span>        </div>
+<div class="line"><span class="lineno">   94</span>        SKIP_SPACES((*exp));</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>        <a class="code hl_struct" href="structNode__t.html">node_t</a> *rnode = <a class="code hl_function" href="#abc51e260013f474ddcb0381654d173c1">GetP</a>(exp);</div>
+<div class="line"><span class="lineno">   97</span>        </div>
+<div class="line"><span class="lineno">   98</span>        node = _POW(node, rnode);</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="line"><span class="lineno">  100</span>    </div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">return</span> node;</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>}</div>
+<div class="ttc" id="aread_8c_html_abc51e260013f474ddcb0381654d173c1"><div class="ttname"><a href="#abc51e260013f474ddcb0381654d173c1">GetP</a></div><div class="ttdeci">node_t * GetP(char **exp)</div><div class="ttdoc">Gets product from expression.</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00105">read.c:105</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="read_8c_source.html#l00105">GetP()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="read_8c_source.html#l00062">GetT()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_a575569dafbf902a16ff04e180ad14bab_cgraph.png" border="0" usemap="#aread_8c_a575569dafbf902a16ff04e180ad14bab_cgraph" alt=""/></div>
+<map name="aread_8c_a575569dafbf902a16ff04e180ad14bab_cgraph" id="aread_8c_a575569dafbf902a16ff04e180ad14bab_cgraph">
+<area shape="rect" title="Gets variable from expression." alt="" coords="5,157,57,184"/>
+<area shape="rect" href="read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="105,107,156,133"/>
+<area shape="poly" title=" " alt="" coords="56,155,90,137,92,142,58,160"/>
+<area shape="rect" href="read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="324,5,376,32"/>
+<area shape="poly" title=" " alt="" coords="138,105,164,72,182,55,203,42,229,30,257,23,309,16,309,22,258,28,231,35,205,46,186,60,168,76,143,108"/>
+<area shape="rect" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="205,56,255,83"/>
+<area shape="poly" title=" " alt="" coords="155,105,190,86,193,91,157,110"/>
+<area shape="rect" href="read_8c.html#adfb6427a2db0bc58be50dae5cc9ae767" title="Gets keyword from expression." alt="" coords="205,107,256,133"/>
+<area shape="poly" title=" " alt="" coords="156,117,189,117,189,123,156,123"/>
+<area shape="rect" href="read_8c.html#a4b3a879d81abade33728b5b9b25262c0" title="Gets number from expression." alt="" coords="204,157,256,184"/>
+<area shape="poly" title=" " alt="" coords="157,130,191,148,189,153,155,135"/>
+<area shape="rect" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="444,107,494,133"/>
+<area shape="poly" title=" " alt="" coords="378,29,397,42,425,67,449,93,445,97,422,71,394,46,375,33"/>
+<area shape="poly" title=" " alt="" coords="445,134,363,169,311,186,257,199,207,203,157,200,71,185,72,179,157,195,207,197,256,193,309,181,361,164,443,129"/>
+<area shape="poly" title=" " alt="" coords="255,56,309,33,311,38,257,61"/>
+<area shape="rect" href="differentiator_8c.html#a5c2ba86d87f77f6bdab5dfb65018e7aa" title="Creates a new expression tree node." alt="" coords="304,56,396,83"/>
+<area shape="poly" title=" " alt="" coords="256,67,289,67,289,72,256,72"/>
+<area shape="rect" href="read_8c.html#a922cfb1857404523cfb1fcc3a53591da" title=" " alt="" coords="318,107,382,133"/>
+<area shape="poly" title=" " alt="" coords="257,77,305,98,302,103,255,82"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_a575569dafbf902a16ff04e180ad14bab_icgraph.png" border="0" usemap="#aread_8c_a575569dafbf902a16ff04e180ad14bab_icgraph" alt=""/></div>
+<map name="aread_8c_a575569dafbf902a16ff04e180ad14bab_icgraph" id="aread_8c_a575569dafbf902a16ff04e180ad14bab_icgraph">
+<area shape="rect" title="Gets variable from expression." alt="" coords="548,132,599,159"/>
+<area shape="rect" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="450,81,500,108"/>
+<area shape="poly" title=" " alt="" coords="533,128,499,110,502,105,536,123"/>
+<area shape="rect" href="read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="350,69,402,96"/>
+<area shape="poly" title=" " alt="" coords="434,92,402,88,403,83,434,87"/>
+<area shape="rect" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="251,56,301,83"/>
+<area shape="poly" title=" " alt="" coords="335,80,301,75,302,70,336,75"/>
+<area shape="rect" href="read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="127,107,178,133"/>
+<area shape="poly" title=" " alt="" coords="335,92,179,118,178,113,334,87"/>
+<area shape="rect" href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a" title=" " alt="" coords="250,5,302,32"/>
+<area shape="poly" title=" " alt="" coords="339,63,297,35,300,30,342,58"/>
+<area shape="poly" title=" " alt="" coords="238,88,179,112,177,107,236,83"/>
+<area shape="poly" title=" " alt="" coords="194,120,548,141,547,146,193,125"/>
+<area shape="rect" href="read_8c.html#a7809f622e41beb01d7eb8c3d73191c3f" title="Reads an expression tree from a file." alt="" coords="103,5,202,32"/>
+<area shape="poly" title=" " alt="" coords="234,21,202,21,202,16,234,16"/>
+<area shape="rect" href="src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7809f622e41beb01d7eb8c3d73191c3f" name="a7809f622e41beb01d7eb8c3d73191c3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7809f622e41beb01d7eb8c3d73191c3f">&#9670;&#160;</a></span>ReadTreeFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="differentiator_8h.html#a2a54e6f8eadf216207448af397991c8e">node_t</a> * ReadTreeFile </td>
+          <td>(</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>fp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads an expression tree from a file. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fp</td><td>File pointer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Expression tree node. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="read_8c_source.html">read.c</a> строка <a class="el" href="read_8c_source.html#l00015">15</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{</div>
+<div class="line"><span class="lineno">   17</span>    <a class="code hl_struct" href="structArray__t.html">array_t</a>* arr = <a class="code hl_function" href="array_8c.html#a2cccab9f28107160d6429029c9089f6f">ctor_array</a>(fp);</div>
+<div class="line"><span class="lineno">   18</span>    </div>
+<div class="line"><span class="lineno">   19</span>    PRINT_DEBUG(<span class="stringliteral">&quot;Исходное выражение [%s]\n&quot;</span>, arr-&gt;<a class="code hl_variable" href="structArray__t.html#aced3600acb4bfcc18756a75d531bcfa7">array</a>);</div>
+<div class="line"><span class="lineno">   20</span> </div>
+<div class="line"><span class="lineno">   21</span>    <span class="keywordtype">char</span>*   tmp  = arr-&gt;<a class="code hl_variable" href="structArray__t.html#aced3600acb4bfcc18756a75d531bcfa7">array</a>;</div>
+<div class="line"><span class="lineno">   22</span>    <a class="code hl_struct" href="structNode__t.html">node_t</a>* tree = <a class="code hl_function" href="#a7669219ca1e65583aeb3532fe1e1127a">GetG</a>(&amp;(tmp));</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_function" href="array_8c.html#a403b3f4c9fe398e3d549c1f61eb72223">dtor_array</a>(arr);</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>    <span class="keywordflow">return</span> tree;</div>
+<div class="line"><span class="lineno">   27</span>}</div>
+<div class="ttc" id="aarray_8c_html_a2cccab9f28107160d6429029c9089f6f"><div class="ttname"><a href="array_8c.html#a2cccab9f28107160d6429029c9089f6f">ctor_array</a></div><div class="ttdeci">array_t * ctor_array(FILE *fp)</div><div class="ttdoc">Creates an array from a file.</div><div class="ttdef"><b>Definition</b> <a href="array_8c_source.html#l00006">array.c:6</a></div></div>
+<div class="ttc" id="aarray_8c_html_a403b3f4c9fe398e3d549c1f61eb72223"><div class="ttname"><a href="array_8c.html#a403b3f4c9fe398e3d549c1f61eb72223">dtor_array</a></div><div class="ttdeci">int dtor_array(array_t *arr)</div><div class="ttdoc">Deletes an array.</div><div class="ttdef"><b>Definition</b> <a href="array_8c_source.html#l00028">array.c:28</a></div></div>
+<div class="ttc" id="aread_8c_html_a7669219ca1e65583aeb3532fe1e1127a"><div class="ttname"><a href="#a7669219ca1e65583aeb3532fe1e1127a">GetG</a></div><div class="ttdeci">node_t * GetG(char **exp)</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00029">read.c:29</a></div></div>
+<div class="ttc" id="astructArray__t_html"><div class="ttname"><a href="structArray__t.html">Array_t</a></div><div class="ttdoc">Structure of array_t.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00015">array.h:15</a></div></div>
+<div class="ttc" id="astructArray__t_html_aced3600acb4bfcc18756a75d531bcfa7"><div class="ttname"><a href="structArray__t.html#aced3600acb4bfcc18756a75d531bcfa7">Array_t::array</a></div><div class="ttdeci">char * array</div><div class="ttdoc">Array of characters.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00016">array.h:16</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="array_8h_source.html#l00016">Array_t::array</a>, <a class="el" href="array_8c_source.html#l00006">ctor_array()</a>, <a class="el" href="array_8c_source.html#l00028">dtor_array()</a> и <a class="el" href="read_8c_source.html#l00029">GetG()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="src_2main_8c_source.html#l00007">main()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_a7809f622e41beb01d7eb8c3d73191c3f_cgraph.png" border="0" usemap="#aread_8c_a7809f622e41beb01d7eb8c3d73191c3f_cgraph" alt=""/></div>
+<map name="aread_8c_a7809f622e41beb01d7eb8c3d73191c3f_cgraph" id="aread_8c_a7809f622e41beb01d7eb8c3d73191c3f_cgraph">
+<area shape="rect" title="Reads an expression tree from a file." alt="" coords="5,56,105,83"/>
+<area shape="rect" href="array_8c.html#a2cccab9f28107160d6429029c9089f6f" title="Creates an array from a file." alt="" coords="153,5,232,32"/>
+<area shape="poly" title=" " alt="" coords="93,53,139,35,141,40,94,58"/>
+<area shape="rect" href="array_8c.html#a403b3f4c9fe398e3d549c1f61eb72223" title="Deletes an array." alt="" coords="153,56,232,83"/>
+<area shape="poly" title=" " alt="" coords="105,67,137,67,137,72,105,72"/>
+<area shape="rect" href="read_8c.html#a7669219ca1e65583aeb3532fe1e1127a" title=" " alt="" coords="166,107,219,133"/>
+<area shape="poly" title=" " alt="" coords="94,81,153,103,151,108,93,86"/>
+<area shape="rect" href="array_8c.html#a403f081f1322e03c670fae269c3932c3" title="Calculates the size of a file." alt="" coords="280,5,408,32"/>
+<area shape="poly" title=" " alt="" coords="232,16,264,16,264,21,232,21"/>
+<area shape="rect" href="read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="319,107,370,133"/>
+<area shape="poly" title=" " alt="" coords="219,117,303,117,303,123,219,123"/>
+<area shape="rect" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="456,56,507,83"/>
+<area shape="poly" title=" " alt="" coords="369,108,441,81,443,86,371,113"/>
+<area shape="rect" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="555,56,606,83"/>
+<area shape="poly" title=" " alt="" coords="507,67,539,67,539,72,507,72"/>
+<area shape="rect" href="read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="654,107,705,133"/>
+<area shape="poly" title=" " alt="" coords="608,80,642,98,639,103,605,85"/>
+<area shape="poly" title=" " alt="" coords="653,123,385,123,385,117,653,117"/>
+<area shape="rect" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b" title="Gets factor from expression." alt="" coords="754,157,805,184"/>
+<area shape="poly" title=" " alt="" coords="707,130,742,149,740,154,704,135"/>
+<area shape="rect" href="read_8c.html#adfb6427a2db0bc58be50dae5cc9ae767" title="Gets keyword from expression." alt="" coords="754,56,805,83"/>
+<area shape="poly" title=" " alt="" coords="704,105,739,87,741,92,707,110"/>
+<area shape="rect" href="read_8c.html#a4b3a879d81abade33728b5b9b25262c0" title="Gets number from expression." alt="" coords="753,107,806,133"/>
+<area shape="poly" title=" " alt="" coords="706,117,738,117,738,123,706,123"/>
+<area shape="poly" title=" " alt="" coords="754,170,385,127,385,122,754,165"/>
+<area shape="rect" href="differentiator_8c.html#a5c2ba86d87f77f6bdab5dfb65018e7aa" title="Creates a new expression tree node." alt="" coords="854,132,945,159"/>
+<area shape="poly" title=" " alt="" coords="805,163,838,156,839,161,806,168"/>
+<area shape="rect" href="read_8c.html#a922cfb1857404523cfb1fcc3a53591da" title=" " alt="" coords="867,183,932,209"/>
+<area shape="poly" title=" " alt="" coords="806,173,852,183,851,189,805,179"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_8c_a7809f622e41beb01d7eb8c3d73191c3f_icgraph.png" border="0" usemap="#aread_8c_a7809f622e41beb01d7eb8c3d73191c3f_icgraph" alt=""/></div>
+<map name="aread_8c_a7809f622e41beb01d7eb8c3d73191c3f_icgraph" id="aread_8c_a7809f622e41beb01d7eb8c3d73191c3f_icgraph">
+<area shape="rect" title="Reads an expression tree from a file." alt="" coords="103,5,202,32"/>
+<area shape="rect" href="src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="read_8c.html">read.c</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

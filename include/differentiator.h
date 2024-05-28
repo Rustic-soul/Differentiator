@@ -1,12 +1,23 @@
 #ifndef DIFFERENTIATOR_H
 #define DIFFERENTIATOR_H
 
-#include "main.h"
+#include <stdio.h>
 
-typedef struct Array_t {
-    char   *arr_ptr;
-    size_t  size_arr;
-} array_t;
+union Node_data_t {
+    double num;
+    int    additional_type;
+};
+typedef union Node_data_t node_data_t;
+
+struct Node_t {
+    char type;
+
+    node_data_t data;
+
+    struct Node_t *LeftNode;
+    struct Node_t *RightNode;
+};
+typedef struct Node_t node_t;
 
 enum ClassNodeType {
     TpNm = 0,
@@ -83,8 +94,6 @@ static const char* ArrayTp[] = {
 
 static const char ArrayOp[] = { '+', '-', '*', '/', '^' };
 
-static const char ArrayVr[] = { 'x', 'y', 'z' };
-
 enum ErrorCode {
     ERROR_UNKNOWN_NODE_TYPE      = -1,
     ERROR_UNKNOWN_OPERATION_TYPE = -2,
@@ -95,71 +104,24 @@ enum ErrorCode {
     ERROR_FTELL_FAILED = -7
 };
 
-#define MAX_LEN_FUNC_NAME 100
-
-#define NTYPE      node->Type
-#define NDATA      node->Data
-#define NDTYPE     node->Data.AdditionalType
-#define NDNUM      node->Data.Num
-
-#define LNODE      node->LeftNode
-#define RNODE      node->RightNode
-#define LNTYPE     node->LeftNode->Type
-#define RNTYPE     node->RightNode->Type
-#define LNDATA     node->LeftNode->Data
-#define RNDATA     node->RightNode->Data
-#define LNDTYPE    node->LeftNode->Data.AdditionalType
-#define RNDTYPE    node->RightNode->Data.AdditionalType
-#define LNDNUM     node->LeftNode->Data.Num
-#define RNDNUM     node->RightNode->Data.Num
-
-#define _DIFF(node) DifferentiatorRec(node, part)
-#define _CPY(node)  CopyNode         (node)
-
-#define _VAR(tp)           CreateNode(TpVr, (NodeData){.AdditionalType = tp   }, NULL , NULL )
-#define _NUM(val)          CreateNode(TpNm, (NodeData){.Num            = val  }, NULL , NULL )
-#define _ADD(lnode, rnode) CreateNode(TpOp, (NodeData){.AdditionalType = OpAdd}, lnode, rnode)
-#define _SUB(lnode, rnode) CreateNode(TpOp, (NodeData){.AdditionalType = OpSub}, lnode, rnode)
-#define _MUL(lnode, rnode) CreateNode(TpOp, (NodeData){.AdditionalType = OpMul}, lnode, rnode)
-#define _DIV(lnode, rnode) CreateNode(TpOp, (NodeData){.AdditionalType = OpDiv}, lnode, rnode)
-#define _POW(lnode, rnode) CreateNode(TpOp, (NodeData){.AdditionalType = OpPow}, lnode, rnode)
-
-#define _LN(node)          CreateNode(TpFn, (NodeData){.AdditionalType = FnLn  }, node, NULL)
-#define _LG(node)          CreateNode(TpFn, (NodeData){.AdditionalType = FnLg  }, node, NULL)
-#define _LOG(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnLog }, node, NULL)
-#define _SIN(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnSin }, node, NULL)
-#define _COS(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnCos }, node, NULL)
-#define _TG(node)          CreateNode(TpFn, (NodeData){.AdditionalType = FnTg  }, node, NULL)
-#define _CTG(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnCtg }, node, NULL)
-#define _ASIN(node)        CreateNode(TpFn, (NodeData){.AdditionalType = FnAsin}, node, NULL)
-#define _ACOS(node)        CreateNode(TpFn, (NodeData){.AdditionalType = FnAcos}, node, NULL)
-#define _ATG(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnTg  }, node, NULL)
-#define _ACTG(node)        CreateNode(TpFn, (NodeData){.AdditionalType = FnCtg }, node, NULL)
-#define _SH(node)          CreateNode(TpFn, (NodeData){.AdditionalType = FnSh  }, node, NULL)
-#define _CH(node)          CreateNode(TpFn, (NodeData){.AdditionalType = FnCh  }, node, NULL)
-#define _TH(node)          CreateNode(TpFn, (NodeData){.AdditionalType = FnTh  }, node, NULL)
-#define _CTH(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnCth }, node, NULL)
-#define _SQRT(node)        CreateNode(TpFn, (NodeData){.AdditionalType = FnSqrt}, node, NULL)
-#define _EXP(node)         CreateNode(TpFn, (NodeData){.AdditionalType = FnExp }, node, NULL)
-
-#define SKIP_SPACES(pstr) while ((*pstr == ' ') || (*pstr == '\n')) { pstr++; }
-
-// int DTFunc(const char* fname);
-
-DiffNode *CreateTreeRec(array_t *sarr, size_t *count);
-int       SearchVar(DiffNode *node, int var);
+int       SearchVar(node_t *node, int var);
 int       DoubleEqual(double num1, double num2);
-DiffNode *CopyNode(DiffNode *node);
-DiffNode *CreateNode(char type, NodeData data, DiffNode *LeftNode, DiffNode *RightNode);
-int       PrintNodesDot(FILE *fp, DiffNode *node);
-int       DefinitionTypeVariableAndOperation(char ch);
-char      DefinitionTypeNode(char *arr);
+node_t* CopyNode(node_t *node);
+node_t* CreateNode(char type, node_data_t data, node_t *LeftNode, node_t *RightNode);
 
-DiffNode *CreateTree           (FILE     *fp);
-DiffNode *ConvolutionConstants (DiffNode *node);
-DiffNode *RemoveNeutralElements(DiffNode *node);
-DiffNode *FullOptimizer        (DiffNode *node);
-DiffNode *DifferentiatorRec    (DiffNode *node, int part);
-DiffNode *DifferentiatorLog(DiffNode *node, int part);
+node_t* convolution_constants (node_t *node);
+node_t* remove_neutral_elements(node_t *node);
+node_t* FullOptimizer        (node_t *node);
+
+node_t* ReadTreeFile  (FILE     *fp);
+node_t* Differentiator(node_t *node, int part);
+double    CalculateTree (node_t *node);
+
+int       DtorTree      (node_t *node);
+
+int       PrintTreeDot  (FILE *fp, node_t *node);
+int       CreateResTex  (FILE *fp, node_t *TreeExp, node_t *TreeDiff);
+
+int PrintExpression(FILE *fp, node_t *node);
 
 #endif

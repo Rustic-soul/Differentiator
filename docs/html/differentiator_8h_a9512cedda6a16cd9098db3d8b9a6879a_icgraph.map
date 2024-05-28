@@ -1,0 +1,28 @@
+<map id="DoubleEqual" name="DoubleEqual">
+<area shape="rect" id="Node000001" title="Checks if two double values are equal." alt="" coords="1078,107,1174,133"/>
+<area shape="rect" id="Node000002" href="$differentiator_8c.html#af36e4fe287c0ff30dacca754916f637d" title=" " alt="" coords="831,5,1029,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1099,98,1067,71,1029,46,1000,35,1002,30,1032,42,1070,66,1102,94"/>
+<area shape="rect" id="Node000008" href="$differentiator_8c.html#a7e54fc0c5b1dad10f5eb6ddf6a17a1ac" title=" " alt="" coords="833,56,1027,83"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1062,106,1030,97,986,86,987,81,1031,92,1064,101"/>
+<area shape="rect" id="Node000009" href="$differentiator_8c.html#a170cc82dbb91f52550cb494b0140e23f" title=" " alt="" coords="831,107,1029,133"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="1063,123,1029,123,1029,117,1063,117"/>
+<area shape="rect" id="Node000010" href="$differentiator_8c.html#aeae20067aef004b6dafe3a8f3861297a" title=" " alt="" coords="829,157,1030,184"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="1064,139,1031,148,987,159,986,154,1030,143,1062,134"/>
+<area shape="rect" id="Node000011" href="$differentiator_8c.html#aea6c3b07a8aa4a2963c16a71866a94a4" title=" " alt="" coords="831,208,1029,235"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="1102,146,1070,174,1032,198,1002,210,1000,205,1029,194,1067,169,1099,142"/>
+<area shape="rect" id="Node000003" href="$differentiator_8c.html#a0c59e84515eceb9674999c21057f4416" title=" " alt="" coords="611,99,781,141"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="849,40,830,46,777,72,731,100,728,96,774,68,828,42,847,35"/>
+<area shape="rect" id="Node000004" href="$differentiator_8c.html#af568b87d046fc494a549b2ee6f81a34d" title="Removes neutral elements in expression tree." alt="" coords="392,107,563,133"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="595,123,563,123,563,117,595,117"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="508,94,498,88,477,85,459,87,448,92,446,97,451,105,446,108,441,98,445,88,457,82,478,80,499,83,511,89"/>
+<area shape="rect" id="Node000005" href="$differentiator_8c.html#a39a8e68c15f71b41ddb2847e326b0996" title="Full optimizer of expression tree." alt="" coords="246,107,344,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="377,123,345,123,345,117,377,117"/>
+<area shape="rect" id="Node000006" href="$differentiator_8c.html#abea5f36d78c7c1736bddb0cd0f06e189" title="Differentiates an expression tree." alt="" coords="103,107,198,133"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="231,123,198,123,198,117,231,117"/>
+<area shape="rect" id="Node000007" href="$src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,107,55,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="87,123,55,123,55,117,87,117"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="850,89,782,104,781,99,849,84"/>
+<area shape="poly" id="edge11_Node000009_Node000003" title=" " alt="" coords="815,123,782,123,782,117,815,117"/>
+<area shape="poly" id="edge13_Node000010_Node000003" title=" " alt="" coords="849,156,781,141,782,136,850,151"/>
+<area shape="poly" id="edge15_Node000011_Node000003" title=" " alt="" coords="847,205,828,198,774,172,728,144,731,140,777,168,830,194,849,200"/>
+</map>

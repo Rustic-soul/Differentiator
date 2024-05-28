@@ -1,21 +1,19 @@
-#define CALCULATE_CPP
-
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
 
 #include "differentiator.h"
+#include "DSL.h"
 #include "mydef.h"
 #include "config.h"
 
-#include <math.h>
-
-double CalculateTree(DiffNode *node)
+double CalculateTree(node_t *node)
 {
     switch (NTYPE)
     {
-    case TpNm: PRINT_DEBUG("node <--> Num\n"); return node->Data.Num;
+    case TpNm: PRINT_DEBUG("node <--> Num\n"); return node->data.num;
 
-    case TpVr: PRINT_DEBUG("node <--> Var\n"); return VarArray[NDTYPE];
+    case TpVr: PRINT_DEBUG("node <--> Var\n"); return 1; //TODO Сделать запрос переменных для подсчета
 
     case TpCn: PRINT_DEBUG("node <--> Const\n"); return ConstArray[NDTYPE];
 

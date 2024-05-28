@@ -1,0 +1,33 @@
+<map id="differentiator_unary_function" name="differentiator_unary_function">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,472,137,515"/>
+<area shape="rect" id="Node000002" href="$differentiator_8c.html#a424486a359ad61a344f5a2bee3e35be8" title=" " alt="" coords="185,5,316,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,472,73,397,87,288,101,228,121,168,148,111,183,58,184,57,188,60,187,62,153,113,126,170,106,230,92,289,78,397,75,472"/>
+<area shape="rect" id="Node000003" href="$differentiator_8c.html#a91133d519153e0d04ba9fe9f825322f0" title=" " alt="" coords="185,72,316,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="71,471,77,406,94,316,109,266,128,216,152,168,183,125,184,124,188,127,187,128,157,171,133,218,114,267,100,317,82,407,76,472"/>
+<area shape="rect" id="Node000004" href="$differentiator_8c.html#afb920ec757c6c54b1805338eed3f4353" title=" " alt="" coords="185,139,316,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="72,471,82,417,102,343,135,264,156,226,183,192,185,190,188,193,187,195,161,229,139,266,107,345,88,418,78,472"/>
+<area shape="rect" id="Node000005" href="$differentiator_8c.html#ad1742f3eaf71596427e153f6ea9c654f" title=" " alt="" coords="185,205,316,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="75,471,88,428,110,372,141,312,183,258,185,256,189,260,187,262,146,315,115,374,93,430,80,472"/>
+<area shape="rect" id="Node000006" href="$differentiator_8c.html#a6f9e9fef5de008f260b78c8dcec7ae90" title=" " alt="" coords="185,272,316,315"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="80,470,120,401,149,361,183,325,186,322,190,326,187,329,153,364,124,404,85,473"/>
+<area shape="rect" id="Node000007" href="$differentiator_8c.html#a9a0c0fbd52fe2dc248c79deb92197b48" title=" " alt="" coords="185,339,316,381"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="92,470,132,431,183,391,189,387,192,392,186,395,136,435,95,474"/>
+<area shape="rect" id="Node000008" href="$differentiator_8c.html#aac51a3a914168a3f74d3808ab9b14e5a" title=" " alt="" coords="185,405,316,448"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="129,469,176,451,178,456,131,474"/>
+<area shape="rect" id="Node000009" href="$differentiator_8c.html#ac0b2165d8ba249a123e960fb26692dc4" title=" " alt="" coords="185,472,316,515"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="137,491,169,491,169,496,137,496"/>
+<area shape="rect" id="Node000010" href="$differentiator_8c.html#a90a5e2b51b2aa431049f48d95fd5f73b" title=" " alt="" coords="185,539,316,581"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="131,513,178,530,176,535,129,518"/>
+<area shape="rect" id="Node000011" href="$differentiator_8c.html#aca1c17094273e5fd7ae13a28f72fbbc8" title=" " alt="" coords="185,605,316,648"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="95,513,136,551,186,591,192,595,189,599,183,595,132,555,92,517"/>
+<area shape="rect" id="Node000012" href="$differentiator_8c.html#a65b348551144a72ff595df6e9647f880" title=" " alt="" coords="185,672,316,715"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="85,514,124,583,153,623,187,658,190,661,186,665,183,662,149,626,120,586,80,517"/>
+<area shape="rect" id="Node000013" href="$differentiator_8c.html#a13c6ad257364259c28db0124acd74d1b" title=" " alt="" coords="185,739,316,781"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="80,514,93,557,115,613,146,672,187,725,189,727,185,731,183,728,141,675,110,615,88,559,75,516"/>
+<area shape="rect" id="Node000014" href="$differentiator_8c.html#af0f194aa4770f5f0e3b56aed7b2851b5" title=" " alt="" coords="185,805,316,848"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="78,515,88,569,107,642,139,721,161,758,187,792,188,794,185,797,183,795,156,761,135,723,102,644,82,570,72,516"/>
+<area shape="rect" id="Node000015" href="$differentiator_8c.html#a3d9d6d4b62a4b81e37ab84940324bba0" title=" " alt="" coords="185,872,316,915"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="76,515,82,579,100,670,114,719,133,769,157,816,187,858,188,859,184,863,183,862,152,818,128,771,109,721,94,671,77,580,71,515"/>
+<area shape="rect" id="Node000016" href="$differentiator_8c.html#aea2a3782aeb3234f12300bce8e278da3" title=" " alt="" coords="185,939,316,981"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="75,515,78,590,92,697,106,757,126,816,153,873,187,925,188,926,184,930,183,928,148,876,121,818,101,758,87,698,73,590,69,515"/>
+</map>

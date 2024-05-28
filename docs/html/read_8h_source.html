@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My first project: Исходный файл read.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My first project<span id="projectnumber">&#160;1.0.1</span>
+   </div>
+   <div id="projectbrief">program for solving quadratic equations</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('read_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">read.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="read_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef READ_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define READ_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="differentiator_8h.html">differentiator.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define SYNTAX_ERROR()                                  \</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">{                                                       \</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">    PRINT_ERROR(&quot;Неправильный синтаксис\n&quot;);            \</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">    exit(ERROR_SYNTAX);                                 \</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define SKIP_SPACES(pstr) while ((*pstr == &#39; &#39;) || (*pstr == &#39;\n&#39;)) { pstr++; }</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">static</span> <a class="code hl_struct" href="structNode__t.html">node_t</a>* <a class="code hl_function" href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4">GetT</a>  (<span class="keywordtype">char</span> **exp);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">static</span> <a class="code hl_struct" href="structNode__t.html">node_t</a>* <a class="code hl_function" href="read_8c.html#abc51e260013f474ddcb0381654d173c1">GetP</a>  (<span class="keywordtype">char</span> **exp);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">static</span> <a class="code hl_struct" href="structNode__t.html">node_t</a>* <a class="code hl_function" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b">GetF</a>  (<span class="keywordtype">char</span> **exp);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">static</span> <a class="code hl_struct" href="structNode__t.html">node_t</a>* <a class="code hl_function" href="read_8c.html#a4b3a879d81abade33728b5b9b25262c0">GetN</a>  (<span class="keywordtype">char</span> **exp);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">static</span> <a class="code hl_struct" href="structNode__t.html">node_t</a>* <a class="code hl_function" href="read_8c.html#a575569dafbf902a16ff04e180ad14bab">GetV</a>  (<span class="keywordtype">char</span> **exp);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">static</span> <a class="code hl_struct" href="structNode__t.html">node_t</a>* <a class="code hl_function" href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b">GetF</a>  (<span class="keywordtype">char</span> **exp);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keyword">static</span> <a class="code hl_struct" href="structNode__t.html">node_t</a>* <a class="code hl_function" href="read_8c.html#adfb6427a2db0bc58be50dae5cc9ae767">GetK</a>  (<span class="keywordtype">char</span> **exp);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">static</span> <span class="keywordtype">int</span> is_digit(<span class="keywordtype">char</span> c) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">return</span> (c &gt;= <span class="charliteral">&#39;0&#39;</span>) &amp;&amp; (c &lt;= <span class="charliteral">&#39;9&#39;</span>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">static</span> <span class="keywordtype">int</span> is_letter(<span class="keywordtype">char</span> c) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">return</span> ((c &gt;= <span class="charliteral">&#39;a&#39;</span>) &amp;&amp; (c &lt;= <span class="charliteral">&#39;z&#39;</span>)) || ((c &gt;= <span class="charliteral">&#39;A&#39;</span>) &amp;&amp; (c &lt;= <span class="charliteral">&#39;Z&#39;</span>));</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword">static</span> <span class="keywordtype">int</span> is_sign(<span class="keywordtype">char</span> c) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">return</span> (c == <span class="charliteral">&#39;+&#39;</span>) || (c == <span class="charliteral">&#39;-&#39;</span>) || (c == <span class="charliteral">&#39;*&#39;</span>) || (c == <span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="keyword">static</span> <span class="keywordtype">int</span> is_in(<span class="keywordtype">char</span> c, <span class="keywordtype">char</span> *chars, <span class="keywordtype">size_t</span> len) {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; len; ++i) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">if</span> (c == chars[i]) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="keyword">static</span> <span class="keywordtype">int</span> is_whitespace(<span class="keywordtype">char</span> c) {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">return</span> (c == <span class="charliteral">&#39; &#39;</span>) || (c == <span class="charliteral">&#39;\t&#39;</span>) || (c == <span class="charliteral">&#39;\n&#39;</span>) || (c == <span class="charliteral">&#39;\v&#39;</span>) ||</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>           (c == <span class="charliteral">&#39;\f&#39;</span>) || (c == <span class="charliteral">&#39;\r&#39;</span>);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>}</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="adifferentiator_8h_html"><div class="ttname"><a href="differentiator_8h.html">differentiator.h</a></div></div>
+<div class="ttc" id="aread_8c_html_a1462589fbf1d7c4381368d38fb36c39b"><div class="ttname"><a href="read_8c.html#a1462589fbf1d7c4381368d38fb36c39b">GetF</a></div><div class="ttdeci">node_t * GetF(char **exp)</div><div class="ttdoc">Gets factor from expression.</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00145">read.c:145</a></div></div>
+<div class="ttc" id="aread_8c_html_a4b3a879d81abade33728b5b9b25262c0"><div class="ttname"><a href="read_8c.html#a4b3a879d81abade33728b5b9b25262c0">GetN</a></div><div class="ttdeci">node_t * GetN(char **exp)</div><div class="ttdoc">Gets number from expression.</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00185">read.c:185</a></div></div>
+<div class="ttc" id="aread_8c_html_a575569dafbf902a16ff04e180ad14bab"><div class="ttname"><a href="read_8c.html#a575569dafbf902a16ff04e180ad14bab">GetV</a></div><div class="ttdeci">node_t * GetV(char **exp)</div><div class="ttdoc">Gets variable from expression.</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00084">read.c:84</a></div></div>
+<div class="ttc" id="aread_8c_html_abc51e260013f474ddcb0381654d173c1"><div class="ttname"><a href="read_8c.html#abc51e260013f474ddcb0381654d173c1">GetP</a></div><div class="ttdeci">node_t * GetP(char **exp)</div><div class="ttdoc">Gets product from expression.</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00105">read.c:105</a></div></div>
+<div class="ttc" id="aread_8c_html_acfb2a0957732ccc4c64603e63126b7f4"><div class="ttname"><a href="read_8c.html#acfb2a0957732ccc4c64603e63126b7f4">GetT</a></div><div class="ttdeci">node_t * GetT(char **exp)</div><div class="ttdoc">Gets term from expression.</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00062">read.c:62</a></div></div>
+<div class="ttc" id="aread_8c_html_adfb6427a2db0bc58be50dae5cc9ae767"><div class="ttname"><a href="read_8c.html#adfb6427a2db0bc58be50dae5cc9ae767">GetK</a></div><div class="ttdeci">node_t * GetK(char **exp)</div><div class="ttdoc">Gets keyword from expression.</div><div class="ttdef"><b>Definition</b> <a href="read_8c_source.html#l00133">read.c:133</a></div></div>
+<div class="ttc" id="astructNode__t_html"><div class="ttname"><a href="structNode__t.html">Node_t</a></div><div class="ttdoc">Structure that represents a node in an expression tree.</div><div class="ttdef"><b>Definition</b> <a href="differentiator_8h_source.html#l00025">differentiator.h:25</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="read_8h.html">read.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

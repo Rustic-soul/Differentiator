@@ -1,0 +1,21 @@
+<map id="GetF" name="GetF">
+<area shape="rect" id="Node000001" title="Gets factor from expression." alt="" coords="5,81,56,108"/>
+<area shape="rect" id="Node000002" href="$differentiator_8c.html#a5c2ba86d87f77f6bdab5dfb65018e7aa" title="Creates a new expression tree node." alt="" coords="104,5,195,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,79,102,42,109,38,112,42,105,46,52,83"/>
+<area shape="rect" id="Node000003" href="$read_8c.html#a922cfb1857404523cfb1fcc3a53591da" title=" " alt="" coords="117,56,182,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,87,102,77,103,82,56,92"/>
+<area shape="rect" id="Node000004" href="$read_8c.html#a121c0a0635ee664e1e75dc6f4b744554" title=" " alt="" coords="124,107,175,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="56,97,109,109,108,114,55,103"/>
+<area shape="rect" id="Node000005" href="$read_8c.html#acfb2a0957732ccc4c64603e63126b7f4" title="Gets term from expression." alt="" coords="243,56,293,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="174,107,228,84,230,88,176,112"/>
+<area shape="rect" id="Node000006" href="$read_8c.html#a575569dafbf902a16ff04e180ad14bab" title="Gets variable from expression." alt="" coords="341,56,393,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="294,67,326,67,326,72,294,72"/>
+<area shape="rect" id="Node000007" href="$read_8c.html#abc51e260013f474ddcb0381654d173c1" title="Gets product from expression." alt="" coords="441,107,492,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="394,80,428,98,426,103,392,85"/>
+<area shape="poly" id="edge8_Node000007_Node000001" title=" " alt="" coords="441,130,380,146,295,160,248,164,199,164,150,159,103,148,78,136,56,121,59,116,80,131,105,143,151,154,199,159,248,159,295,155,379,141,439,125"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="440,123,191,123,191,117,440,117"/>
+<area shape="rect" id="Node000008" href="$read_8c.html#adfb6427a2db0bc58be50dae5cc9ae767" title="Gets keyword from expression." alt="" coords="541,81,592,108"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="492,111,525,102,526,108,493,116"/>
+<area shape="rect" id="Node000009" href="$read_8c.html#a4b3a879d81abade33728b5b9b25262c0" title="Gets number from expression." alt="" coords="540,132,592,159"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="493,124,526,132,524,138,492,129"/>
+</map>
