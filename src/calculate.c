@@ -1,25 +1,24 @@
-#include <stdio.h>
 #include <stdlib.h>
-#define CALCULATE_CPP
+#include <stdio.h>
+#include <math.h>
 
 #include "differentiator.h"
+#include "DSL.h"
 #include "mydef.h"
 #include "config.h"
 
-#include <math.h>
-
-double CalculateTree(DiffNode *node)
+double CalculateTree(node_t *node)
 {
     switch (NTYPE)
     {
-    case TpNm: PRINT_DEBUG("node <--> Num\n"); return node->Data.Num;
+    case TpNm: PRINT_DEBUG("node <--> Num\n"); return node->data.num;
 
-    case TpVr: PRINT_DEBUG("node <--> Var\n"); return VarArray[OP_VR_TYPE];
+    case TpVr: PRINT_DEBUG("node <--> Var\n"); return 1; //TODO Сделать запрос переменных для подсчета
 
-    case TpCn: PRINT_DEBUG("node <--> Const\n"); return ConstArray[OP_VR_TYPE];
+    case TpCn: PRINT_DEBUG("node <--> Const\n"); return ConstArray[NDTYPE];
 
     case TpOp:
-        switch (OP_VR_TYPE)
+        switch (NDTYPE)
         {
         case OpAdd: PRINT_DEBUG("node <--> Add\n"); return CalculateTree(LNODE) + CalculateTree(RNODE);
         
@@ -32,12 +31,12 @@ double CalculateTree(DiffNode *node)
         case OpPow: PRINT_DEBUG("node <--> Pow\n"); return pow(CalculateTree(LNODE), CalculateTree(RNODE));
         
         default:
-            PRINT_ERROR("Неизвестный тип операции [%d]\n", OP_VR_TYPE);
+            PRINT_ERROR("Неизвестный тип операции [%d]\n", NDTYPE);
             exit(ERROR_UNKNOWN_OPERATION_TYPE);
         }
 
     case TpFn:
-        switch (OP_VR_TYPE)
+        switch (NDTYPE)
         {
         case FnSin:  PRINT_DEBUG("node <--> Sin\n"); return sin  (CalculateTree(LNODE)); 
         case FnCos:  PRINT_DEBUG("node <--> Cos\n"); return cos  (CalculateTree(LNODE)); 
@@ -60,7 +59,7 @@ double CalculateTree(DiffNode *node)
         case FnLog:  PRINT_DEBUG("node <--> Log\n"); printf("Да вроде норм\n"); return log(CalculateTree(RNODE)) / log(CalculateTree(LNODE)); 
         
         default:
-            PRINT_ERROR("Неизвестный тип функции [%d]\n", OP_VR_TYPE);
+            PRINT_ERROR("Неизвестный тип функции [%d]\n", NDTYPE);
             exit(ERROR_UNKNOWN_FUNCTION_TYPE);
         }
 

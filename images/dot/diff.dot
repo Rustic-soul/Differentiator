@@ -1,0 +1,201 @@
+digraph {
+	"0x59d50b4febb0" [label = "{ Nodetype: Operation | TypeOperation: * | 0x59d50b4febb0 | { 0x59d50b4fd6f0 | 0x59d50b4feb80 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4febb0" -> "0x59d50b4fd6f0"
+	"0x59d50b4fd6f0" [label = "{ Nodetype: Operation | TypeOperation: ^ | 0x59d50b4fd6f0 | { 0x59d50b4fd630 | 0x59d50b4fd6c0 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fd6f0" -> "0x59d50b4fd630"
+	"0x59d50b4fd630" [label = "{ Nodetype: Operation | TypeOperation: / | 0x59d50b4fd630 | { 0x59d50b4fd510 | 0x59d50b4fd600 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fd630" -> "0x59d50b4fd510"
+	"0x59d50b4fd510" [label = "{ Nodetype: Function | TypeFunction: ch | 0x59d50b4fd510 | { 0x59d50b4fd4e0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd510" -> "0x59d50b4fd4e0"
+	"0x59d50b4fd4e0" [label = "{ Nodetype: Function | TypeFunction: arcsin | 0x59d50b4fd4e0 | { 0x59d50b4fd4b0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd4e0" -> "0x59d50b4fd4b0"
+	"0x59d50b4fd4b0" [label = "{ Nodetype: Function | TypeFunction: cos | 0x59d50b4fd4b0 | { 0x59d50b4fd480 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd4b0" -> "0x59d50b4fd480"
+	"0x59d50b4fd480" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fd480 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fd630" -> "0x59d50b4fd600"
+	"0x59d50b4fd600" [label = "{ Nodetype: Operation | TypeOperation: + | 0x59d50b4fd600 | { 0x59d50b4fd570 | 0x59d50b4fd5d0 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fd600" -> "0x59d50b4fd570"
+	"0x59d50b4fd570" [label = "{ Nodetype: Function | TypeFunction: cos | 0x59d50b4fd570 | { 0x59d50b4fd540 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd570" -> "0x59d50b4fd540"
+	"0x59d50b4fd540" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fd540 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fd600" -> "0x59d50b4fd5d0"
+	"0x59d50b4fd5d0" [label = "{ Nodetype: Function | TypeFunction: th | 0x59d50b4fd5d0 | { 0x59d50b4fd5a0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd5d0" -> "0x59d50b4fd5a0"
+	"0x59d50b4fd5a0" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fd5a0 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fd6f0" -> "0x59d50b4fd6c0"
+	"0x59d50b4fd6c0" [label = "{ Nodetype: Function | TypeFunction: ln | 0x59d50b4fd6c0 | { 0x59d50b4fd690 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd6c0" -> "0x59d50b4fd690"
+	"0x59d50b4fd690" [label = "{ Nodetype: Function | TypeFunction: ch | 0x59d50b4fd690 | { 0x59d50b4fd660 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd690" -> "0x59d50b4fd660"
+	"0x59d50b4fd660" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fd660 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4febb0" -> "0x59d50b4feb80"
+	"0x59d50b4feb80" [label = "{ Nodetype: Operation | TypeOperation: + | 0x59d50b4feb80 | { 0x59d50b4fe440 | 0x59d50b4feb50 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4feb80" -> "0x59d50b4fe440"
+	"0x59d50b4fe440" [label = "{ Nodetype: Operation | TypeOperation: / | 0x59d50b4fe440 | { 0x59d50b4fe230 | 0x59d50b4fe410 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fe440" -> "0x59d50b4fe230"
+	"0x59d50b4fe230" [label = "{ Nodetype: Operation | TypeOperation: * | 0x59d50b4fe230 | { 0x59d50b4fd780 | 0x59d50b4fe200 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fe230" -> "0x59d50b4fd780"
+	"0x59d50b4fd780" [label = "{ Nodetype: Function | TypeFunction: ln | 0x59d50b4fd780 | { 0x59d50b4fd750 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd780" -> "0x59d50b4fd750"
+	"0x59d50b4fd750" [label = "{ Nodetype: Function | TypeFunction: ch | 0x59d50b4fd750 | { 0x59d50b4fd720 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd750" -> "0x59d50b4fd720"
+	"0x59d50b4fd720" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fd720 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fe230" -> "0x59d50b4fe200"
+	"0x59d50b4fe200" [label = "{ Nodetype: Operation | TypeOperation: / | 0x59d50b4fe200 | { 0x59d50b4fe080 | 0x59d50b4fe1d0 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fe200" -> "0x59d50b4fe080"
+	"0x59d50b4fe080" [label = "{ Nodetype: Operation | TypeOperation: - | 0x59d50b4fe080 | { 0x59d50b4fdc90 | 0x59d50b4fe050 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fe080" -> "0x59d50b4fdc90"
+	"0x59d50b4fdc90" [label = "{ Nodetype: Operation | TypeOperation: * | 0x59d50b4fdc90 | { 0x59d50b4fdb70 | 0x59d50b4fdc60 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fdc90" -> "0x59d50b4fdb70"
+	"0x59d50b4fdb70" [label = "{ Nodetype: Operation | TypeOperation: * | 0x59d50b4fdb70 | { 0x59d50b4fd840 | 0x59d50b4fdb40 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fdb70" -> "0x59d50b4fd840"
+	"0x59d50b4fd840" [label = "{ Nodetype: Function | TypeFunction: sh | 0x59d50b4fd840 | { 0x59d50b4fd810 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd840" -> "0x59d50b4fd810"
+	"0x59d50b4fd810" [label = "{ Nodetype: Function | TypeFunction: arcsin | 0x59d50b4fd810 | { 0x59d50b4fd7e0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd810" -> "0x59d50b4fd7e0"
+	"0x59d50b4fd7e0" [label = "{ Nodetype: Function | TypeFunction: cos | 0x59d50b4fd7e0 | { 0x59d50b4fd7b0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd7e0" -> "0x59d50b4fd7b0"
+	"0x59d50b4fd7b0" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fd7b0 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fdb70" -> "0x59d50b4fdb40"
+	"0x59d50b4fdb40" [label = "{ Nodetype: Operation | TypeOperation: * | 0x59d50b4fdb40 | { 0x59d50b4fd9f0 | 0x59d50b4fdb10 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fdb40" -> "0x59d50b4fd9f0"
+	"0x59d50b4fd9f0" [label = "{ Nodetype: Operation | TypeOperation: / | 0x59d50b4fd9f0 | { 0x59d50b4fd870 | 0x59d50b4fd9c0 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fd9f0" -> "0x59d50b4fd870"
+	"0x59d50b4fd870" [label = "{ Nodetype: Num | Num: 1.00 | 0x59d50b4fd870 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = lightskyblue, shape = Mrecord]
+	"0x59d50b4fd9f0" -> "0x59d50b4fd9c0"
+	"0x59d50b4fd9c0" [label = "{ Nodetype: Function | TypeFunction: sqrt | 0x59d50b4fd9c0 | { 0x59d50b4fd990 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd9c0" -> "0x59d50b4fd990"
+	"0x59d50b4fd990" [label = "{ Nodetype: Operation | TypeOperation: - | 0x59d50b4fd990 | { 0x59d50b4fd8a0 | 0x59d50b4fd960 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fd990" -> "0x59d50b4fd8a0"
+	"0x59d50b4fd8a0" [label = "{ Nodetype: Num | Num: 1.00 | 0x59d50b4fd8a0 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = lightskyblue, shape = Mrecord]
+	"0x59d50b4fd990" -> "0x59d50b4fd960"
+	"0x59d50b4fd960" [label = "{ Nodetype: Operation | TypeOperation: ^ | 0x59d50b4fd960 | { 0x59d50b4fd900 | 0x59d50b4fd930 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fd960" -> "0x59d50b4fd900"
+	"0x59d50b4fd900" [label = "{ Nodetype: Function | TypeFunction: cos | 0x59d50b4fd900 | { 0x59d50b4fd8d0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fd900" -> "0x59d50b4fd8d0"
+	"0x59d50b4fd8d0" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fd8d0 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fd960" -> "0x59d50b4fd930"
+	"0x59d50b4fd930" [label = "{ Nodetype: Num | Num: 2.00 | 0x59d50b4fd930 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = lightskyblue, shape = Mrecord]
+	"0x59d50b4fdb40" -> "0x59d50b4fdb10"
+	"0x59d50b4fdb10" [label = "{ Nodetype: Operation | TypeOperation: * | 0x59d50b4fdb10 | { 0x59d50b4fda20 | 0x59d50b4fda80 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fdb10" -> "0x59d50b4fda20"
+	"0x59d50b4fda20" [label = "{ Nodetype: Num | Num: -1.00 | 0x59d50b4fda20 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = lightskyblue, shape = Mrecord]
+	"0x59d50b4fdb10" -> "0x59d50b4fda80"
+	"0x59d50b4fda80" [label = "{ Nodetype: Function | TypeFunction: sin | 0x59d50b4fda80 | { 0x59d50b4fda50 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fda80" -> "0x59d50b4fda50"
+	"0x59d50b4fda50" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fda50 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fdc90" -> "0x59d50b4fdc60"
+	"0x59d50b4fdc60" [label = "{ Nodetype: Operation | TypeOperation: + | 0x59d50b4fdc60 | { 0x59d50b4fdbd0 | 0x59d50b4fdc30 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fdc60" -> "0x59d50b4fdbd0"
+	"0x59d50b4fdbd0" [label = "{ Nodetype: Function | TypeFunction: cos | 0x59d50b4fdbd0 | { 0x59d50b4fdba0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fdbd0" -> "0x59d50b4fdba0"
+	"0x59d50b4fdba0" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fdba0 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fdc60" -> "0x59d50b4fdc30"
+	"0x59d50b4fdc30" [label = "{ Nodetype: Function | TypeFunction: th | 0x59d50b4fdc30 | { 0x59d50b4fdc00 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fdc30" -> "0x59d50b4fdc00"
+	"0x59d50b4fdc00" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fdc00 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fe080" -> "0x59d50b4fe050"
+	"0x59d50b4fe050" [label = "{ Nodetype: Operation | TypeOperation: * | 0x59d50b4fe050 | { 0x59d50b4fdd50 | 0x59d50b4fe020 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fe050" -> "0x59d50b4fdd50"
+	"0x59d50b4fdd50" [label = "{ Nodetype: Function | TypeFunction: ch | 0x59d50b4fdd50 | { 0x59d50b4fdd20 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fdd50" -> "0x59d50b4fdd20"
+	"0x59d50b4fdd20" [label = "{ Nodetype: Function | TypeFunction: arcsin | 0x59d50b4fdd20 | { 0x59d50b4fdcf0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fdd20" -> "0x59d50b4fdcf0"
+	"0x59d50b4fdcf0" [label = "{ Nodetype: Function | TypeFunction: cos | 0x59d50b4fdcf0 | { 0x59d50b4fdcc0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fdcf0" -> "0x59d50b4fdcc0"
+	"0x59d50b4fdcc0" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fdcc0 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fe050" -> "0x59d50b4fe020"
+	"0x59d50b4fe020" [label = "{ Nodetype: Operation | TypeOperation: + | 0x59d50b4fe020 | { 0x59d50b4fde70 | 0x59d50b4fdf90 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fe020" -> "0x59d50b4fde70"
+	"0x59d50b4fde70" [label = "{ Nodetype: Operation | TypeOperation: * | 0x59d50b4fde70 | { 0x59d50b4fdd80 | 0x59d50b4fdde0 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fde70" -> "0x59d50b4fdd80"
+	"0x59d50b4fdd80" [label = "{ Nodetype: Num | Num: -1.00 | 0x59d50b4fdd80 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = lightskyblue, shape = Mrecord]
+	"0x59d50b4fde70" -> "0x59d50b4fdde0"
+	"0x59d50b4fdde0" [label = "{ Nodetype: Function | TypeFunction: sin | 0x59d50b4fdde0 | { 0x59d50b4fddb0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fdde0" -> "0x59d50b4fddb0"
+	"0x59d50b4fddb0" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fddb0 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fe020" -> "0x59d50b4fdf90"
+	"0x59d50b4fdf90" [label = "{ Nodetype: Operation | TypeOperation: / | 0x59d50b4fdf90 | { 0x59d50b4fdea0 | 0x59d50b4fdf60 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fdf90" -> "0x59d50b4fdea0"
+	"0x59d50b4fdea0" [label = "{ Nodetype: Num | Num: 1.00 | 0x59d50b4fdea0 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = lightskyblue, shape = Mrecord]
+	"0x59d50b4fdf90" -> "0x59d50b4fdf60"
+	"0x59d50b4fdf60" [label = "{ Nodetype: Operation | TypeOperation: ^ | 0x59d50b4fdf60 | { 0x59d50b4fdf00 | 0x59d50b4fdf30 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fdf60" -> "0x59d50b4fdf00"
+	"0x59d50b4fdf00" [label = "{ Nodetype: Function | TypeFunction: ch | 0x59d50b4fdf00 | { 0x59d50b4fded0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fdf00" -> "0x59d50b4fded0"
+	"0x59d50b4fded0" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fded0 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fdf60" -> "0x59d50b4fdf30"
+	"0x59d50b4fdf30" [label = "{ Nodetype: Num | Num: 2.00 | 0x59d50b4fdf30 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = lightskyblue, shape = Mrecord]
+	"0x59d50b4fe200" -> "0x59d50b4fe1d0"
+	"0x59d50b4fe1d0" [label = "{ Nodetype: Operation | TypeOperation: ^ | 0x59d50b4fe1d0 | { 0x59d50b4fe170 | 0x59d50b4fe1a0 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fe1d0" -> "0x59d50b4fe170"
+	"0x59d50b4fe170" [label = "{ Nodetype: Operation | TypeOperation: + | 0x59d50b4fe170 | { 0x59d50b4fe0e0 | 0x59d50b4fe140 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fe170" -> "0x59d50b4fe0e0"
+	"0x59d50b4fe0e0" [label = "{ Nodetype: Function | TypeFunction: cos | 0x59d50b4fe0e0 | { 0x59d50b4fe0b0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fe0e0" -> "0x59d50b4fe0b0"
+	"0x59d50b4fe0b0" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fe0b0 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fe170" -> "0x59d50b4fe140"
+	"0x59d50b4fe140" [label = "{ Nodetype: Function | TypeFunction: th | 0x59d50b4fe140 | { 0x59d50b4fe110 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fe140" -> "0x59d50b4fe110"
+	"0x59d50b4fe110" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fe110 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fe1d0" -> "0x59d50b4fe1a0"
+	"0x59d50b4fe1a0" [label = "{ Nodetype: Num | Num: 2.00 | 0x59d50b4fe1a0 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = lightskyblue, shape = Mrecord]
+	"0x59d50b4fe440" -> "0x59d50b4fe410"
+	"0x59d50b4fe410" [label = "{ Nodetype: Operation | TypeOperation: / | 0x59d50b4fe410 | { 0x59d50b4fe2f0 | 0x59d50b4fe3e0 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fe410" -> "0x59d50b4fe2f0"
+	"0x59d50b4fe2f0" [label = "{ Nodetype: Function | TypeFunction: ch | 0x59d50b4fe2f0 | { 0x59d50b4fe2c0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fe2f0" -> "0x59d50b4fe2c0"
+	"0x59d50b4fe2c0" [label = "{ Nodetype: Function | TypeFunction: arcsin | 0x59d50b4fe2c0 | { 0x59d50b4fe290 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fe2c0" -> "0x59d50b4fe290"
+	"0x59d50b4fe290" [label = "{ Nodetype: Function | TypeFunction: cos | 0x59d50b4fe290 | { 0x59d50b4fe260 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fe290" -> "0x59d50b4fe260"
+	"0x59d50b4fe260" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fe260 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fe410" -> "0x59d50b4fe3e0"
+	"0x59d50b4fe3e0" [label = "{ Nodetype: Operation | TypeOperation: + | 0x59d50b4fe3e0 | { 0x59d50b4fe350 | 0x59d50b4fe3b0 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fe3e0" -> "0x59d50b4fe350"
+	"0x59d50b4fe350" [label = "{ Nodetype: Function | TypeFunction: cos | 0x59d50b4fe350 | { 0x59d50b4fe320 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fe350" -> "0x59d50b4fe320"
+	"0x59d50b4fe320" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fe320 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fe3e0" -> "0x59d50b4fe3b0"
+	"0x59d50b4fe3b0" [label = "{ Nodetype: Function | TypeFunction: th | 0x59d50b4fe3b0 | { 0x59d50b4fe380 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fe3b0" -> "0x59d50b4fe380"
+	"0x59d50b4fe380" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fe380 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4feb80" -> "0x59d50b4feb50"
+	"0x59d50b4feb50" [label = "{ Nodetype: Operation | TypeOperation: * | 0x59d50b4feb50 | { 0x59d50b4fe910 | 0x59d50b4feb20 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4feb50" -> "0x59d50b4fe910"
+	"0x59d50b4fe910" [label = "{ Nodetype: Operation | TypeOperation: * | 0x59d50b4fe910 | { 0x59d50b4fe820 | 0x59d50b4fe880 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fe910" -> "0x59d50b4fe820"
+	"0x59d50b4fe820" [label = "{ Nodetype: Operation | TypeOperation: / | 0x59d50b4fe820 | { 0x59d50b4fe790 | 0x59d50b4fe7f0 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4fe820" -> "0x59d50b4fe790"
+	"0x59d50b4fe790" [label = "{ Nodetype: Num | Num: 1.00 | 0x59d50b4fe790 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = lightskyblue, shape = Mrecord]
+	"0x59d50b4fe820" -> "0x59d50b4fe7f0"
+	"0x59d50b4fe7f0" [label = "{ Nodetype: Function | TypeFunction: ch | 0x59d50b4fe7f0 | { 0x59d50b4fe7c0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fe7f0" -> "0x59d50b4fe7c0"
+	"0x59d50b4fe7c0" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fe7c0 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4fe910" -> "0x59d50b4fe880"
+	"0x59d50b4fe880" [label = "{ Nodetype: Function | TypeFunction: sh | 0x59d50b4fe880 | { 0x59d50b4fe850 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fe880" -> "0x59d50b4fe850"
+	"0x59d50b4fe850" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fe850 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4feb50" -> "0x59d50b4feb20"
+	"0x59d50b4feb20" [label = "{ Nodetype: Function | TypeFunction: ln | 0x59d50b4feb20 | { 0x59d50b4feaf0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4feb20" -> "0x59d50b4feaf0"
+	"0x59d50b4feaf0" [label = "{ Nodetype: Operation | TypeOperation: / | 0x59d50b4feaf0 | { 0x59d50b4fe9d0 | 0x59d50b4feac0 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4feaf0" -> "0x59d50b4fe9d0"
+	"0x59d50b4fe9d0" [label = "{ Nodetype: Function | TypeFunction: ch | 0x59d50b4fe9d0 | { 0x59d50b4fe9a0 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fe9d0" -> "0x59d50b4fe9a0"
+	"0x59d50b4fe9a0" [label = "{ Nodetype: Function | TypeFunction: arcsin | 0x59d50b4fe9a0 | { 0x59d50b4fe970 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fe9a0" -> "0x59d50b4fe970"
+	"0x59d50b4fe970" [label = "{ Nodetype: Function | TypeFunction: cos | 0x59d50b4fe970 | { 0x59d50b4fe940 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fe970" -> "0x59d50b4fe940"
+	"0x59d50b4fe940" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fe940 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4feaf0" -> "0x59d50b4feac0"
+	"0x59d50b4feac0" [label = "{ Nodetype: Operation | TypeOperation: + | 0x59d50b4feac0 | { 0x59d50b4fea30 | 0x59d50b4fea90 } }", fontsize = 18, style = filled, fillcolor = crimson, shape = Mrecord]
+	"0x59d50b4feac0" -> "0x59d50b4fea30"
+	"0x59d50b4fea30" [label = "{ Nodetype: Function | TypeFunction: cos | 0x59d50b4fea30 | { 0x59d50b4fea00 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fea30" -> "0x59d50b4fea00"
+	"0x59d50b4fea00" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fea00 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+	"0x59d50b4feac0" -> "0x59d50b4fea90"
+	"0x59d50b4fea90" [label = "{ Nodetype: Function | TypeFunction: th | 0x59d50b4fea90 | { 0x59d50b4fea60 | (nil) } }", fontsize = 18, style = filled, fillcolor = orange, shape = Mrecord]
+	"0x59d50b4fea90" -> "0x59d50b4fea60"
+	"0x59d50b4fea60" [label = "{ Nodetype: Variable | Var: x | 0x59d50b4fea60 | { (nil) | (nil) } }", fontsize = 18, style = filled, fillcolor = green, shape = Mrecord]
+}

@@ -1,16 +1,13 @@
 cmake_minimum_required(VERSION 3.20)
 
 project(Differentiator)
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-set(SRC_FILES src/main.c src/calculate.c src/differentiator.c src/print.c)
-set(INCLUDE_DIR include/)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/)
 
-set(FLAGS -std=c99 -lm)
-
-set(RELEASE_FLAGS -O3)
-
-set(DEBUG_FLAGS 
+set(MY_DEBUG_FLAGS
     -DDEBUG
     -ggdb3
     -O0 
@@ -63,18 +60,30 @@ set(DEBUG_FLAGS
     -fsanitize=address,alignment,bool,bounds,enum,float-cast-overflow,float-divide-by-zero,integer-divide-by-zero,leak,nonnull-attribute,null,object-size,return,returns-nonnull-attribute,shift,signed-integer-overflow,undefined,unreachable,vla-bound,vptr
 )
 
-option(debug OFF)
-option(release ON)
 
-add_compile_options(${FLAGS})
-add_link_options   (${FLAGS})
-if (debug)
-    add_compile_options(${DEBUG_FLAGS})
-  add_link_options     (${DEBUG_FLAGS})
-elseif(release)
-  add_compile_options(${RELEASE_FLAGS})
-  add_link_options   (${RELEASE_FLAGS})
+set(SOURCES 
+    ./src/main.c 
+    ./src/calculate.c 
+    ./src/differentiator.c 
+    ./src/print.c
+    ./src/read.c
+    ./lib/array.c
+)
+
+set(INCLUDE_DIRS 
+    ./include/
+    ./lib/
+)
+
+add_executable(differentiator ${SOURCES})
+
+target_compile_features(differentiator PRIVATE c_std_99)
+
+target_include_directories(differentiator PRIVATE ${INCLUDE_DIRS})
+
+target_link_libraries(differentiator PRIVATE m)
+
+if (CMAKE_BUILD_TYPE STREQUAL "MyDebug")
+    target_compile_options(differentiator PRIVATE ${MY_DEBUG_FLAGS})
+    target_link_options   (differentiator PRIVATE ${MY_DEBUG_FLAGS})
 endif()
-
-add_executable(differentiator ${SRC_FILES})
-target_include_directories(differentiator PRIVATE ${INCLUDE_DIR})

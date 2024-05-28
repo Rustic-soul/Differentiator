@@ -1,296 +1,450 @@
-#define DIFFERENTIATOR_CPP
+#include <stdlib.h>
+#include <stdio.h>
+#include <stddef.h>
+#include <stdbool.h>
+#include <string.h>
+#include <math.h>
+#include <assert.h>
 
 #include "differentiator.h"
-#include "main.h"
 #include "mydef.h"
+#include "DSL.h"
 
-#include <assert.h>
-#include <math.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <math.h>
+node_t* DifferentiatorRec(node_t *node, int part);
+node_t* DifferentiatorLog(node_t *node, int part);
 
+bool is_num(node_t *node);
+bool is_variable(node_t* node);
+bool is_binary_operator(node_t* node);
+bool is_unary_function(node_t* node);
 
-DiffNode *Differentiator(DiffNode *node, int part)
+void free_children(node_t* node);
+
+node_t* remove_neutral_elements_binary_operator(node_t* node);
+node_t* remove_neutral_elements_add(node_t* node, node_t* num_node, node_t* nan_node);
+node_t* remove_neutral_elements_sub(node_t* node, node_t* num_node, node_t* nan_node);
+node_t* remove_neutral_elements_mul(node_t* node, node_t* num_node, node_t* nan_node);
+node_t* remove_neutral_elements_div(node_t* node, node_t* num_node, node_t* nan_node);
+node_t* remove_neutral_elements_pow(node_t* node, node_t* num_node, node_t* nan_node);
+
+node_t* differentiator_num(node_t *node, int part);
+node_t* differentiator_variable(node_t *node, int part);
+
+node_t* differentiator_binary_operator(node_t *node, int part);
+node_t* differentiator_binary_operator_add(node_t *node, int part);
+node_t* differentiator_binary_operator_sub(node_t *node, int part);
+node_t* differentiator_binary_operator_mul(node_t *node, int part);
+node_t* differentiator_binary_operator_div(node_t *node, int part);
+node_t* differentiator_binary_operator_pow(node_t *node, int part);
+
+node_t* differentiator_unary_function(node_t *node, int part);
+node_t* differentiator_unary_function_sin(node_t *node, int part);
+node_t* differentiator_unary_function_cos(node_t *node, int part);
+node_t* differentiator_unary_function_tg(node_t *node, int part);
+node_t* differentiator_unary_function_ctg(node_t *node, int part);
+node_t* differentiator_unary_function_asin(node_t *node, int part);
+node_t* differentiator_unary_function_acos(node_t *node, int part);
+node_t* differentiator_unary_function_atg(node_t *node, int part);
+node_t* differentiator_unary_function_actg(node_t *node, int part);
+node_t* differentiator_unary_function_sh(node_t *node, int part);
+node_t* differentiator_unary_function_ch(node_t *node, int part);
+node_t* differentiator_unary_function_th(node_t *node, int part);
+node_t* differentiator_unary_function_cth(node_t *node, int part);
+node_t* differentiator_unary_function_exp(node_t *node, int part);
+node_t* differentiator_unary_function_sqrt(node_t *node, int part);
+node_t* differentiator_unary_function_ln(node_t *node, int part);
+
+node_t* Differentiator(node_t *node, int part)
 {
+    assert(node != NULL);
+
+    node_t *diff = DifferentiatorRec(node, part);
+    assert(diff != NULL);
+    
+    return FullOptimizer(diff);
+}
+
+node_t *DifferentiatorRec(node_t *node, int part)
+{
+    assert(node != NULL);
+
     switch (NTYPE)
     {
-    case TpNm: return _NUM(0);
-    
-    case TpVr: return _NUM((OP_VR_TYPE == part) ? 1.0 : 0);
-    
-    case TpOp:
-        switch (OP_VR_TYPE)
-        {
-        case OpAdd: return _ADD(_DIFF(LNODE), _DIFF(RNODE));
-
-        case OpSub: return _SUB(_DIFF(LNODE), _DIFF(RNODE));
-
-        case OpMul: return _ADD(_MUL(_DIFF(LNODE), _CPY(RNODE)), _MUL(_CPY(LNODE), _DIFF(RNODE)));
-
-        case OpDiv: return _DIV(_SUB(_MUL(_DIFF(LNODE), _CPY(RNODE)), _MUL(_CPY(LNODE), _DIFF(RNODE))), _POW(_CPY(RNODE), _NUM(2)));
-
-        case OpPow:
-            if (SearchVar(LNODE, part) == 0)
-            {
-                return _MUL(_LN(_CPY(LNODE)), _MUL(_POW(_CPY(LNODE), _CPY(RNODE)), _DIFF(RNODE)));              
-            }
-            else if ((SearchVar(LNODE, part) == 1) && (SearchVar(RNODE, part) == 0))
-            {
-                return _MUL(_MUL(_CPY(RNODE), _POW(_CPY(LNODE), _SUB(_CPY(RNODE), _NUM(1)))), _DIFF(LNODE));
-            }
-            else
-            {
-                return _MUL(_POW(_CPY(LNODE), _CPY(RNODE)), _ADD(_DIV(_MUL(_CPY(RNODE), _DIFF(LNODE)), _CPY(LNODE)), _MUL(_DIFF(RNODE), _LN(_CPY(LNODE)))));
-            }
+        case TpNm: return differentiator_num(node, part);
         
-        default:
-            PRINT_ERROR("Неизвестный тип операциии [%d]\n", OP_VR_TYPE);
-            exit(ERROR_UNKNOWN_OPERATION_TYPE);
-        }
-    
-    case TpFn:
-        switch (OP_VR_TYPE)
-        {
-        case FnSin:  return _MUL(_COS(_CPY(LNODE)), _DIFF(LNODE));
-
-        case FnCos:  return _MUL(_NUM(-1), _MUL(_SIN(_CPY(LNODE)), _DIFF(LNODE)));
-
-        case FnTg:   return _MUL(_DIV(_NUM(1), _POW(_COS(_CPY(LNODE)), _NUM(2))), _DIFF(LNODE));
-
-        case FnCtg:  return _MUL(_MUL(_NUM(-1), _DIV(_NUM(1), _POW(_SIN(_CPY(LNODE)), _NUM(2)))), _DIFF(LNODE));
-
-        case FnAsin: return _MUL(_DIV(_NUM(1), _SQRT(_SUB(_NUM(1), _POW(_CPY(LNODE), _NUM(2))))), _DIFF(LNODE));
+        case TpVr: return differentiator_variable(node, part);
         
-        case FnAcos: return _MUL(_NUM(-1), _MUL(_DIV(_NUM(1), _SQRT(_SUB(_NUM(1), _POW(_CPY(LNODE), _NUM(2))))), _DIFF(LNODE)));
+        case TpOp: return differentiator_binary_operator(node, part);
         
-        case FnAtg:  return _MUL(_DIV(_NUM(1), _ADD(_NUM(1), _POW(_CPY(LNODE), _NUM(2)))), _DIFF(LNODE));
-
-        case FnActg: return _MUL(_NUM(-1),_MUL(_DIV(_NUM(1), _ADD(_NUM(1), _POW(_CPY(LNODE), _NUM(2)))), _DIFF(LNODE)));
-
-        case FnSh:   return _MUL(_CH(_CPY(LNODE)), _DIFF(LNODE));
-        
-        case FnCh:   return _MUL(_SH(_CPY(LNODE)), _DIFF(LNODE));
-        
-        case FnTh:   return _MUL(_DIV(_NUM(1), _POW(_CH(_CPY(LNODE)), _NUM(2))), _DIFF(LNODE));
-
-        case FnCth:  return _MUL(_NUM(-1), _MUL(_DIV(_NUM(1), _POW(_SH(_CPY(LNODE)), _NUM(2))), _DIFF(LNODE)));
-
-        case FnExp:  return _MUL(_EXP(_CPY(LNODE)), _DIFF(LNODE));
-
-        case FnSqrt: return _MUL(_DIV(_NUM(1), _MUL(_NUM(2), _SQRT(_CPY(LNODE)))), _DIFF(LNODE));
-            
-        case FnLn:   return _MUL(_DIV(_NUM(1), _CPY(LNODE)), _DIFF(LNODE));
-
-        case FnLg:   return _MUL(_DIV(_NUM(1), _MUL(_LN(_NUM(10)), _CPY(LNODE))), _DIFF(LNODE));
-
-        case FnLog:
-            if (SearchVar(LNODE, part) == 0)
-            {
-                printf("uuuu\n");
-                return _MUL(_DIV(_NUM(1), _MUL(_LN(_CPY(LNODE)), _CPY(RNODE))), _DIFF(RNODE));
-            }
-            else
-            {
-                printf("oooo\n");
-                DiffNode *diffl = _LN(_CPY(LNODE));
-                DiffNode *diffr = _LN(_CPY(RNODE));
-                DiffNode * tmp = _DIV(_SUB(_MUL(_DIFF(diffr), _LN(_CPY(LNODE))), _MUL(_DIFF(diffl), _LN(_CPY(RNODE)))), _POW(_LN(_CPY(LNODE)), _NUM(2)));
-                DtorTree(diffl);
-                DtorTree(diffr);
-                return tmp;
-            }
+        case TpFn: return differentiator_unary_function(node, part);
 
         default:
-            PRINT_ERROR("Неизвестный тип функции [%d]\n", OP_VR_TYPE);
-            exit(ERROR_UNKNOWN_FUNCTION_TYPE);
-        }
-
-    default:
-        PRINT_ERROR("Неизвестный тип узла [%d]\n", NTYPE);
-        exit(ERROR_UNKNOWN_NODE_TYPE);
+            PRINT_ERROR("Неизвестный тип узла [%d]\n", NTYPE);
+            exit(ERROR_UNKNOWN_NODE_TYPE);
     }
-
-    return NULL;
 }
 
-DiffNode *FullOptimizer (DiffNode *node) { return Optimizer2(Optimizer1(node)); }
-
-DiffNode *Optimizer1(DiffNode *node)
+node_t* differentiator_num(node_t *node, int part)
 {
-    if ((NTYPE == TpVr) || (NTYPE == TpNm)) { return node; }
+    return _NUM(0);
+}
 
-    LNODE = Optimizer1(LNODE);
+node_t* differentiator_variable(node_t *node, int part)
+{
+    return _NUM((NDTYPE == part) ? 1 : 0);
+}
 
-    if ((NTYPE != TpFn) || ((NTYPE == TpFn) && (OP_VR_TYPE == FnLog))) { RNODE = Optimizer1(RNODE); }
-
-    if ((NTYPE == TpOp) && (LNTYPE == TpNm) && (RNTYPE == TpNm))
+node_t* differentiator_binary_operator(node_t *node, int part)
+{
+    switch (NDTYPE)
     {
-        switch (OP_VR_TYPE)
-        {
-        case OpAdd: node->Data.Num = LNODE->Data.Num + RNODE->Data.Num; break;
-        case OpSub: node->Data.Num = LNODE->Data.Num - RNODE->Data.Num; break;
-        case OpMul: node->Data.Num = LNODE->Data.Num * RNODE->Data.Num; break;
-        case OpDiv: node->Data.Num = LNODE->Data.Num / RNODE->Data.Num; break;
+        case OpAdd: return differentiator_binary_operator_add(node, part);
+
+        case OpSub: return differentiator_binary_operator_sub(node, part);
+
+        case OpMul: return differentiator_binary_operator_mul(node, part);
+
+        case OpDiv: return differentiator_binary_operator_div(node, part);
+
+        case OpPow: return differentiator_binary_operator_pow(node, part);
         
-        case OpPow: node->Data.Num = pow(LNODE->Data.Num, RNODE->Data.Num); break;
-    
         default:
-            PRINT_ERROR("Неизвестный тип операции [%d]\n", OP_VR_TYPE);
+            PRINT_ERROR("Неизвестный тип операциии [%d]\n", NDTYPE);
             exit(ERROR_UNKNOWN_OPERATION_TYPE);
-        }
-
-        free(LNODE);
-        free(RNODE);
-        
-        NTYPE = TpNm;
-        LNODE = NULL;
-        RNODE = NULL;
     }
-    else if (((NTYPE == TpFn) && (LNTYPE == TpNm) && (OP_VR_TYPE != FnLog)) || ((NTYPE == TpFn) && (LNTYPE == TpNm) && (RNTYPE == TpNm) && (OP_VR_TYPE == FnLog)))
+}
+
+node_t* differentiator_binary_operator_add(node_t *node, int part)
+{
+    return _ADD(_DIFF(LNODE), _DIFF(RNODE));
+}
+
+node_t* differentiator_binary_operator_sub(node_t *node, int part)
+{
+    return _SUB(_DIFF(LNODE), _DIFF(RNODE));
+}
+
+node_t* differentiator_binary_operator_mul(node_t *node, int part)
+{
+    return _ADD(_MUL(_DIFF(LNODE), _CPY(RNODE)), _MUL(_CPY(LNODE), _DIFF(RNODE)));
+}
+
+node_t* differentiator_binary_operator_div(node_t *node, int part)
+{
+    return _DIV(_SUB(_MUL(_DIFF(LNODE), _CPY(RNODE)), _MUL(_CPY(LNODE), _DIFF(RNODE))), _POW(_CPY(RNODE), _NUM(2)));
+}
+
+node_t* differentiator_binary_operator_pow(node_t *node, int part)
+{
+    if (SearchVar(LNODE, part) == 0)
     {
-        switch (OP_VR_TYPE)
-        {
-        case FnSin:  node->Data.Num = sin  (LNODE->Data.Num); break;
-        case FnCos:  node->Data.Num = cos  (LNODE->Data.Num); break;
-        case FnTg:   node->Data.Num = tan  (LNODE->Data.Num); break;
-        case FnAtg:  node->Data.Num = atan (LNODE->Data.Num); break;
-        case FnSh:   node->Data.Num = sinh (LNODE->Data.Num); break;
-        case FnCh:   node->Data.Num = cosh (LNODE->Data.Num); break;
-        case FnTh:   node->Data.Num = tanh (LNODE->Data.Num); break;
-        case FnExp:  node->Data.Num = exp  (LNODE->Data.Num); break;
-        case FnSqrt: node->Data.Num = sqrt (LNODE->Data.Num); break;
-        case FnLn:   node->Data.Num = log  (LNODE->Data.Num); break;
-        case FnLg:   node->Data.Num = log10(LNODE->Data.Num); break;
-        
-        case FnCtg:  node->Data.Num = tan(3.14/2 - LNODE->Data.Num);                 break;
+        return _MUL(_LN(_CPY(LNODE)), _MUL(_POW(_CPY(LNODE), _CPY(RNODE)), _DIFF(RNODE)));              
+    }
+    else if ((SearchVar(LNODE, part) == 1) && (SearchVar(RNODE, part) == 0))
+    {
+        return _MUL(_MUL(_CPY(RNODE), _POW(_CPY(LNODE), _SUB(_CPY(RNODE), _NUM(1)))), _DIFF(LNODE));
+    }
+    else
+    {
+        return _MUL(_POW(_CPY(LNODE), _CPY(RNODE)), _ADD(_DIV(_MUL(_CPY(RNODE), _DIFF(LNODE)), _CPY(LNODE)), _MUL(_DIFF(RNODE), _LN(_CPY(LNODE)))));
+    }
+}
 
-        case FnActg: node->Data.Num = 3.14/2 - atan(LNODE->Data.Num);                break;
-        
-        case FnCth:  node->Data.Num = cosh(LNODE->Data.Num) / sinh(LNODE->Data.Num); break;
-        
+node_t* differentiator_unary_function(node_t *node, int part)
+{
+    switch (NDTYPE)
+    {
+        case FnSin:  return differentiator_unary_function_sin(node, part);
+
+        case FnCos:  return differentiator_unary_function_cos(node, part);
+
+        case FnTg:   return differentiator_unary_function_tg(node, part);
+
+        case FnCtg:  return differentiator_unary_function_ctg(node, part);
+
+        case FnAsin: return differentiator_unary_function_asin(node, part);
+
+        case FnAcos: return differentiator_unary_function_acos(node, part);
+
+        case FnAtg:  return differentiator_unary_function_atg(node, part);
+
+        case FnActg: return differentiator_unary_function_actg(node, part);
+
+        case FnSh:   return differentiator_unary_function_sh(node, part);
+
+        case FnCh:   return differentiator_unary_function_ch(node, part);
+
+        case FnTh:   return differentiator_unary_function_th(node, part);
+
+        case FnCth:  return differentiator_unary_function_cth(node, part);
+
+        case FnExp:  return differentiator_unary_function_exp(node, part);
+
+        case FnSqrt: return differentiator_unary_function_sqrt(node, part);
+            
+        case FnLn:   return differentiator_unary_function_ln(node, part);
+
         default:
-            PRINT_ERROR("Неизвестный тип функции [%d]\n", OP_VR_TYPE);
+            PRINT_ERROR("Неизвестный тип функции [%d]\n", NDTYPE);
             exit(ERROR_UNKNOWN_FUNCTION_TYPE);
-        }
-        
-        if (OP_VR_TYPE == FnLog)
-        {
-            node->Data.Num = log(RNODE->Data.Num) / log(LNODE->Data.Num); 
-            free(RNODE);
-        }
+    }
+}
 
-        free(LNODE);
-        
-        NTYPE = TpNm;
-        LNODE = NULL;
-        RNODE = NULL;
+node_t* differentiator_unary_function_sin(node_t *node, int part)
+{
+    return _MUL(_COS(_CPY(LNODE)), _DIFF(LNODE));
+}
+
+node_t* differentiator_unary_function_cos(node_t *node, int part)
+{
+    return _MUL(_NUM(-1), _MUL(_SIN(_CPY(LNODE)), _DIFF(LNODE)));
+}
+
+node_t* differentiator_unary_function_tg(node_t *node, int part)
+{
+    return _MUL(_DIV(_NUM(1), _POW(_COS(_CPY(LNODE)), _NUM(2))), _DIFF(LNODE));
+}
+
+node_t* differentiator_unary_function_ctg(node_t *node, int part)
+{
+    return _MUL(_MUL(_NUM(-1), _DIV(_NUM(1), _POW(_SIN(_CPY(LNODE)), _NUM(2)))), _DIFF(LNODE));
+}
+
+node_t* differentiator_unary_function_asin(node_t *node, int part)
+{
+    return _MUL(_DIV(_NUM(1), _SQRT(_SUB(_NUM(1), _POW(_CPY(LNODE), _NUM(2))))), _DIFF(LNODE));
+}
+
+node_t* differentiator_unary_function_acos(node_t *node, int part)
+{
+    return _MUL(_NUM(-1), _MUL(_DIV(_NUM(1), _SQRT(_SUB(_NUM(1), _POW(_CPY(LNODE), _NUM(2))))), _DIFF(LNODE)));
+}
+
+node_t* differentiator_unary_function_atg(node_t *node, int part)
+{
+    return _MUL(_DIV(_NUM(1), _ADD(_NUM(1), _POW(_CPY(LNODE), _NUM(2)))), _DIFF(LNODE));
+}
+
+node_t* differentiator_unary_function_actg(node_t *node, int part)
+{
+    return _MUL(_NUM(-1), _MUL(_DIV(_NUM(1), _ADD(_NUM(1), _POW(_CPY(LNODE), _NUM(2)))), _DIFF(LNODE)));
+}
+
+node_t* differentiator_unary_function_sh(node_t *node, int part)
+{
+    return _MUL(_CH(_CPY(LNODE)), _DIFF(LNODE));
+}
+
+node_t* differentiator_unary_function_ch(node_t *node, int part)
+{
+    return _MUL(_SH(_CPY(LNODE)), _DIFF(LNODE));
+}
+
+node_t* differentiator_unary_function_th(node_t *node, int part)
+{
+    return _MUL(_DIV(_NUM(1), _POW(_CH(_CPY(LNODE)), _NUM(2))), _DIFF(LNODE));
+}
+
+node_t* differentiator_unary_function_cth(node_t *node, int part)
+{
+    return _MUL(_NUM(-1), _MUL(_DIV(_NUM(1), _POW(_SH(_CPY(LNODE)), _NUM(2))), _DIFF(LNODE)));
+}
+
+node_t* differentiator_unary_function_exp(node_t *node, int part)
+{
+    return _MUL(_EXP(_CPY(LNODE)), _DIFF(LNODE));
+}
+
+node_t* differentiator_unary_function_sqrt(node_t *node, int part)
+{
+    return _MUL(_DIV(_NUM(1), _MUL(_NUM(2), _SQRT(_CPY(LNODE)))), _DIFF(LNODE));
+}
+
+node_t* differentiator_unary_function_ln(node_t *node, int part)
+{
+    return _MUL(_DIV(_NUM(1), _CPY(LNODE)), _DIFF(LNODE));
+}
+
+node_t *FullOptimizer (node_t *node) { return remove_neutral_elements(convolution_constants(node)); }
+
+node_t *convolution_constants(node_t *node)
+{
+    if ((node == NULL) ||is_num(node) || is_variable(node)) { return node; }
+
+    LNODE = convolution_constants(LNODE);
+    RNODE = convolution_constants(RNODE);
+
+    if (is_binary_operator(node) && is_num(LNODE) && is_num(RNODE))
+    {
+        NDNUM = CalculateTree(node);
+        free_children(node);
+    }
+    else if (is_unary_function(node) && is_num(LNODE))
+    {
+        NDNUM = CalculateTree(node);
+        free_children(node);
     }
 
     return node;
 }
 
-DiffNode *Optimizer2(DiffNode *node)
+bool is_num(node_t *node)
 {
-    if (NTYPE == TpOp)
+    return (NTYPE == TpNm);
+}
+
+bool is_variable(node_t* node)
+{
+    return (NTYPE == TpVr);
+}
+
+bool is_binary_operator(node_t* node)
+{
+    return (NTYPE == TpOp);
+}
+
+bool is_unary_function(node_t* node)
+{
+    return (NTYPE == TpFn);
+}
+
+void free_children(node_t* node)
+{
+    free(LNODE);
+    free(RNODE);
+    LNODE = NULL;
+    RNODE = NULL;
+}
+
+node_t *remove_neutral_elements(node_t *node)
+{
+    if (node == NULL) { return node; }
+
+    LNODE = remove_neutral_elements(LNODE);
+    RNODE = remove_neutral_elements(RNODE);
+    
+    if (is_binary_operator(node))
     {
-        LNODE = Optimizer2(LNODE);
-        RNODE = Optimizer2(RNODE);
-        
-        if ((LNTYPE == TpNm) || (RNTYPE == TpNm))
+        if (is_num(LNODE) || is_num(RNODE))
         {
-            DiffNode *num_node = (LNTYPE == TpNm) ? LNODE : RNODE;
-            DiffNode *nan_node = (LNTYPE == TpNm) ? RNODE : LNODE;
-            
-            switch (OP_VR_TYPE)
-            {
-            case OpAdd:
-                if (equal(num_node->Data.Num, 0))
-                {
-                    free(num_node);
-                    free(node);
-                    return nan_node;
-                }
-                break;
-
-            case OpSub:
-                if (equal(num_node->Data.Num, 0))
-                {
-                    if (num_node == RNODE) { return node; } //  Мб нужно придумывать умножение на (-1)
-                    free(num_node);
-                    free(node);
-                    return nan_node;
-                }
-                break;
-
-            case OpMul:
-                if (equal(num_node->Data.Num, 0))
-                {
-                    DtorTree(nan_node);
-                    free(node);
-                    return num_node;
-                }
-                else if (equal(num_node->Data.Num, 1))
-                {
-                    free(num_node);
-                    free(node);
-                    return nan_node;
-                }
-                break;
-
-            case OpDiv:
-                if ((num_node == LNODE) && equal(num_node->Data.Num, 0))
-                {
-                    DtorTree(nan_node);
-                    free(node);
-                    return num_node;
-                }
-                else if ((num_node == RNODE) && equal(num_node->Data.Num, 1))
-                {
-                    free(num_node);
-                    free(node);
-                    return nan_node;
-                }
-                break;
-
-            case OpPow:
-                if ((num_node == LNODE) && (equal(num_node->Data.Num, 1) || equal(num_node->Data.Num, 0)))
-                {
-                    DtorTree(nan_node);
-                    free(node);
-                    return num_node;
-                }
-                else if ((num_node == RNODE) && equal(num_node->Data.Num, 1))
-                {
-                    free(num_node);
-                    free(node);
-                    return nan_node;
-                }
-                else if ((num_node == RNODE) && equal(num_node->Data.Num, 0))
-                {
-                    DtorTree(node);
-                    return _NUM(1);
-                }
-                break;
-
-            default:
-                PRINT_ERROR("Неизвестный тип операции [%d]\n", OP_VR_TYPE);
-                exit(ERROR_UNKNOWN_OPERATION_TYPE);
-            }
+            return remove_neutral_elements_binary_operator(node);
         }
     }
 
     return node;
 }
 
-int SearchVar(DiffNode *node, int var)
+node_t* remove_neutral_elements_binary_operator(node_t* node)
+{
+    node_t *num_node = is_num(LNODE) ? LNODE : RNODE;
+    node_t *nan_node = is_num(LNODE) ? RNODE : LNODE;
+    
+    switch (NDTYPE)
+    {
+        case OpAdd: return remove_neutral_elements_add(node, num_node, nan_node);
+
+        case OpSub: return remove_neutral_elements_sub(node, num_node, nan_node);
+        
+        case OpMul: return remove_neutral_elements_mul(node, num_node, nan_node);
+
+        case OpDiv: return remove_neutral_elements_div(node, num_node, nan_node);
+
+        case OpPow: return remove_neutral_elements_pow(node, num_node, nan_node);
+
+        default:
+            PRINT_ERROR("Неизвестный тип операции [%d]\n", NDTYPE);
+            exit(ERROR_UNKNOWN_OPERATION_TYPE);
+    }
+}
+
+node_t* remove_neutral_elements_add(node_t* node, node_t* num_node, node_t* nan_node)
+{
+    if (DoubleEqual(num_node->data.num, 0))
+    {
+        free(num_node);
+        free(node);
+        return nan_node;
+    }
+
+    return node;
+}
+
+node_t* remove_neutral_elements_sub(node_t* node, node_t* num_node, node_t* nan_node)
+{
+    if (DoubleEqual(num_node->data.num, 0))
+    {
+        if (num_node == LNODE) { return node; } //TODO  Мб нужно придумывать умножение на (-1)
+        
+        free(num_node);
+        free(node);
+        return nan_node;
+    }
+    
+    return node;
+}
+
+node_t* remove_neutral_elements_mul(node_t* node, node_t* num_node, node_t* nan_node)
+{
+    if (DoubleEqual(num_node->data.num, 0))
+    {
+        DtorTree(node);
+        return _NUM(0);
+    }
+    else if (DoubleEqual(num_node->data.num, 1))
+    {
+        free(num_node);
+        free(node);
+        return nan_node;
+    }
+    
+    return node;
+}
+
+node_t* remove_neutral_elements_div(node_t* node, node_t* num_node, node_t* nan_node)
+{
+    if ((num_node == LNODE) && DoubleEqual(num_node->data.num, 0))
+    {
+        DtorTree(node);
+        return _NUM(0);
+    }
+    else if ((num_node == RNODE) && DoubleEqual(num_node->data.num, 1))
+    {
+        free(num_node);
+        free(node);
+        return nan_node;
+    }
+    
+    return node;
+}
+
+node_t* remove_neutral_elements_pow(node_t* node, node_t* num_node, node_t* nan_node)
+{
+    if ((num_node == LNODE) && (DoubleEqual(num_node->data.num, 1) || DoubleEqual(num_node->data.num, 0)))
+    {
+        DtorTree(nan_node);
+        free(node);
+        return num_node;
+    }
+    else if ((num_node == RNODE) && DoubleEqual(num_node->data.num, 1))
+    {
+        free(num_node);
+        free(node);
+        return nan_node;
+    }
+    else if ((num_node == RNODE) && DoubleEqual(num_node->data.num, 0))
+    {
+        DtorTree(node);
+        return _NUM(1);
+    }
+
+    return node;
+}
+
+int SearchVar(node_t *node, int var)
 {
     int tmp = 0;
     
-    if ((NTYPE == TpVr) && (OP_VR_TYPE == var)) { tmp = 1; }
+    if ((NTYPE == TpVr) && (NDTYPE == var)) { tmp = 1; }
     
     if ((LNODE != NULL) && (tmp != 1)) { tmp = SearchVar(LNODE, var); }
 
@@ -299,189 +453,37 @@ int SearchVar(DiffNode *node, int var)
     return tmp;
 }
 
-int equal(double num1, double num2)
+int DoubleEqual(double num1, double num2)
 {
     const double EPSILON = 1e-6;
 
     return (fabs(num1 - num2) < EPSILON);
 }
 
-DiffNode *Copy_Node(DiffNode *node)
+node_t *CopyNode(node_t *node)
 {
-    // DiffNode *newnode  = (DiffNode *)malloc(sizeof(DiffNode));
-    // newnode->Type      = node->Type;
-    // newnode->Data      = node->Data;
-    // newnode->LeftNode  = NULL;
-    // newnode->RightNode = NULL;
-    DiffNode *newnode = CreateNode(NTYPE, node->Data, NULL, NULL);
+    if (node == NULL) { return NULL; }
 
-    if (LNODE != NULL) { newnode->LeftNode = Copy_Node(LNODE); }
-
-    if (RNODE != NULL) { newnode->RightNode = Copy_Node(RNODE); }
+    node_t *newnode = CreateNode(NTYPE, node->data, _CPY(LNODE), _CPY(RNODE));
 
     return newnode;
 }
 
-DiffNode *CreateNode(char type, NodeData data, DiffNode *LeftNode, DiffNode *RightNode)
+node_t *CreateNode(char type, node_data_t data, node_t *LeftNode, node_t *RightNode)
 {
-    DiffNode *newnode  = (DiffNode *)malloc(sizeof(DiffNode));
+    node_t *newnode  = (node_t *)malloc(sizeof(node_t));
     
     PRINT_DEBUG("CreateNode: {%p}\n", newnode);
 
-    newnode->Type      = type;
-    newnode->Data      = data;
+    newnode->type      = type;
+    newnode->data      = data;
     newnode->LeftNode  = LeftNode;
     newnode->RightNode = RightNode;
 
     return newnode;
 }
 
-DiffNode *CreateTree(FILE *fp)
-{
-    assert(fp != NULL);
-
-    size_t    cn   = 0;
-    array_t  *arr  = CtorArray(fp);
-    DiffNode *tree = CreateTreeRec(arr, &cn);
-
-    free(arr->arr_ptr);
-    free(arr);
-
-    return tree;
-}
-
-DiffNode *CreateTreeRec(array_t *sarr, size_t *count)
-{
-    assert(sarr != NULL);
-    assert(count != NULL);
-    assert(sarr->size_arr > *count);
-
-    DiffNode *node = NULL;
-
-    while (sarr->arr_ptr[*count] == ' ') { *count += 1; }
-
-    if (sarr->arr_ptr[*count] == '(')
-    {
-        *count += 1;
-
-        int    ncr                          = 0;
-        double tmp_num                      = 0;
-        char   type                         = DefinitionTypeNode(sarr->arr_ptr + (*count));
-        char   tmp2                         = '\0';
-        char   func_name[MAX_LEN_FUNC_NAME] = "";
-
-        switch (type)
-        {
-        case -1:
-            sscanf(sarr->arr_ptr + (*count), "%s%n", func_name, &ncr);
-            *count += (size_t)ncr;
-            node = NULL;
-            break;
-
-        case TpNm:
-            sscanf(sarr->arr_ptr + (*count), "%lf%n", &tmp_num, &ncr);
-            *count += (size_t)ncr;
-            node = CreateNode(type, (NodeData){tmp_num}, NULL, NULL);
-            break;
-
-        case TpFn:
-            sscanf(sarr->arr_ptr + (*count), "%s%n", func_name, &ncr);
-            *count += (size_t)ncr;
-            
-            node = CreateNode(type, (NodeData){.TypeOpVr = DTFunc(func_name)}, NULL, NULL);
-            break;
-        
-        case TpOp: case TpVr:
-            sscanf(sarr->arr_ptr + (*count), "%s%n", func_name, &ncr);
-            *count += (size_t)ncr;
-            NodeData tmp3 = {0};
-            tmp2          = func_name[0];
-            tmp3.TypeOpVr = DefinitionTypeVariableAndOperation(tmp2);
-
-            node = CreateNode(type, tmp3, NULL, NULL);
-            break;
-
-        default:
-            PRINT_ERROR("Неизвестный тип узла [%d]\n", NTYPE);
-            exit(ERROR_UNKNOWN_NODE_TYPE);
-        }
-
-        if (sarr->arr_ptr[*count + 1] == ')')
-        {
-            if (node != NULL)
-            {
-                node->LeftNode  = NULL;
-                node->RightNode = NULL;
-            }
-
-            *count += 2;
-            return node;
-        }
-        node->LeftNode  = CreateTreeRec(sarr, count);
-
-        node->RightNode = CreateTreeRec(sarr, count);
-    }
-    *count += 1;
-    return node;
-}
-
-int DTFunc(const char* fname)
-{
-    for (int i = 0; (size_t)i < SIZEOF_ARR(ArrayFn); i++)
-    {
-        if (strcmp(fname, ArrayFn[i]) == 0) { return i; }
-    }
-
-    return -1;
-}
-
-int DefinitionTypeVariableAndOperation(char ch)
-{
-    for (int i = 0; (size_t)i < SIZEOF_ARR(ArrayOp); i++)
-    {
-        if (ArrayOp[i] == ch) { return i; }
-    }
-
-    for (int i = 0; (size_t)i < SIZEOF_ARR(ArrayVr); i++)
-    {
-        if (ArrayVr[i] == ch) { return i; }
-    }
-
-    return -1;
-}
-
-char DefinitionTypeNode(char *arr)
-{
-    double tmp_num                      = 0;
-    char   func_name[MAX_LEN_FUNC_NAME] = "";
-
-    if (sscanf(arr, "%lf", &tmp_num) == 1)
-    {
-        return TpNm;
-    }
-    else if (sscanf(arr, "%s", func_name) == 1)
-    {
-        if (strlen(func_name) == 1)
-        {
-            if (func_name[0] == '$') { return -1; }
-
-            for (int i = 0; (size_t)i < SIZEOF_ARR(ArrayOp); i++)
-            {
-                if (ArrayOp[i] == func_name[0]) { return TpOp; }
-            }
-            
-            return TpVr;
-        }
-
-        return TpFn;
-    }
-    else
-    {
-        return -2;
-    }
-}
-
-int DtorTree(DiffNode *node)
+int DtorTree(node_t *node)
 {
     if (node->LeftNode != NULL)  { DtorTree(node->LeftNode); }
 
@@ -490,33 +492,4 @@ int DtorTree(DiffNode *node)
     PRINT_DEBUG("FREE: [%p]\n", node);
     free(node);
     return 0;
-}
-
-array_t *CtorArray(FILE *fp_src)
-{
-    assert(fp_src != NULL);
-
-    array_t *new_sarr = (array_t *)malloc(sizeof(array_t));
-
-    size_t sz_file = SearchSizeFile(fp_src);
-    char  *array   = (char *)calloc(sz_file + 1, sizeof(char));
-
-    fread(array, sizeof(char), sz_file, fp_src);
-    array[sz_file] = '\0';
-
-    new_sarr->arr_ptr  = array;
-    new_sarr->size_arr = sz_file;
-
-    return new_sarr;
-}
-
-size_t SearchSizeFile(FILE *fp)
-{
-    assert(fp != NULL);
-
-    fseek(fp, 0L, SEEK_END);
-    size_t size_file = (size_t)ftell(fp);
-    fseek(fp, 0L, SEEK_SET);
-
-    return size_file;
 }

@@ -1,3 +1,16 @@
-.cache/*
-# images/*
-!images/.gitkeep
+.clangd
+
+.cache/
+
+build/
+
+.vscode/
+
+docs/*
+!docs/Doxyfile
+
+images/tex/*
+!images/tex/preamble.tex
+!images/tex/title.tex
+!images/tex/res.tex
+!images/tex/res.pdf

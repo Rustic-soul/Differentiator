@@ -1,0 +1,1 @@
+((ch(arcsin(cos(x))))/(cos(x) + th(x)))^(ln(ch(x)))
